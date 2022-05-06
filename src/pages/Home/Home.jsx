@@ -5,7 +5,7 @@ const Home = () => {
     <Layout>
       <h1>Save Oom!!</h1>
       <p>
-        Let's save the little critter!
+        Let&apos;s save the little critter!
       </p>
     </Layout>
   );
