@@ -1,0 +1,29 @@
+@use '../../styles/reset' as *;
+.nav-bar {
+  &__heading {
+    position: absolute;
+    width: 49px;
+    height: 29px;
+    left: 28px;
+    top: 158px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+
+    /* identical to box height, or 29px */
+    display: flex;
+    align-items: center;
+
+    color: #9baacf;
+  }
+  &__img {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: 20%;
+    bottom: 25%;
+  }
+}
