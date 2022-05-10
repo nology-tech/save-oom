@@ -1,0 +1,25 @@
+@use '../../styles/reset' as *;
+@use '../../styles/variables' as *;
+@use '../../styles/typography' as *;
+.nav-bar {
+  display: flex;
+  align-items: center;
+  &__heading {
+    width: 3rem;
+    height: 1.8rem;
+
+    margin-right: 0.6rem;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 180%;
+
+    /* identical to box height, or 29px */
+
+    color: $color-accent;
+  }
+  &__img {
+    margin-left: 0.6rem;
+  }
+}
