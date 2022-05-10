@@ -1,0 +1,12 @@
+@use '../../styles/reset' as *;
+@use '../../styles/variables' as *;
+@use '../../styles/typography' as *;
+
+.nav-bar {
+  background-color: $color-secondary-dark;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
