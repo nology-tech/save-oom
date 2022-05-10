@@ -1,6 +1,7 @@
 import Layout from '../../components/Layout/Layout';
 import NavBarHeading from '../../components/navBarHeading/NavBarHeading';
 
+
 const Home = () => {
   return (
     <>
