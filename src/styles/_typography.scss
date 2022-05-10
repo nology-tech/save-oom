@@ -22,6 +22,7 @@ p {
   margin: 0.5rem 0;
   display: inline-block;
   width: 100%;
+  font-family: $font-primary;
 }
 
 button {
@@ -30,14 +31,17 @@ button {
 
 h1 {
   font-size: 2.1rem;
+  font-family: $font-secondary;
 }
 
 h2 {
   font-size: 1.65rem;
+  font-family: $font-secondary;
 }
 
 h3 {
   font-size: 1.25rem;
+  font-family: $font-secondary;
 }
 
 @media screen and (min-width: $tablet-breakpoint) {
