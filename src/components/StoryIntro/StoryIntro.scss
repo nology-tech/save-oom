@@ -1,0 +1,12 @@
+@use "../../styles/variables" as *;
+  
+
+.intro {
+
+
+  &__paragraph {
+    color: $color-primary;
+    font-family: $font-primary;
+    font-size: 32px;
+  }
+}
