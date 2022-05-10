@@ -12,5 +12,19 @@ exports[`Should render the app 1`] = `
       Let's save the little critter!
     </p>
   </div>
+  <div
+    class="nav-bar"
+  >
+    <h2
+      class="nav-bar__heading"
+    >
+      Phonics stage
+    </h2>
+    <img
+      alt="vector img"
+      class="nav-bar__img"
+      src="Vectorvector.png"
+    />
+  </div>
 </div>
 `;
