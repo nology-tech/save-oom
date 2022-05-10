@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
 // breakpoints
 $mobile-breakpoint: 320px;
 $tablet-breakpoint: 768px;
@@ -6,5 +9,12 @@ $large-desktop-breakpoint: 1440px;
 $extra-large-desktop-breakpoint: 2560px;
 
 //colors
-$text-color: #f3f2e8;
-$background-color: #1f1b1b;
+$color-white: #ffffff;
+$color-primary: #a8f48d;
+$color-secondary-light: #1e2639;
+$color-secondary-dark: #1e2332;
+$color-accent: #9baacf;
+
+//text
+$font-primary:'Inter';
+$font-secondary: "Koulen";
