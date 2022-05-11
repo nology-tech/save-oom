@@ -1,0 +1,15 @@
+@use "../../styles/variables" as *;
+  
+
+.intro {
+ height: 20rem;
+ width: 51rem;
+ margin: auto;
+
+  &__paragraph {
+    color: $color-primary;
+    font-family: $font-primary;
+    font-size: 2rem;
+    text-align: center;
+  }
+}
