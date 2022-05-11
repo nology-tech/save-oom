@@ -1,7 +1,8 @@
 @use "../../styles/variables" as *;
 
 .layout {
-  height: 100vh;
-  width: 100vw;
-  background-color: $color-secondary-dark;
+  // height: 100vh;
+  // width: 100vw;
+  // background-color: $color-secondary-dark;
+  display: none;
 }
