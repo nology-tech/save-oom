@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@300&display=swap');
 
 // breakpoints
 $mobile-breakpoint: 320px;
@@ -14,7 +15,9 @@ $color-primary: #a8f48d;
 $color-secondary-light: #1e2639;
 $color-secondary-dark: #1e2332;
 $color-accent: #9baacf;
+$color-border: #3f4f74;
 
 //text
 $font-primary:'Inter';
 $font-secondary: "Koulen";
+$font-tertiary: "Antonio";
