@@ -1,12 +1,11 @@
 import React from 'react';
 import './NavBarHeading.scss';
-import vector from '../../assets/Vectorvector.png';
 
-const NavBarHeading = () => {
+const NavBarHeading = ({ headingText, headingImg }) => {
   return (
-    <div className='nav-bar'>
-      <h2 className='nav-bar__heading'>Phonics stage</h2>
-      <img className='nav-bar__img' src={vector} alt='vector img' />
+    <div className='nav-bar-header'>
+      <h2 className='nav-bar-header__heading'>{headingText}</h2>
+      <img className='nav-bar-header__img' src={headingImg} alt={headingText} />
     </div>
   );
 };

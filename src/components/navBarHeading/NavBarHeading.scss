@@ -1,13 +1,12 @@
 @use '../../styles/reset' as *;
 @use '../../styles/variables' as *;
 @use '../../styles/typography' as *;
-.nav-bar {
+.nav-bar-header {
   display: flex;
   align-items: center;
   &__heading {
-    width: 3rem;
+    width: 10rem;
     height: 1.8rem;
-
     margin-right: 0.6rem;
     font-family: 'Inter';
     font-style: normal;
