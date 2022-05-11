@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@300&display=swap');
 
 // breakpoints
 $mobile-breakpoint: 320px;
@@ -18,11 +17,5 @@ $color-accent: #9baacf;
 $color-border: #3f4f74;
 
 //text
-<<<<<<< HEAD
 $font-primary:'Inter';
 $font-secondary: "Koulen";
-$font-tertiary: "Antonio";
-=======
-$font-primary:'Inter'; // body
-$font-secondary: "Koulen"; // header => formula condensed was unavailable so this was used instead.
->>>>>>> 33c85f7a7012522dd8d39dae5468b9054e402346
