@@ -9,6 +9,7 @@ it('Should render the navbar header', () => {
 });
 
 it('Should contain the navbar heading', () => {
-    render(<NavBarHeading />);
-  
+    render(<NavBarHeading headingText={"Heading"} />);
+    const navHeading = screen.getByText(/Heading/i)
+    expect(navHeading).toBeInTheDocument();
 });
