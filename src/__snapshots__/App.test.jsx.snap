@@ -11,6 +11,33 @@ exports[`Should render the app 1`] = `
     <p>
       Let's save the little critter!
     </p>
+    <div
+      class="avatar-heading"
+    >
+      <h1
+        class="avatar-heading__text"
+      >
+        Please add an avatar to save Oom
+      </h1>
+    </div>
+    <div
+      class="avatar-heading"
+    >
+      <h1
+        class="avatar-heading__text"
+      >
+        Name your avatar
+      </h1>
+    </div>
+    <div
+      class="avatar-heading"
+    >
+      <h1
+        class="avatar-heading__text"
+      >
+        Jack's a great name, Oom would be proud!
+      </h1>
+    </div>
   </div>
   <div
     class="nav-bar"
