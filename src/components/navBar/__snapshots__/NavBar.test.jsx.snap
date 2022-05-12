@@ -1,17 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render the app 1`] = `
+exports[`Should render the navbar 1`] = `
 <div>
-  <div
-    class="layout"
-  >
-    <h1>
-      Save Oom!!
-    </h1>
-    <p>
-      Let's save the little critter!
-    </p>
-  </div>
   <div
     class="nav-bar"
   >
