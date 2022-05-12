@@ -1,5 +1,7 @@
 import Layout from '../../components/Layout/Layout';
 import NavBar from '../../components/navBar/NavBar';
+import AvatarHeading from '../../components/AvatarHeading/AvatarHeading';
+
 const Home = () => {
   return (
     <>
