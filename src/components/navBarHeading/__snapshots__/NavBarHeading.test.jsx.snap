@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the navbar header 1`] = `
+<div>
+  <div
+    class="nav-bar-header"
+  >
+    <h2
+      class="nav-bar-header__heading"
+    />
+    <img
+      class="nav-bar-header__img"
+    />
+  </div>
+</div>
+`;
