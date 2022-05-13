@@ -13,11 +13,11 @@ expect(timer).toBeInTheDocument();
 })
 
 
-it("Should set timeout to start on page load", () => {
-    jest.useFakeTimers();
-jest.spyOn(globalThis, 'setTimeout');
+// it("Should set timeout to start on page load", () => {
+//     jest.useFakeTimers();
+// jest.spyOn(globalThis, 'setTimeout');
 
-render(<Timer startTime={60} />);
+// render(<Timer startTime={60} />);
 
-  expect(setTimeout).toHaveBeenCalled();
-})
+//   expect(setTimeout).toHaveBeenCalled();
+// })
