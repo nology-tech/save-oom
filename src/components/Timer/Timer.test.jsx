@@ -1,7 +1,5 @@
 import { render, screen } from "@testing-library/react";
 import Timer from "./Timer";
-import { customRender } from '../../utils/testUtils';
-
 
 
 
@@ -11,7 +9,6 @@ it("Should render the timer", () => {
 
   const timer = screen.getByRole("heading");
 
-//   expect(setTimeout).toHaveBeenCalled();
 expect(timer).toBeInTheDocument();
 })
 
