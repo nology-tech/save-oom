@@ -19,7 +19,7 @@ const StoryContainer = () => {
   return (
     <div className="story__container">
       <StoryIntro text = {storyData[counter].story}/>
-      <Button buttonStyle={"button-primary"} buttonText={"NEXT"} handleIncrement={handleIncrement}/>
+      <Button buttonStyle={"button-primary"} buttonText={"NEXT"} onClickEvent={handleIncrement}/>
 
     </div>
   )
