@@ -3,13 +3,10 @@
 exports[`Should render the navbar header 1`] = `
 <div>
   <div
-    class="nav-bar-header"
+    class="undefined-header"
   >
     <h2
-      class="nav-bar-header__heading"
-    />
-    <img
-      class="nav-bar-header__img"
+      class="undefined-header__heading"
     />
   </div>
 </div>
