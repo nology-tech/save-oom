@@ -1,6 +1,6 @@
 import Layout from '../../components/Layout/Layout';
 import NavBar from '../../components/navBar/NavBar';
-import "./Home.scss"
+import "./Home.scss";
 
 const Home = () => {
   return (
