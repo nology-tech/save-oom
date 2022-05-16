@@ -1,13 +1,17 @@
+import React from 'react';
 import Layout from '../../components/Layout/Layout';
 import NavBar from '../../components/navBar/NavBar';
+import levelSelectData from "../../data/levelSelectData";
+import LevelSelectCardContainer from '../../containers/LevelSelectCardContainer/LevelSelectCardContainer';
+
+
 const Home = () => {
   return (
     <>
       <Layout>
-        <h1>Save Oom!!</h1>
-        <p>Let&apos;s save the little critter!</p>
+        <NavBar />
+        <LevelSelectCardContainer levelSelectData={levelSelectData} />
       </Layout>
-      <NavBar />
     </>
   );
 };
