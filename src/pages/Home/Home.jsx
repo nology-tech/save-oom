@@ -10,7 +10,6 @@ const Home = () => {
     <>
       <Layout>
         <NavBar />
-        <LevelSelectCardContainer levelSelectData={levelSelectData} />
       </Layout>
     </>
   );
