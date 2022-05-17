@@ -1,9 +1,9 @@
 import React from 'react';
 import './NavBar.scss';
-import NavBarHeading from '../navBarHeading/NavBarHeading';
+import NavBarHeading from '../../components/navBarHeading/NavBarHeading';
 import vector from '../../assets/images/Vectorvector.png';
-import Button from '../Button/Button';
-import Logo from '../Logo/Logo';
+import Button from '../../components/Button/Button';
+import Logo from '../../components/Logo/Logo';
 import lockImg from '../../assets/images/Vectorlock.png';
 import statImg from '../../assets/images/Vectorstat.png';
 import addImg from '../../assets/images/Vectoradd.png';
