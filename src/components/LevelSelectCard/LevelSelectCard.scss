@@ -1,0 +1,28 @@
+@use "../../styles/reset" as *;
+@use "../../styles/typography" as *;
+@use "../../styles/variables" as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: $color-secondary-light;
+  padding: 1rem;
+  min-height: 17rem;
+  max-height: 30rem;
+  max-width: 25rem;
+  place-self: center;
+
+  &__heading {
+    color: $color-white;
+  }
+  
+  &__text {
+    color: $color-accent;
+  }
+
+  &__button {
+    align-self: center;
+  }
+
+}

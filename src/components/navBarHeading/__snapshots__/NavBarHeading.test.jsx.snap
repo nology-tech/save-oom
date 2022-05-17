@@ -3,13 +3,17 @@
 exports[`Should render the navbar header 1`] = `
 <div>
   <div
-    class="nav-bar-header"
+    class="nav-bar-header-header"
   >
     <h2
-      class="nav-bar-header__heading"
-    />
+      class="nav-bar-header-header__heading"
+    >
+      heading
+    </h2>
     <img
-      class="nav-bar-header__img"
+      alt="heading"
+      class="nav-bar-header-header__img"
+      src="Vectorlock.png"
     />
   </div>
 </div>
