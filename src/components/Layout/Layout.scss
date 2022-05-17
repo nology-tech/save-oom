@@ -1,7 +1,7 @@
 @use "../../styles/variables" as *;
 
 .layout {
-  height: 100vh;
+  display: flex;
   width: 100vw;
   background-color: $color-secondary-dark;
 }

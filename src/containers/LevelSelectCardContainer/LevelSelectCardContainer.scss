@@ -1,0 +1,24 @@
+@use "../../styles/reset" as *;
+@use "../../styles/typography" as *;
+@use "../../styles/variables" as *;
+
+.levels {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5rem;
+
+  &__heading {
+    font-size: 3.5rem;
+    margin-left: 2rem;
+  }
+
+  &__card-container { 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 2rem;
+    gap: 3rem;
+    width: 100%;
+  }
+}
+
