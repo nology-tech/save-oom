@@ -1,0 +1,29 @@
+@use "../../styles/variables.scss" as *;
+
+.validation {
+  width: 6.6rem;
+  height: 3.5rem;
+  background: rgba(0, 0, 0, 0.46);
+  border-radius: 4.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__button {
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+  }
+  &__button--wrong:hover {
+    background: #ee9260;
+  }
+  &__button--wrong {
+    background-color: #F27B39;
+  
+  }
+  &__button--right:hover {
+    background: #abe76e;
+  }
+  &__button--right {
+    background-color: #7DC833;
+  }
+}
