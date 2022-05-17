@@ -6,12 +6,14 @@
   background: rgba(0, 0, 0, 0.46);
   border-radius: 4.6rem;
   display: flex;
+  gap: 0.4rem;
   justify-content: center;
   align-items: center;
   &__button {
     width: 2.6rem;
     height: 2.6rem;
     border-radius: 50%;
+    border: none;
   }
   &__button--wrong:hover {
     background: #ee9260;
