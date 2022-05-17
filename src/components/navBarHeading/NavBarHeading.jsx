@@ -1,11 +1,11 @@
 import React from 'react';
 import './NavBarHeading.scss';
 
-const NavBarHeading = ({ headingText, headingImg }) => {
+const NavBarHeading = ({ headingText, headingImg, headingStyle, isLocked}) => {
   return (
-    <div className='nav-bar-header'>
-      <h2 className='nav-bar-header__heading'>{headingText}</h2>
-      <img className='nav-bar-header__img' src={headingImg} alt={headingText} />
+    <div className={`${headingStyle}-header`}>
+      <h2 className={`${headingStyle}-header__heading`}>{headingText}</h2>
+      {isLocked && <img className={`${headingStyle}-header__img`} src={headingImg} alt={headingText} />}
     </div>
   );
 };
