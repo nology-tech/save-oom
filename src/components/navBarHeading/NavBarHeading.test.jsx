@@ -1,10 +1,11 @@
 import {render, screen} from "@testing-library/react"
 import NavBarHeading from "./NavBarHeading";
 import { customRender } from '../../utils/testUtils';
+import VectorLock from "../../assets/images/Vectorlock.png";
 
 
 it('Should render the navbar header', () => {
-    const { container } = customRender(<NavBarHeading />);
+    const { container } = customRender(<NavBarHeading headingText="heading" headingImg={VectorLock} headingStyle={"nav-bar-header"} isLocked={true} />);
     expect(container).toMatchSnapshot();
 });
 

@@ -8,7 +8,7 @@
     width: 10rem;
     height: 1.8rem;
     margin-right: 0.6rem;
-    font-family: 'Inter';
+    font-family: $font-primary;
     font-style: normal;
     font-weight: 400;
     font-size: 1rem;
@@ -20,5 +20,27 @@
   }
   &__img {
     margin-left: 0.6rem;
+  }
+}
+
+.level-select-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__heading {
+    width: 10rem;
+    height: 1.8rem;
+    margin-right: 0.6rem;
+    font-family: $font-secondary;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 180%;
+    color: $color-white;
+  }
+
+  &__img {
+    height: 1.3rem;
+    width: 1.1rem;
   }
 }
