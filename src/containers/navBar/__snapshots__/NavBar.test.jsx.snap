@@ -21,11 +21,6 @@ exports[`Should render the navbar 1`] = `
         >
           Phonics stages
         </h2>
-        <img
-          alt="Phonics stages"
-          class="nav-bar-header__img"
-          src="Vectorvector.png"
-        />
       </div>
       <h2>
         Introduction
@@ -38,11 +33,6 @@ exports[`Should render the navbar 1`] = `
         >
           Level 1
         </h2>
-        <img
-          alt="Level 1"
-          class="nav-bar-header__img"
-          src="Vectorlock.png"
-        />
       </div>
       <div
         class="nav-bar-header"
@@ -52,11 +42,6 @@ exports[`Should render the navbar 1`] = `
         >
           Level 2
         </h2>
-        <img
-          alt="Level 2"
-          class="nav-bar-header__img"
-          src="Vectorlock.png"
-        />
       </div>
       <div
         class="nav-bar-header"
@@ -66,11 +51,6 @@ exports[`Should render the navbar 1`] = `
         >
           Level 3
         </h2>
-        <img
-          alt="Level 3"
-          class="nav-bar-header__img"
-          src="Vectorlock.png"
-        />
       </div>
       <div
         class="nav-bar-header"
@@ -80,11 +60,6 @@ exports[`Should render the navbar 1`] = `
         >
           Stats
         </h2>
-        <img
-          alt="Stats"
-          class="nav-bar-header__img"
-          src="Vectorstat.png"
-        />
       </div>
       <h2>
         Jack
@@ -97,11 +72,6 @@ exports[`Should render the navbar 1`] = `
         >
           Add Avatar
         </h2>
-        <img
-          alt="Add Avatar"
-          class="nav-bar-header__img"
-          src="Vectoradd.png"
-        />
       </div>
     </div>
     <button

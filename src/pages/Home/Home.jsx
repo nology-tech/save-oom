@@ -1,11 +1,15 @@
-// import Layout from '../../components/Layout/Layout';
-// import NavBar from '../../components/navBar/NavBar';
+import React from 'react';
 import GamePlay from '../GamePlay/GamePlay';
+import Layout from '../../components/Layout/Layout';
+import NavBar from '../../containers/navBar/NavBar';
 
 const Home = () => {
   return (
     <>
-      <GamePlay />
+      <Layout>
+        <NavBar />
+        <GamePlay />
+      </Layout>
     </>
   );
 };
