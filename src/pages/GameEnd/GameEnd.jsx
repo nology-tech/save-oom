@@ -1,7 +1,7 @@
 import React from 'react'
 import AvatarHeading from '../../components/AvatarHeading/AvatarHeading'
 import Button from '../../components/Button/Button'
-import NavBar from '../../components/navBar/NavBar'
+import NavBar from '../../containers/navBar/NavBar'
 import './GameEnd.scss'
 
 const GameEnd = () => {
