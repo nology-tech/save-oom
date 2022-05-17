@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState } from 'react'
 import "./Timer.scss";
 
 
@@ -9,9 +9,8 @@ import "./Timer.scss";
     const [counter, setCounter] = useState(startTime);
 
 
-    useEffect(() => {
+    
         counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
-      }, [counter]);
     
 
 
