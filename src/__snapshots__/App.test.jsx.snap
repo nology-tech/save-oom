@@ -83,6 +83,30 @@ exports[`Should render the app 1`] = `
         Logout
       </button>
     </div>
+    <div
+      class="game-play"
+    >
+      <div
+        class="game-play__images"
+      >
+        <img
+          alt="background"
+          class="game-play__background"
+          src="Frame 5backgroung.png"
+        />
+        <img
+          alt=""
+          class="animate__animated.animate__fast animate__swing game-play__oom "
+          id="oom"
+          src="Group 146swingingOom.png"
+        />
+        <img
+          alt="Animated Image"
+          class="animate__bounce game-play__squirrel animate__animated"
+          src="squirrel.png"
+        />
+      </div>
+    </div>
   </div>
 </div>
 `;

@@ -2,6 +2,7 @@ import React from 'react';
 import background from '../../assets/images/Frame 5backgroung.png';
 import swingingOom from '../../assets/images/Group 146swingingOom.png';
 import squirrel from '../../assets/images/squirrel.png';
+import AnimatedImage from '../../components/AnimatedImage/AnimatedImage';
 import './GamePlay.scss';
 
 const GamePlay = () => {
@@ -13,18 +14,18 @@ const GamePlay = () => {
           src={background}
           alt='background'
         />
-        <img
-          id='squirrel'
-          className='animate__animated animate__bounce game-play__squirrel '
-          src={squirrel}
-          alt=''
-        />
 
-        <img
-          id='oom'
-          className='animate__animated.animate__fast animate__swing game-play__oom '
-          src={swingingOom}
-          alt=''
+        <AnimatedImage
+          imageToAnimate={squirrel}
+          animationClass={'animate__animated'}
+          animationType={'animate__bounce'}
+          imageStylesClass={'game-play__squirrel'}
+        />
+        <AnimatedImage
+          imageToAnimate={swingingOom}
+          animationClass={'animate__animated.animate__fast'}
+          animationType={'animate__swing'}
+          imageStylesClass={'game-play__oom'}
         />
       </div>
     </div>
