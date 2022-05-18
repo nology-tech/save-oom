@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the button 1`] = `
+<div>
+  <div
+    class="validation"
+  >
+    <button
+      class="validation__button validation__button--wrong"
+    >
+      <img
+        alt="cross"
+        src="Cross.png"
+      />
+    </button>
+    <button
+      class="validation__button validation__button--right"
+    >
+      <img
+        alt="tick"
+        src="Tick.png"
+      />
+    </button>
+  </div>
+</div>
+`;
