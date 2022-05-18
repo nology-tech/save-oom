@@ -21,6 +21,8 @@
     position: absolute;
     top: 65vh;
     left: 65vw;
+    // animation: swing;
+    // transform-origin: top center;
     animation-delay: 1s;
     animation-duration: 10s;
   }
@@ -32,7 +34,7 @@
     transform: scaleX(-1);
     animation: bounce;
     animation-duration: 10s;
-    animation-delay: 2s;
+    animation-delay: 1s;
   }
 
   &__button {
