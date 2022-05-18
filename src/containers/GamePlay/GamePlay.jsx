@@ -3,9 +3,9 @@ import React from 'react'
 
 const GamePlay = () => {
   return (
-    <div className='game-play'>
+    <section className='game-play'>
 
-    </div>
+    </section>
   )
 }
 
