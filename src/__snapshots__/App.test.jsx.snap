@@ -24,11 +24,14 @@ exports[`Should render the app 1`] = `
           >
             Phonics stages
           </h2>
+<<<<<<< HEAD
           <img
             alt="Phonics stages"
             class="nav-bar-header__img"
             src="Vectorvector.png"
           />
+=======
+>>>>>>> d8b97a38f841b36dd976730828d2a7dc107aa436
         </div>
         <h2>
           Introduction
@@ -41,11 +44,14 @@ exports[`Should render the app 1`] = `
           >
             Level 1
           </h2>
+<<<<<<< HEAD
           <img
             alt="Level 1"
             class="nav-bar-header__img"
             src="Vectorlock.png"
           />
+=======
+>>>>>>> d8b97a38f841b36dd976730828d2a7dc107aa436
         </div>
         <div
           class="nav-bar-header"
@@ -55,11 +61,14 @@ exports[`Should render the app 1`] = `
           >
             Level 2
           </h2>
+<<<<<<< HEAD
           <img
             alt="Level 2"
             class="nav-bar-header__img"
             src="Vectorlock.png"
           />
+=======
+>>>>>>> d8b97a38f841b36dd976730828d2a7dc107aa436
         </div>
         <div
           class="nav-bar-header"
@@ -69,11 +78,14 @@ exports[`Should render the app 1`] = `
           >
             Level 3
           </h2>
+<<<<<<< HEAD
           <img
             alt="Level 3"
             class="nav-bar-header__img"
             src="Vectorlock.png"
           />
+=======
+>>>>>>> d8b97a38f841b36dd976730828d2a7dc107aa436
         </div>
         <div
           class="nav-bar-header"
@@ -83,11 +95,14 @@ exports[`Should render the app 1`] = `
           >
             Stats
           </h2>
+<<<<<<< HEAD
           <img
             alt="Stats"
             class="nav-bar-header__img"
             src="Vectorstat.png"
           />
+=======
+>>>>>>> d8b97a38f841b36dd976730828d2a7dc107aa436
         </div>
         <h2>
           Jack
@@ -100,11 +115,14 @@ exports[`Should render the app 1`] = `
           >
             Add Avatar
           </h2>
+<<<<<<< HEAD
           <img
             alt="Add Avatar"
             class="nav-bar-header__img"
             src="Vectoradd.png"
           />
+=======
+>>>>>>> d8b97a38f841b36dd976730828d2a7dc107aa436
         </div>
       </div>
       <button

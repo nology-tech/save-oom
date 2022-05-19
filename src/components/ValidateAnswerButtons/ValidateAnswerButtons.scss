@@ -1,0 +1,31 @@
+@use "../../styles/variables.scss" as *;
+
+.validation {
+  width: 6.6rem;
+  height: 3.5rem;
+  background: $color-validation-button-background;
+  border-radius: 4.6rem;
+  display: flex;
+  gap: 0.4rem;
+  justify-content: center;
+  align-items: center;
+  &__button {
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    border: none;
+  }
+  &__button--wrong:hover {
+    background: $color-button-wrong-hover;
+  }
+  &__button--wrong {
+    background-color: $color-button-wrong;
+  
+  }
+  &__button--right:hover {
+    background: $color-button-right-hover;
+  }
+  &__button--right {
+    background-color: $color-button-right;
+  }
+}
