@@ -83,6 +83,15 @@ exports[`Should render the app 1`] = `
         Logout
       </button>
     </div>
+    <div
+      class="phonic-component"
+    >
+      <h1
+        class="phonic-component__heading"
+      >
+        Ay
+      </h1>
+    </div>
   </div>
 </div>
 `;
