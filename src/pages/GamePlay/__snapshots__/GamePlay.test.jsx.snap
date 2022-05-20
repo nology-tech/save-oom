@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render the AnimatedImage component on screen 1`] = `<AnimatedImage />`;
-
 exports[`Should render the Game Play screen 1`] = `
 <div>
   <div
@@ -16,15 +14,13 @@ exports[`Should render the Game Play screen 1`] = `
         src="Frame 5backgroung.png"
       />
       <img
-        alt=""
-        class="animate__animated animate__bounce game-play__squirrel "
-        id="squirrel"
+        alt="Animated Image"
+        class="animate__animated game-play__squirrel animate__bounce"
         src="squirrel.png"
       />
       <img
-        alt=""
-        class="animate__animated.animate__fast animate__swing game-play__oom "
-        id="oom"
+        alt="Animated Image"
+        class="animate__animated.animate__fast game-play__oom animate__swing"
         src="Group 146swingingOom.png"
       />
     </div>
