@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the Ooms needs 1`] = `
+<div>
+  <div
+    class="needs"
+  >
+    <img
+      alt="ooms needs"
+    />
+    <p
+      class="needs__percentage"
+    >
+      %
+    </p>
+  </div>
+</div>
+`;
