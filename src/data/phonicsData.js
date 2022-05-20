@@ -5,6 +5,11 @@ const phonics = {
           text: "as in 'sat'",
           soundUrl: "./assets/sounds/s_1.mp3",
         },
+        a: {
+          phonics: "a",
+          text: "as in 'ant'",
+          soundUrl: "./assets/sounds/a_1.mp3",
+        },
         t: {
           phonics: "t",
           text: "as in 'tap'",
@@ -113,3 +118,5 @@ const phonics = {
     }    
 };
 export default phonics;
+
+// Phonic data foir Level1 

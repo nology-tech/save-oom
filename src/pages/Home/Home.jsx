@@ -4,6 +4,7 @@ import NavBar from '../../containers/navBar/NavBar';
 import "./Home.scss";
 
 
+
 const Home = () => {
 
   return (
