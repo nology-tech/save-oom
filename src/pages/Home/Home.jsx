@@ -5,6 +5,7 @@ import "./Home.scss";
 
 
 const Home = () => {
+
   return (
     <>
       <Layout>
@@ -15,3 +16,4 @@ const Home = () => {
 };
 
 export default Home;
+
