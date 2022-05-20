@@ -3,9 +3,11 @@ import React from 'react'
 
 const GamePlay = () => {
   return (
-    <div className='game-play'>
 
-    </div>
+    <section className='game-play'>
+
+    </section>
+
   )
 }
 
