@@ -2,7 +2,9 @@ import React from 'react';
 import Layout from '../../components/Layout/Layout';
 import NavBar from '../../containers/navBar/NavBar';
 
+
 const Home = () => {
+
   return (
     <>
       <Layout>
@@ -13,3 +15,4 @@ const Home = () => {
 };
 
 export default Home;
+
