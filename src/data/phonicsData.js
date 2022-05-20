@@ -118,3 +118,5 @@ const phonics = {
     }    
 };
 export default phonics;
+
+// Phonic data foir Level1 
