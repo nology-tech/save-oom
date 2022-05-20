@@ -1,9 +1,9 @@
 import React from "react";
 import "./Button.scss";
 
-const Button = ({buttonText, buttonStyle}) => {
+const Button = ({buttonText, buttonStyle, onClickEvent}) => {
    
-  return <button className={buttonStyle}>{buttonText}</button>;
+  return <button className={buttonStyle} onClick={onClickEvent}>{buttonText}</button>;
 };
 
 export default Button;
