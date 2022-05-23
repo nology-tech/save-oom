@@ -3,14 +3,14 @@ import background from '../../assets/images/Frame 5backgroung.png';
 import swingingOom from '../../assets/images/Group 146swingingOom.png';
 import squirrel from '../../assets/images/squirrel.png';
 import AnimatedImage from '../../components/AnimatedImage/AnimatedImage';
-import './GamePlayAnimation.scss';
+import './SwingGamePlay.scss';
 
-const GamePlayAnimation = () => {
+const SwingGamePlay = () => {
   return (
-    <div className='game-play-animation'>
-      <div className='game-play-animation__images'>
+    <div className='swing-game-play'>
+      <div className='swing-game-play__images'>
         <img
-          className='game-play-animation__background'
+          className='swing-game-play__background'
           src={background}
           alt='background'
         />
@@ -19,17 +19,17 @@ const GamePlayAnimation = () => {
           imageToAnimate={squirrel}
           animationClass={'animate__animated'}
           animationType={'animate__bounce'}
-          imageStylesClass={'game-play-animation__squirrel'}
+          imageStylesClass={'swing-game-play__squirrel'}
         />
         <AnimatedImage
           imageToAnimate={swingingOom}
           animationClass={'animate__animated.animate__fast'}
           animationType={'animate__swing'}
-          imageStylesClass={'game-play-animation__oom'}
+          imageStylesClass={'swing-game-play__oom'}
         />
       </div>
     </div>
   );
 };
 
-export default GamePlayAnimation;
+export default SwingGamePlay;
