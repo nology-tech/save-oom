@@ -8,7 +8,9 @@ import {
     getDocs,
     doc,
     getDoc,
-  } from "firebase/firestore/lite";
+    query,
+    where
+  } from "firebase/firestore";
   
 
 // Your web app's Firebase configuration
@@ -56,6 +58,17 @@ async function getUsers(db) {
     });
     return phonicsArr;
   }
+
+   
+  export async function getSpecificRoundsForUser(id, game) {
+    const q = query(collection(db, "users", id,"rounds_played"), where("gameId", "==", game));
+    const querySnap = await getDocs(q);
+    const phonicsArr = querySnap.docs.map((doc) => {
+      return doc.data().phonic;
+    });
+    return phonicsArr;
+  }
+  
   
 //   export async function startNewGame(userId, gameId, level) {
 //     // get the user for the userId
