@@ -13,7 +13,7 @@ const Home = () => {
       <Layout>
 
         <NavBar />
-        <GamePlay />
+        
       </Layout>
     </>
   );
