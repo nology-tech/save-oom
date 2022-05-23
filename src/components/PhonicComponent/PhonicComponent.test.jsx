@@ -1,13 +1,26 @@
 import {render, screen} from "@testing-library/react";
 import PhonicComponent from "./PhonicComponent";
+import { customRender } from '../../utils/testUtils';
 
-it("Should render the heading text 'This a test'", ()=> {
+it("Should render the heading text 's'", ()=> {
     //1. Arrange
-    render(<PhonicComponent phonicText={'Test'}/>);
+    render(<PhonicComponent phonicText={"s"}/>);
 
     //2. Act
-    const headingText = screen.queryByText('Test')
+    const headingText = screen.queryByText('s')
 
     //3. Assert
-    expect(headingText).toBeInTheDocument()
+    expect(headingText).toBeInTheDocument();
 })
+
+
+it('Should render the navbar header', () => {
+    const { container } = customRender(<PhonicComponent phonicText={"test"} />);
+    expect(container).toMatchSnapshot();
+});
+
+it('Should contain the navbar heading', () => {
+    render(<PhonicComponent phonicText={"test"} />);
+    const phonicHeading = screen.getByText(/test/i)
+    expect(phonicHeading).toBeInTheDocument();
+});
