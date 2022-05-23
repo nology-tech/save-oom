@@ -1,10 +1,10 @@
 @use "../../styles/variables" as *;
 
-.LogIn{
+.logIn{
   margin: auto;
 
 
-  &__Container{
+  &__container{
     display: flex;
     margin: auto;
     background-color: $color-secondary-light;
@@ -15,25 +15,25 @@
     padding: 1.2rem; //20px
   }
   
-  &__Image{
+  &__image{
     display: flex;
     justify-content: center;
   }
 
-  &__Heading{
+  &__heading{
     color: white;
   }
 
-  &__TopText{
+  &__topText{
     color: #9BAACF;
   }
 
-  &__BottomText{
+  &__bottomText{
     color:white;
     text-align: center;
   }
 
-  &__RegistrationLink{
+  &__registrationLink{
     color: white;
   }
 

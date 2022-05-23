@@ -9,24 +9,24 @@ const Registration = () => {
   return (
     <>
       <Layout>
-        <div className="Registration">
-          <div className="Registration__Image">
+        <div className="registration">
+          <div className="registration__image">
             <Logo />
           </div>
-          <div className="Registration__Container">
-            <h1 className="Registration__Heading">Create your account</h1>
-            <p className="Registration__TopText">This is the registration page</p>
-            <TextInput className="Registration__Input" labelText={"First Name"} />
-            <TextInput className="Registration__Input" labelText={"Email Address"} />
-            <TextInput className="Registration__Input" labelText={"Password"} />
-            <Button className="Registration__Button" buttonText={"Create your account"} buttonStyle={"button-secondary"} />
-            <p className="Registration__BottomText">
+          <form className="registration__container">
+            <h1 className="registration__heading">Create your account</h1>
+            <p className="registration__topText">This is the registration page</p>
+            <TextInput className="registration__input" labelText={"First Name"} />
+            <TextInput className="registration__input" labelText={"Email Address"} />
+            <TextInput className="registration__input" labelText={"Password"} />
+            <Button className="registration__button" buttonText={"Create your account"} buttonStyle={"button-secondary"} />
+            <p className="registration__bottomText">
               Already have an account?{" "}
-              <a className="Registration__RegistrationLink" href="../LogIn/LogIn.jsx">
+              <a className="registration__registrationLink" href="../LogIn/LogIn.jsx">
                 Sign in
               </a>
             </p>
-          </div>
+          </form>
         </div>
       </Layout>
     </>

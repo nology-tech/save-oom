@@ -1,14 +1,14 @@
 @use "../../styles/variables" as *;
 
-.Registration{
+.registration{
   margin:auto;
 
-  &__Image{
+  &__image{
     display: flex;
     justify-content: center;
   }
 
-  &__Container{
+  &__container{
     display: flex;
     margin: auto;
     background-color: $color-secondary-light;
@@ -20,20 +20,20 @@
 
   }
 
-  &__Heading{
+  &__heading{
     color: white;
   }
 
-  &__TopText{
+  &__topText{
     color: #9BAACF;
   }
 
-  &__BottomText{
+  &__bottomText{
     color:white;
     text-align: center;
   }
 
-  &__RegistrationLink{
+  &__registrationLink{
     color: white;
   }
 
