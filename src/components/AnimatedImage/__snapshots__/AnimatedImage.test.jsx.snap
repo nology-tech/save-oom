@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render the Game Play screen 1`] = `
+exports[`Should render the AnimatedImage to screen 1`] = `
 <div>
   <img
     alt="Animated Image"
