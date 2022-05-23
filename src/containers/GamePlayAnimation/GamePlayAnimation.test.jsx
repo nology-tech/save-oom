@@ -1,8 +1,8 @@
 import { customRender } from '../../utils/testUtils';
-import GamePlay from './GamePlay';
+import GamePlayAnimation from './GamePlayAnimation';
 
 it('Should render the Game Play screen', () => {
-  const { container } = customRender(<GamePlay />);
+  const { container } = customRender(<GamePlayAnimation />);
 
   expect(container).toMatchSnapshot();
 });

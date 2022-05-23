@@ -1,13 +1,10 @@
-@use "../../styles/variables" as *;
+@use '../../styles/variables' as *;
 
-.game-play {
-
-
-
-  height: 100%;
-  width: 100%;
+.game-play-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
 
   background-color: $color-secondary-dark;
   //background-image: url("");
-
 }

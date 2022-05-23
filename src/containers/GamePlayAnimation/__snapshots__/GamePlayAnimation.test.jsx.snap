@@ -3,24 +3,24 @@
 exports[`Should render the Game Play screen 1`] = `
 <div>
   <div
-    class="game-play"
+    class="game-play-animation"
   >
     <div
-      class="game-play__images"
+      class="game-play-animation__images"
     >
       <img
         alt="background"
-        class="game-play__background"
+        class="game-play-animation__background"
         src="Frame 5backgroung.png"
       />
       <img
         alt="Animated Image"
-        class="animate__animated game-play__squirrel animate__bounce"
+        class="animate__animated game-play-animation__squirrel animate__bounce"
         src="squirrel.png"
       />
       <img
         alt="Animated Image"
-        class="animate__animated.animate__fast game-play__oom animate__swing"
+        class="animate__animated.animate__fast game-play-animation__oom animate__swing"
         src="Group 146swingingOom.png"
       />
     </div>
