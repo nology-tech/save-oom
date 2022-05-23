@@ -68,6 +68,27 @@ async function getUsers(db) {
     });
     return phonicsArr;
   }
+
+     
+  export async function getInCorrectRoundsForUser(id, game) {
+    const q = query(collection(db, "users", id,"rounds_played"), where("gameId", "==", game), where("correct", "==", false));
+    const querySnap = await getDocs(q);
+    const phonicsArr = querySnap.docs.map((doc) => {
+      return doc.data().phonic;
+    });
+    return phonicsArr;
+  }
+       
+  export async function getCorrectRoundsForUser(id, game) {
+    const q = query(collection(db, "users", id,"rounds_played"), where("gameId", "==", game), where("correct", "==", true));
+    const querySnap = await getDocs(q);
+    const phonicsArr = querySnap.docs.map((doc) => {
+      return doc.data().phonic;
+    });
+    return phonicsArr;
+  }
+  
+  
   
   
 //   export async function startNewGame(userId, gameId, level) {
