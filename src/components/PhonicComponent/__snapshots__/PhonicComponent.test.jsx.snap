@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the phonic header 1`] = `
+<div>
+  <div
+    class="phonic-component"
+  >
+    <h1
+      class="phonic-component__heading"
+    >
+      test
+    </h1>
+  </div>
+</div>
+`;
