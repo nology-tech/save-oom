@@ -14,12 +14,12 @@ it("Should render the heading text 's'", ()=> {
 })
 
 
-it('Should render the navbar header', () => {
+it('Should render the phonic header', () => {
     const { container } = customRender(<PhonicComponent phonicText={"test"} />);
     expect(container).toMatchSnapshot();
 });
 
-it('Should contain the navbar heading', () => {
+it('Should contain the phonic heading', () => {
     render(<PhonicComponent phonicText={"test"} />);
     const phonicHeading = screen.getByText(/test/i)
     expect(phonicHeading).toBeInTheDocument();
