@@ -1,13 +1,13 @@
 import React from 'react'
 import AvatarHeading from '../../components/AvatarHeading/AvatarHeading'
 import Button from '../../components/Button/Button'
-import NavBar from '../../containers/navBar/NavBar'
+
 import './GameEnd.scss'
 
 const GameEnd = () => {
   return (
     <div className='game-end'>
-        <NavBar/>
+
         <div className='game-end__content'>
             <div className='game-end__content__top'>
                 <p className='game-end__timer'>Time&apos;s up</p>
