@@ -9,7 +9,7 @@ const Graph = () => {
         vAxis: {title: "SCORE(%)",minValue: 0, maxValue: 100,textStyle:{color:"#FFFFFF"},titleTextStyle:{color:"#FFFFFF"}},
         curveType: "function",
         pointSize:10,
-        backgroundColor: "#1E2639",
+        backgroundColor: "#1e2332",
         legend: {
           textStyle: {
             color: '#FFFFFF',
