@@ -83,6 +83,83 @@ exports[`Should render the app 1`] = `
         Logout
       </button>
     </div>
+    <div
+      class="stats-page"
+    >
+      <div
+        class="stats-page__stats"
+      >
+        <div
+          class="stats-page__top-line"
+        >
+          <div
+            class="avatar-heading"
+          >
+            <h1
+              class="dropdown-heading"
+            >
+              Stats for Jack
+            </h1>
+          </div>
+          <div
+            class="stats-page__buttons"
+          >
+            <div
+              class="dropdown"
+              role="dropdown"
+            >
+              <button
+                aria-expanded="false"
+                class="dropdown-level dropdown-toggle btn btn-primary"
+                id="react-aria1807156013-1"
+                type="button"
+              >
+                LEVEL 1
+              </button>
+            </div>
+            <div
+              class="dropdown"
+              role="dropdown"
+            >
+              <button
+                aria-expanded="false"
+                class="dropdown-name dropdown-toggle btn btn-primary"
+                id="react-aria1807156013-2"
+                type="button"
+              >
+                JACK
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="stats-page__score-graph"
+        >
+          <h2>
+            Score Over Time
+          </h2>
+          <div />
+        </div>
+        <div
+          class="stats-page__correct-phonemes"
+        >
+          <h2>
+            Correct Phonemes
+          </h2>
+          <ul>
+            <li>
+              SH
+            </li>
+            <li>
+              EE
+            </li>
+            <li>
+              P
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
