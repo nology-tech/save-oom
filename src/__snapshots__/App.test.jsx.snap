@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the app 1`] = `
+<div>
+  <div
+    class="layout"
+  >
+    <div
+      class="nav-bar"
+    >
+      <div
+        class="nav-bar__section"
+      >
+        <img
+          alt="Logo image"
+          class="logo__image"
+          src="logo.png"
+        />
+        <div
+          class="nav-bar-header"
+        >
+          <h2
+            class="nav-bar-header__heading"
+          >
+            Phonics stages
+          </h2>
+        </div>
+        <h2>
+          Introduction
+        </h2>
+        <div
+          class="nav-bar-header"
+        >
+          <h2
+            class="nav-bar-header__heading"
+          >
+            Level 1
+          </h2>
+        </div>
+        <div
+          class="nav-bar-header"
+        >
+          <h2
+            class="nav-bar-header__heading"
+          >
+            Level 2
+          </h2>
+        </div>
+        <div
+          class="nav-bar-header"
+        >
+          <h2
+            class="nav-bar-header__heading"
+          >
+            Level 3
+          </h2>
+        </div>
+        <div
+          class="nav-bar-header"
+        >
+          <h2
+            class="nav-bar-header__heading"
+          >
+            Stats
+          </h2>
+        </div>
+        <h2>
+          Jack
+        </h2>
+        <div
+          class="nav-bar-header"
+        >
+          <h2
+            class="nav-bar-header__heading"
+          >
+            Add Avatar
+          </h2>
+        </div>
+      </div>
+      <button
+        class="button-logout"
+      >
+        Logout
+      </button>
+    </div>
+    <div
+      class="stats-page"
+    >
+      <div
+        class="stats-page__stats"
+      >
+        <div
+          class="stats-page__top-line"
+        >
+          <div
+            class="avatar-heading"
+          >
+            <h1
+              class="dropdown-heading"
+            >
+              Stats for Jack
+            </h1>
+          </div>
+          <div
+            class="stats-page__buttons"
+          >
+            <div
+              class="dropdown"
+              role="dropdown"
+            >
+              <button
+                aria-expanded="false"
+                class="dropdown-level dropdown-toggle btn btn-primary"
+                id="react-aria9900178962-1"
+                type="button"
+              >
+                LEVEL 1
+              </button>
+            </div>
+            <div
+              class="dropdown"
+              role="dropdown"
+            >
+              <button
+                aria-expanded="false"
+                class="dropdown-name dropdown-toggle btn btn-primary"
+                id="react-aria9900178962-2"
+                type="button"
+              >
+                JACK
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="stats-page__score-graph"
+        >
+          <h2>
+            Score Over Time
+          </h2>
+          <div
+            role="graph"
+          />
+        </div>
+        <div
+          class="stats-page__correct-phonemes"
+        >
+          <h2>
+            Correct Phonemes
+          </h2>
+          <ul>
+            <li>
+              SH
+            </li>
+            <li>
+              EE
+            </li>
+            <li>
+              P
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
