@@ -15,14 +15,14 @@ const Registration = () => {
           </div>
           <form className="registration__container">
             <h1 className="registration__heading">Create your account</h1>
-            <p className="registration__topText">This is the registration page</p>
+            <p className="registration__top-text">This is the registration page</p>
             <TextInput className="registration__input" labelText={"First Name"} />
             <TextInput className="registration__input" labelText={"Email Address"} />
             <TextInput className="registration__input" labelText={"Password"} />
             <Button className="registration__button" buttonText={"Create your account"} buttonStyle={"button-secondary"} />
-            <p className="registration__bottomText">
+            <p className="registration__bottom-text">
               Already have an account?{" "}
-              <a className="registration__registrationLink" href="../LogIn/LogIn.jsx">
+              <a className="registration__link" href="../LogIn/LogIn.jsx">
                 Sign in
               </a>
             </p>

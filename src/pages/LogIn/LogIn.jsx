@@ -9,19 +9,19 @@ const LogIn = () => {
   return (
     <>
       <Layout>
-        <div className="logIn">
-          <div className="logIn__image">
+        <div className="log-in">
+          <div className="log-in__image">
             <Logo />
           </div>
-          <form className="logIn__container">
-            <h1 className="logIn__heading">Welcome!</h1>
-            <p className="logIn__topText">This is the log in page</p>
-            <TextInput className="logIn__input" labelText={"Email"} />
-            <TextInput className="logIn__input" labelText={"Password"} />
-            <Button className="logIn__button" buttonText={"Log in"} buttonStyle={"button-secondary"} />
-            <p className="logIn__bottomText">
+          <form className="log-in__container">
+            <h1 className="log-in__heading">Welcome!</h1>
+            <p className="log-in__top-text">This is the log in page</p>
+            <TextInput className="log-in__input" labelText={"Email"} />
+            <TextInput className="log-in__input" labelText={"Password"} />
+            <Button className="log-in__button" buttonText={"Log in"} buttonStyle={"button-secondary"} />
+            <p className="log-in__bottom-text">
               Don&apos;t have an Account?{" "}
-              <a className="logIn__registrationLink" href="../Registration/Registration.jsx">
+              <a className="log-in__registration-link" href="../Registration/Registration.jsx">
                 Sign up
               </a>
             </p>

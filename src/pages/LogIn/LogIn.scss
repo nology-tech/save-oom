@@ -1,6 +1,6 @@
 @use "../../styles/variables" as *;
 
-.logIn{
+.log-in{
   margin: auto;
 
 
@@ -24,16 +24,16 @@
     color: white;
   }
 
-  &__topText{
+  &__top-text{
     color: #9BAACF;
   }
 
-  &__bottomText{
+  &__bottom-text{
     color:white;
     text-align: center;
   }
 
-  &__registrationLink{
+  &__registration-link{
     color: white;
   }
 
