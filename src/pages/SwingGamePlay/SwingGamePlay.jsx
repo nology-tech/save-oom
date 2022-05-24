@@ -1,5 +1,5 @@
 import React from 'react';
-import background from '../../assets/images/Frame 5backgroung.png';
+import background from '../../assets/images/GameBackground.png';
 import swingingOom from '../../assets/images/Group 146swingingOom.png';
 import squirrel from '../../assets/images/squirrel.png';
 import AnimatedImage from '../../components/AnimatedImage/AnimatedImage';
