@@ -23,3 +23,12 @@ exports[`Should render the Swing Game Play screen 1`] = `
   </div>
 </div>
 `;
+
+exports[`Should render the the AninatedImage components on screen 1`] = `
+<div>
+  <img
+    alt="Animated Image"
+    class="undefined undefined undefined"
+  />
+</div>
+`;
