@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the AnimatedImage to screen 1`] = `
+<div>
+  <img
+    alt="Animated Image"
+    class="undefined undefined undefined"
+  />
+</div>
+`;
