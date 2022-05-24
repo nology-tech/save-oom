@@ -85,6 +85,7 @@ exports[`Should render the app 1`] = `
     </div>
     <div
 <<<<<<< HEAD
+<<<<<<< HEAD
       class="stats-page"
     >
       <div
@@ -161,6 +162,8 @@ exports[`Should render the app 1`] = `
         </div>
       </div>
 =======
+=======
+>>>>>>> e3e8a086a5b5e9bbc200d76e47ccf14e7dd961b9
       class="swing-game-play"
     >
       <img
@@ -178,6 +181,9 @@ exports[`Should render the app 1`] = `
         class="animate__animated.animate__fast swing-game-play__oom animate__swing"
         src="Group 146swingingOom.png"
       />
+<<<<<<< HEAD
+>>>>>>> e3e8a086a5b5e9bbc200d76e47ccf14e7dd961b9
+=======
 >>>>>>> e3e8a086a5b5e9bbc200d76e47ccf14e7dd961b9
     </div>
   </div>
