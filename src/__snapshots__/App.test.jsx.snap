@@ -84,6 +84,7 @@ exports[`Should render the app 1`] = `
       </button>
     </div>
     <div
+<<<<<<< HEAD
       class="stats-page"
     >
       <div
@@ -159,6 +160,25 @@ exports[`Should render the app 1`] = `
           </ul>
         </div>
       </div>
+=======
+      class="swing-game-play"
+    >
+      <img
+        alt="background"
+        class="swing-game-play__background"
+        src="GameBackground.png"
+      />
+      <img
+        alt="Animated Image"
+        class="animate__animated swing-game-play__squirrel animate__bounce"
+        src="squirrel.png"
+      />
+      <img
+        alt="Animated Image"
+        class="animate__animated.animate__fast swing-game-play__oom animate__swing"
+        src="Group 146swingingOom.png"
+      />
+>>>>>>> e3e8a086a5b5e9bbc200d76e47ccf14e7dd961b9
     </div>
   </div>
 </div>
