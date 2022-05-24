@@ -1,23 +1,20 @@
 import React from 'react';
 import Layout from '../../components/Layout/Layout';
-import GamePlay from '../../containers/GamePlay/GamePlay';
+
 import NavBar from '../../containers/navBar/NavBar';
-import "./Home.scss";
-
-
+import SwingGamePlay from '../SwingGamePlay/SwingGamePlay';
+import './Home.scss';
 
 const Home = () => {
-
   return (
     <>
       <Layout>
 
         <NavBar />
-        
+        <SwingGamePlay />
       </Layout>
     </>
   );
 };
 
 export default Home;
-
