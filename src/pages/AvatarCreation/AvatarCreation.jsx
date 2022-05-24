@@ -7,6 +7,8 @@ import Button from "../../components/Button/Button";
 
 import "./AvatarCreation.scss";
 
+// use state for container - which changes upon an index value that changes with button click - and if page is exited resets
+
 const AvatarCreation = () => {
   return (
     <>
