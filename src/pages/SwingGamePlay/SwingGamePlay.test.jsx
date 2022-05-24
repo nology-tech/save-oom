@@ -7,8 +7,3 @@ it('Should render the Swing Game Play screen', () => {
 
   expect(container).toMatchSnapshot();
 });
-it('Should render the the AninatedImage components on screen', () => {
-  const { container } = customRender(<AnimatedImage />);
-
-  expect(container).toMatchSnapshot();
-});
