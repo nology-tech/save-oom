@@ -30,8 +30,8 @@ const Home = () => {
     <>
       <Layout>
         <NavBar />
-        <SwingGamePlay />
       </Layout>
+      
     </>
   );
 };
