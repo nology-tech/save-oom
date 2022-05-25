@@ -3,20 +3,19 @@ import AvatarHeading from '../../components/AvatarHeading/AvatarHeading'
 import Button from '../../components/Button/Button'
 import './GameEnd.scss'
 
-const GameEnd = () => {
+const GameEnd = ({score}) => {
   return (
-    <div className='game-end'>
-        <div className='game-end__content'>
-            <div className='game-end__content__top'>
+        <div className='game-end'>
+            <div className='game-end__top'>
                 <p className='game-end__timer'>Time&apos;s up</p>
                 <AvatarHeading avatarHeadingText={"Amazing effort Jack"} />
                 <div className='game-end__buttons'>
                     <Button buttonStyle={"button-primary"} buttonText={"Back to Home"}/>
                     <Button buttonStyle={"button-primary"} buttonText={"Play Again"}/>
                 </div>
+                <p className='game-end__score'>No. of correct sounds: {score}</p>
             </div>
-            <p className='game-end__score'>No. of correct sounds:</p>
-        </div>
+           
         
     </div>
   )

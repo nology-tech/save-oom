@@ -1,20 +1,18 @@
 @use "../../styles/variables" as *;
 
 .game-end{
-    display: flex;
-    &__content{
+    // background-image: url(../../assets/images/GameBackground.png);
+    // background-size: 100% 100%;
+    // background-repeat: no-repeat;
         display: flex;
         // justify-content: space-around;
         flex-direction: column;
         // width: 90%;
+        align-items: center;
         text-align: center;
-        background-image: url(../../assets/images/GameBackground.png);
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
         &__top{
-            margin-top: 15rem;
-            margin-bottom: 25rem;
-        }
+            margin-top: 10rem;
+            // margin-bottom: 25rem;
     }
     
     &__buttons{

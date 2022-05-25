@@ -2,30 +2,59 @@
 @use '../../../node_modules/animate.css/animate.css';
 
 .swing-game-play {
-  display: flex;
-  flex-direction: row;
+  // display: flex;
+  // flex-direction: row;
   width: 100%;
+  background-image: url(../../assets/images/GameBackground.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 
-  &__background {
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    height: 100%;
+  // &__background {
+  //   background-repeat: no-repeat;
+  //   background-attachment: fixed;
+  //   background-size: cover;
+  //   height: 100%;
+  //   width: 100%;
+  // }
+
+  &__phonic {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__button-and-score {
+    // border: 2px solid red;
+    margin-top: 7rem;
+    justify-self: center;
+    display: flex;
+    text-align: center;
+    align-items: flex-end;
+    padding: 2rem;
+
+    p {
+      color: $color-white;
+    }
+    
   }
 
   &__oom {
     position: absolute;
-    top: 32.5rem;
-    left: 65rem;
+    // top: 32.5rem;
+    // left: 65rem;
+    bottom: 0rem;
+    left: 63%;
     animation-delay: 1s;
     animation-duration: 8s;
   }
 
   &__squirrel {
     position: absolute;
-    left: 20rem;
-    top: 37rem;
+    // left: 20rem;
+    // top: 37rem;
+    bottom: 1rem;
+    left: 30%;
     animation-duration: 10s;
     animation-delay: 1s;
   }
