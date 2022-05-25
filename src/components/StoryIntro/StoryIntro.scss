@@ -1,11 +1,10 @@
 @use "../../styles/variables" as *;
-  
 
 .intro {
- height: 20rem;
- width: 51rem;
- margin: auto;
- margin-top: 15rem;
+  height: 20rem;
+  width: 51rem;
+  margin: auto;
+  margin-top: 15rem;
 
   &__paragraph {
     color: $color-primary;

@@ -1,5 +1,5 @@
-import React from 'react';
-import './NavBarHeading.scss';
+import React from "react";
+import "./NavBarHeading.scss";
 
 const NavBarHeading = ({ headingText, headingImg, headingStyle, isLocked }) => {
   return (

@@ -1,35 +1,34 @@
 @use "../../styles/reset.scss" as *;
 @use "../../styles/variables.scss" as *;
 
-.text-input-container{
-    display: grid;
-    grid-template-columns: 25vw;
-    margin: 0px 5px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 3px;
-    width: max-content;
+.text-input-container {
+  display: grid;
+  grid-template-columns: 25vw;
+  margin: 0px 5px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 3px;
+  width: max-content;
+  background-color: transparent;
+  * {
+    margin: 5px;
+    color: $color-white;
     background-color: transparent;
-    *{
-        margin: 5px;
-        color: $color-white;
-        background-color: transparent;
-    }
-    &__label{
-        width: 144px;
-        height: 19px;
-        font-family: $font-secondary;
-        font-weight: 300;
-        font-size: 1rem;
-    }
-    &__input{
-        width: 339px;
-        height: 55px;
-        font-weight: bold;
-        font-size: 0.8em;
-        border: 1px solid $color-border;
-        padding-left: 2ch;
-        padding-right: 2ch;
-    }
+  }
+  &__label {
+    width: 144px;
+    height: 19px;
+    font-family: $font-secondary;
+    font-weight: 300;
+    font-size: 1rem;
+  }
+  &__input {
+    width: 339px;
+    height: 55px;
+    font-weight: bold;
+    font-size: 0.8em;
+    border: 1px solid $color-border;
+    padding-left: 2ch;
+    padding-right: 2ch;
+  }
 }
-

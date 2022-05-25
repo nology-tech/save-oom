@@ -1,18 +1,12 @@
-import React from 'react'
-import "./StoryIntro.scss"
+import React from "react";
+import "./StoryIntro.scss";
 
-const StoryIntro = ({text}) => {
+const StoryIntro = ({ text }) => {
   return (
-    <div className='intro'>
-     
-
-      <p className='intro__paragraph'>{text}</p>
-
-      
-
-
+    <div className="intro">
+      <p className="intro__paragraph">{text}</p>
     </div>
-  )
-}
+  );
+};
 
-export default StoryIntro
+export default StoryIntro;
