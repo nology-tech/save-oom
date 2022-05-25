@@ -3,6 +3,7 @@ import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 import {
+  addDoc,
   getFirestore,
   collection,
   getDocs,
@@ -10,9 +11,9 @@ import {
   getDoc,
   query,
   where,
-  orderBy
+  orderBy,
+  Timestamp
 } from "firebase/firestore";
-// import { getDatabase, ref, set } from "firebase/database";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -119,5 +120,24 @@ export const getArrayOfRounds = async(id, game, getGameRounds) =>{
 //     // add start date, game id, level and so on
 //     // save as new record.
 //   }
+/** Function that returns an array of rounds 
+@param {String} id
+@param {String} game
+@param {Object} roundInfo
+@param {String} answer
+*@returns returs a promise.
+*/ 
+
+export const saveUserRound = async(id, game, gameStats, answer) => {
+  const {isCorrect, score} = gameStats
+  await addDoc(collection(db, "users", id, "rounds_played"),{
+    correct: isCorrect, 
+    gameId: game,
+    phonic: answer, 
+    roundTime: Timestamp.fromDate(new Date()).toDate(),
+    score: score,
+  })
+
+}
 
 export default getUsers;
