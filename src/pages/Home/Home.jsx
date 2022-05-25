@@ -7,8 +7,7 @@ import { getCorrectGameRoundsForUser,  getIncorrectGameRoundsForUser, getArrayOf
 
 const Home = () => {
 
-  // getSpecificRoundsForUser("dumbo", "swing").then(res => console.log(res))
- getArrayOfRounds("dumbo", "swing", getCorrectGameRoundsForUser).then(res => console.log(res))
+ getArrayOfRounds("dumbo", "swing", getCorrectGameRoundsForUser).then(res => console.log(res)).catch()
  getArrayOfRounds("dumbo", "swing", getIncorrectGameRoundsForUser).then(res => console.log(res))
 
   return (

@@ -12,6 +12,7 @@ import {
   where,
   orderBy
 } from "firebase/firestore";
+// import { getDatabase, ref, set } from "firebase/database";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -29,7 +30,7 @@ const app = initializeApp(firebaseConfig);
 // Reference the firestore DB
 export const db = getFirestore(app);
 
-async function getUsers(db) {
+export const getUsers = async (db) => {
   const usersCol = collection(db, "users");
   const usersSnapshot = await getDocs(usersCol);
   const userList = usersSnapshot.docs.map((doc) => doc.data());
@@ -40,14 +41,22 @@ async function getUsers(db) {
 /**
  *
  * @param {*} userId
- * @returns a docSnap (document snapshow), to access use docSnap.data(), returns a Promise.
+ * @returns a docSnap (document snapshot), to access use docSnap.data(), returns a Promise.
  */
-export async function getUserFromId(userId) {
+export const getUserFromId = async (userId) => {
   const docRef = doc(db, "users", userId);
   const docSnap = await getDoc(docRef);
   return docSnap;
 }
-export async function getGameRoundsForUser(id, game) {
+
+/** 
+ * Get all the rounds of a specific game for a given user, ordered by most recent first 
+
+ @param {*} userId
+*@returns a querySnap (document snapshot), returns a Promise.
+*/
+
+export const getGameRoundsForUser = async(id, game) => {
   const q = query(
     collection(db, "users", id, "rounds_played"),
     where("gameId", "==", game), 
@@ -57,9 +66,13 @@ export async function getGameRoundsForUser(id, game) {
   return querySnap;
 }
 
-
-
-export async function getCorrectGameRoundsForUser(id, game) {
+/** 
+ * Get all the correct round of a specific game for a given user, ordered by most recent first 
+@param {String} userId
+@param {String} gameId
+*@returns a promise with the query snapshot.
+*/
+export const getCorrectGameRoundsForUser = async(id, game) => {
   const q = query(
     collection(db, "users", id, "rounds_played"),
     where("gameId", "==", game), 
@@ -70,8 +83,12 @@ export async function getCorrectGameRoundsForUser(id, game) {
   return querySnap;
 }
 
-
-export async function getIncorrectGameRoundsForUser(id, game) {
+/** Get all the incorrect round of a specific game for a given user, ordered by most recent first 
+@param {String} userId
+@param {String} gameId
+*@returns  a promise with the query snapshot.
+*/
+export const getIncorrectGameRoundsForUser = async(id, game) => {
   const q = query(
     collection(db, "users", id, "rounds_played"),
     where("gameId", "==", game), 
@@ -82,49 +99,19 @@ export async function getIncorrectGameRoundsForUser(id, game) {
   return querySnap;
 }
 
-
-export async function getArrayOfRounds(id, game, getGameRounds) {
+/** Function that returns an array of rounds 
+@param {String} userId
+@param {String} gameId
+@param {Function} getGameRounds
+*@returns returs a promise.
+*/ 
+export const getArrayOfRounds = async(id, game, getGameRounds) =>{
   const querySnap = await getGameRounds(id, game);
   const phonicsArr = querySnap.docs.map((doc) => {
     return doc.data().phonic;
   });
   return phonicsArr;
 }
-
-export async function getInCorrectRoundsForUser(id, game) {
-  const q = query(
-    collection(db, "users", id, "rounds_played"),
-    where("gameId", "==", game),
-    where("correct", "==", false)
-  );
-  const querySnap = await getDocs(q);
-  const phonicsArr = querySnap.docs.map((doc) => {
-    return doc.data().phonic;
-  });
-  return phonicsArr;
-}
-
-export async function getCorrectRoundsForUser(id, game) {
-  const q = query(
-    collection(db, "users", id, "rounds_played"),
-    where("gameId", "==", game),
-    where("correct", "==", true)
-  );
-  const querySnap = await getDocs(q);
-  const phonicsArr = querySnap.docs.map((doc) => {
-    return doc.data().phonic;
-  });
-  return phonicsArr;
-}
-
-// export async function getRecentCorrectRoundsForUser(id, game) {
-//   const q = query(collection(db, "users", id,"rounds_played"), where("gameId", "==", game), where("correct", "==", true));
-//   const querySnap = await getDocs(q);
-//   const phonicsArr = querySnap.docs.map((doc) => {
-//     return doc.data().phonic;
-//   });
-//   return phonicsArr;
-// }
 
 //   export async function startNewGame(userId, gameId, level) {
 //     // get the user for the userId
