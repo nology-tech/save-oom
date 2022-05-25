@@ -1,9 +1,9 @@
-import React from 'react';
-import GamePlayAnimation from '../GamePlayAnimation/GamePlayAnimation';
+import React from "react";
+import GamePlayAnimation from "../GamePlayAnimation/GamePlayAnimation";
 
 const GamePlay = () => {
   return (
-    <section className='game-play'>
+    <section className="game-play">
       <GamePlayAnimation />
     </section>
   );

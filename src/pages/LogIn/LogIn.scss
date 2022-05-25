@@ -1,10 +1,9 @@
 @use "../../styles/variables" as *;
 
-.log-in{
+.log-in {
   margin: auto;
 
-
-  &__container{
+  &__container {
     display: flex;
     margin: auto;
     background-color: $color-secondary-light;
@@ -14,44 +13,40 @@
     justify-content: left;
     padding: 1.2rem; //20px
   }
-  
-  &__image{
+
+  &__image {
     display: flex;
     justify-content: center;
   }
 
-  &__heading{
+  &__heading {
     color: white;
   }
 
-  &__top-text{
-    color: #9BAACF;
+  &__top-text {
+    color: #9baacf;
   }
 
-  &__bottom-text{
-    color:white;
+  &__bottom-text {
+    color: white;
     text-align: center;
   }
 
-  &__registration-link{
+  &__registration-link {
     color: white;
   }
-
 }
 
-
-.text-input-container{
-
+.text-input-container {
   justify-items: left;
   align-content: left;
-  
-  &__input{
+
+  &__input {
     width: 100%;
-    
   }
 }
 
-.button-secondary{
+.button-secondary {
   margin-top: 1rem;
   width: 80%;
   margin-left: auto;
