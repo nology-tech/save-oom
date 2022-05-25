@@ -6,11 +6,6 @@ exports[`Should render the Swing Game Play screen 1`] = `
     class="swing-game-play"
   >
     <img
-      alt="background"
-      class="swing-game-play__background"
-      src="GameBackground.png"
-    />
-    <img
       alt="Animated Image"
       class="animate__animated swing-game-play__squirrel animate__bounce"
       src="squirrel.png"

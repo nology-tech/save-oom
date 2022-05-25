@@ -1,0 +1,20 @@
+@use "../../styles/reset.scss" as *;
+@use "../../styles/variables.scss" as *;
+
+.phonic-component {
+  height: 18rem;
+  width: 12rem;
+
+  &__heading {
+    font-family: $font-secondary;
+    color: $color-primary;
+    font-size: 11.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.02em;
+    text-shadow: -0.02em -0.02em 0 $color-text-border,
+      0.02em -0.02em 0 $color-text-border, -0.02em 0.02em 0 $color-text-border,
+      0.02em 0.02em 0 $color-text-border;
+  }
+}

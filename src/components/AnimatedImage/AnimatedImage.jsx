@@ -1,5 +1,5 @@
-import React from 'react';
-import './AnimatedImage.scss';
+import React from "react";
+import "./AnimatedImage.scss";
 
 const AnimatedImage = ({
   imageToAnimate,
@@ -12,7 +12,7 @@ const AnimatedImage = ({
       <img
         className={`${animationClass} ${imageStylesClass} ${animationType}`}
         src={imageToAnimate}
-        alt='Animated Image'
+        alt="Animated Image"
       />
     </>
   );

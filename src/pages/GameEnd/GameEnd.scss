@@ -1,37 +1,36 @@
 @use "../../styles/variables" as *;
 
-.game-end{
+.game-end {
+  display: flex;
+  &__content {
     display: flex;
-    &__content{
-        display: flex;
-        // justify-content: space-around;
-        flex-direction: column;
-        width: 90%;
-        text-align: center;
-        background-image: url(../../assets/images/GameBackground.png);
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        &__top{
-            margin-top: 15rem;
-            margin-bottom: 25rem;
-        }
+    // justify-content: space-around;
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+    background-image: url(../../assets/images/GameBackground.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    &__top {
+      margin-top: 15rem;
+      margin-bottom: 25rem;
     }
-    
-    &__buttons{
-        display: flex;
-        justify-content: space-evenly;
-        width: 30rem;
-        margin:0.8rem auto;
-    }
-    &__timer{
-        color: $color-white;
-        font-size: 3rem;
-        font-family:$font-secondary;
-    }
-    &__score{
-        color: $color-white;
-        font-family:$font-secondary;
-        font-size: 1.5rem;
-        
-    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 30rem;
+    margin: 0.8rem auto;
+  }
+  &__timer {
+    color: $color-white;
+    font-size: 3rem;
+    font-family: $font-secondary;
+  }
+  &__score {
+    color: $color-white;
+    font-family: $font-secondary;
+    font-size: 1.5rem;
+  }
 }
