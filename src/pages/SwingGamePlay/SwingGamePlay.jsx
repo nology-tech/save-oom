@@ -1,5 +1,5 @@
 import React from 'react';
-import background from '../../assets/images/GameBackground.png';
+// import background from '../../assets/images/GameBackground.png';
 import swingingOom from '../../assets/images/Group 146swingingOom.png';
 import squirrel from '../../assets/images/squirrel.png';
 import AnimatedImage from '../../components/AnimatedImage/AnimatedImage';
@@ -8,11 +8,11 @@ import './SwingGamePlay.scss';
 const SwingGamePlay = () => {
   return (
     <div className='swing-game-play'>
-      <img
+      {/* <img
         className='swing-game-play__background'
         src={background}
         alt='background'
-      />
+      /> */}
 
       <AnimatedImage
         imageToAnimate={squirrel}
