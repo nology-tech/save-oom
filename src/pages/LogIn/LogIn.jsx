@@ -6,6 +6,7 @@ import TextInput from "../../components/TextInput/TextInput";
 import "./LogIn.scss";
 
 const LogIn = () => {
+  
   return (
     <>
       <Layout>

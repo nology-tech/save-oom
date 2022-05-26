@@ -3,6 +3,7 @@ import "./LevelSelectCardContainer.scss";
 import LevelSelectCard from "../../components/LevelSelectCard/LevelSelectCard";
 
 const LevelSelectCardContainer = ({ levelSelectData }) => {
+
   const cardContainerJsx = levelSelectData.map((card) => {
     return (
       <LevelSelectCard
