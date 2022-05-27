@@ -1,13 +1,14 @@
 import React from "react";
 import Layout from "../../components/Layout/Layout";
 import NavBar from "../../containers/navBar/NavBar";
-import SwingGamePlay from "../SwingGamePlay/SwingGamePlay";
+// import SwingGamePlay from "../SwingGamePlay/SwingGamePlay";
 import "./Home.scss";
 import {
   getCorrectGameRoundsForUser,
   getIncorrectGameRoundsForUser,
   getArrayOfRounds,
 } from "../../utils/firebaseGameUtils";
+import Registration from "../Registration/Registration";
 
 const Home = () => {
   //   const currentRound = {
@@ -30,7 +31,8 @@ const Home = () => {
     <>
       <Layout>
         <NavBar />
-        <SwingGamePlay />
+        {/* <SwingGamePlay /> */}
+        <Registration />
       </Layout>
     </>
   );
