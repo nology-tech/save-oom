@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 // import background from '../../assets/images/GameBackground.png';
 import swingingOom from '../../assets/images/Group 146swingingOom.png';
 import squirrel from '../../assets/images/squirrel.png';
@@ -22,17 +22,25 @@ const SwingGamePlay = () => {
     newGameState.score = newGameState.score + 1;
     gameScore = newGameState.score;
     newGameState.index = handleIndexChange();
-    setGameState(newGameState);
+    setGameState(newGameState);    
     console.log(newGameState, gameState, "handleCorrect");
 
   }
   
   const handleIncorrect = () => {
     let newGameState = {...gameState};
-    newGameState.isCorrect = false;
+    // newGameState.isCorrect = false;
     newGameState.index = newGameState.index + 1;
     setGameState(newGameState);
     console.log(newGameState, gameState, "handleIncorrect");
+  }
+
+  const handleHint = () => {
+    let newGameState = {...gameState};
+    newGameState.isCorrect = false;
+    let audio = new Audio(phonicsData.levelOne[phonicsArray[gameState.index]].soundUrl )
+    audio.play()
+    setGameState(newGameState);
   }
   
   const handleIndexChange = () => {
@@ -50,52 +58,44 @@ const SwingGamePlay = () => {
     console.log(newGameState, gameState, "handleGameEnd");
   }
 
-  useEffect(() => {
-    setInterval(()=> {
-      handleGameEnd();
-    }, 10000)
-  }, []);
-
   const squirrelAnimationType = gameState.isCorrect ? "" : 'animate__bounce';
   const oomAnimationType = gameState.isCorrect ? 'animate__swing' : "";
 
   console.log(squirrelAnimationType, oomAnimationType);
   
   return (
-
-    <div className='swing-game-play'>
-      {gameState.isGameOver? (
-      <GameEnd score={gameScore}/>
-      ) : (
-      <div className='swing-game-play__images'>
-        {/* <img
-          className='swing-game-play__background'
-          src={background}
-          alt='background'
-        /> */}
-        <div className='swing-game-play__phonic'>
-          <Timer startTime={10} />
-          <PhonicComponent phonicText={phonicsArray[gameState.index]} />
+      <div className='swing-game-play'>
+        {gameState.isGameOver? (
+        <GameEnd score={gameScore}/>
+        ) : (
+        <div className='swing-game-play__images'>
+          <div className='swing-game-play__phonic'>
+            <Timer startTime={60} handleGameEnd={handleGameEnd}/>
+            <PhonicComponent phonicText={phonicsArray[gameState.index]} />
+          </div>
+          <button onClick={handleHint}>
+          <AnimatedImage
+            imageToAnimate={squirrel}
+            animationClass={"animate__animated"}
+            animationType={squirrelAnimationType}
+            imageStylesClass={'swing-game-play__squirrel'}
+          />
+          </button>
+          <AnimatedImage
+            imageToAnimate={swingingOom}
+            animationClass={'animate__animated.animate__fast'}
+            animationType={oomAnimationType}
+            imageStylesClass={'swing-game-play__oom'}
+          />
+          <div className='swing-game-play__buttons'>
+            <ValidateAnswerButtons handleCorrect={handleCorrect} handleIncorrect={handleIncorrect} />
+          </div>  
+          <p className='swing-game-play__score'>Number Of Correct Sounds: {gameState.score}</p>
+             
+           
         </div>
-        <AnimatedImage
-          imageToAnimate={squirrel}
-          animationClass={"animate__animated"}
-          animationType={squirrelAnimationType}
-          imageStylesClass={'swing-game-play__squirrel'}
-        />
-        <AnimatedImage
-          imageToAnimate={swingingOom}
-          animationClass={"animate__animated.animate__faster"}
-          animationType={oomAnimationType}
-          imageStylesClass={'swing-game-play__oom'}
-        />
-        <div className='swing-game-play__button-and-score'>
-          <p>Number Of Correct Sounds: {gameState.score}</p>
-          <ValidateAnswerButtons handleCorrect={handleCorrect} handleIncorrect={handleIncorrect} /> 
-        </div>   
+      )} 
       </div>
-    )} 
-    </div>
   );
 };
 

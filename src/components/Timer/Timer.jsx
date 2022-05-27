@@ -5,20 +5,13 @@ import "./Timer.scss";
 
 
 
- const Timer = ({startTime}) => {
+ const Timer = ({startTime, handleGameEnd}) => {
     const [counter, setCounter] = useState(startTime);
-
-
-    
-        counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
-    
-
-
-      //Add in once game created
-    //   if(counter = 0){
-    //       end game
-    //   }
-
+      counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
+      if(counter==0){
+        handleGameEnd()
+      }
+     
   return (
     <h1 className='timer'>{counter}<span className='timer__s'>s</span></h1>
   )

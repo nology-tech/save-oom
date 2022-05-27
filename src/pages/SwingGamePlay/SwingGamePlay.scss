@@ -2,20 +2,15 @@
 @use '../../../node_modules/animate.css/animate.css';
 
 .swing-game-play {
-  // display: flex;
-  // flex-direction: row;
+
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
   background-image: url(../../assets/images/GameBackground.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
-
-  // &__background {
-  //   background-repeat: no-repeat;
-  //   background-attachment: fixed;
-  //   background-size: cover;
-  //   height: 100%;
-  //   width: 100%;
-  // }
+  // align-items: center;
+  border:2px solid green;
 
   &__phonic {
     width: 100%;
@@ -24,38 +19,43 @@
     align-items: center;
   }
 
-  &__button-and-score {
-    // border: 2px solid red;
-    margin-top: 7rem;
-    justify-self: center;
-    display: flex;
-    text-align: center;
-    align-items: flex-end;
-    padding: 2rem;
+  // write separate scss for __score and __buttons now we have separated them!!!!
 
-    p {
-      color: $color-white;
-    }
+  // &__button-and-score {
+  //   // border: 2px solid red;
+  //   bottom: 10%;
+  //   justify-self: center;
+  //   position: absolute;
+  //   bottom: 10%;
+  //   text-align: center;
+  //   align-items: flex-end;
+  //   padding: 2rem;
+  //   border: 2px solid red;
+
+  //   p {
+  //     color: $color-white;
+  //   }
     
-  }
+  // }
 
   &__oom {
     position: absolute;
     // top: 32.5rem;
     // left: 65rem;
-    bottom: 0rem;
+    bottom: 5%;
     left: 63%;
-    animation-delay: 1s;
-    animation-duration: 8s;
+    // animation-delay: 0s;
+    animation-duration: 12s;
   }
 
   &__squirrel {
     position: absolute;
     // left: 20rem;
     // top: 37rem;
-    bottom: 1rem;
+    bottom: 5%;
     left: 30%;
     animation-duration: 10s;
-    animation-delay: 1s;
+    // animation-delay: 1s;
   }
+
 }
