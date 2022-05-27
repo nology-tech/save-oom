@@ -8,6 +8,7 @@ import {
   getDocs,
   doc,
   getDoc,
+  setDoc,
 } from "firebase/firestore";
 
 import { getAuth } from "firebase/auth";
@@ -30,6 +31,7 @@ export const auth = getAuth(app);
 // Reference the firestore DB
 export const db = getFirestore(app);
 
+
 export const getUsers = async (db) => {
   const usersCol = collection(db, "users");
   const usersSnapshot = await getDocs(usersCol);
@@ -47,4 +49,12 @@ export const getUserFromId = async (userId) => {
   const docRef = doc(db, "users", userId);
   const docSnap = await getDoc(docRef);
   return docSnap;
+};
+
+
+export const createUser = async (userId, key, value) => {
+  const docRef = doc(db, 'users', userId);
+   await setDoc(docRef, {
+   key: value
+  })
 };

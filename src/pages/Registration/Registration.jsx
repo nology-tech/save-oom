@@ -9,7 +9,8 @@ import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
 } from "firebase/auth";
-import { auth } from "../../firebase";
+// import { doc, setDoc } from "firebase/firestore";
+import { auth, createUser } from "../../firebase";
 
 const Registration = () => {
   const [firstName, setFirstName] = useState("");
@@ -20,24 +21,24 @@ const Registration = () => {
 
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
+    console.log(user)
   });
 
   const register = async (e) => {
     e.preventDefault();
-
     console.log(auth, firstName, registerEmail, registerPassword);
-
-    try {
-      const user = await createUserWithEmailAndPassword(
-        auth,
-        registerEmail,
-        registerPassword
-      );
-      console.log(user);
-    } catch (error) {
-      console.log(error.message);
-    }
-    // console.log(user.email);
+    const user = await createUserWithEmailAndPassword(
+      auth,
+      registerEmail,
+      registerPassword
+    )
+    await createUser(user.user.uid, "parentName", firstName)
+    setUser(
+      {
+        parentName: firstName,
+        userId: user.user.uid,
+      }
+    )
   };
 
   return (
