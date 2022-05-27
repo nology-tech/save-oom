@@ -12,7 +12,7 @@ const levelSelectData = [
   },
   {
     heading: "LEVEL 1",
-    isLocked: false,
+    isLocked: true,
     headingImg: lockImage,
     paragraph:
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
@@ -21,7 +21,7 @@ const levelSelectData = [
   },
   {
     heading: "LEVEL 2",
-    isLocked: false,
+    isLocked: true,
     headingImg: lockImage,
     paragraph:
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
