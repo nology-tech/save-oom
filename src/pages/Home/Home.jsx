@@ -9,6 +9,7 @@ import {
   getArrayOfRounds,
 } from "../../utils/firebaseGameUtils";
 import Registration from "../Registration/Registration";
+// import LogIn from "../LogIn/LogIn";
 
 const Home = () => {
   //   const currentRound = {

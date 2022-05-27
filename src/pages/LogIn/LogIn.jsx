@@ -5,14 +5,18 @@ import Logo from "../../components/Logo/Logo";
 import TextInput from "../../components/TextInput/TextInput";
 import "./LogIn.scss";
 //authentication imports
-import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 
 const LogIn = () => {
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
 
-  const login = async () => {
+  const login = async (e) => {
+    e.preventDefault();
+
+    console.log(auth, loginEmail, loginPassword);
+
     try {
       const user = await signInWithEmailAndPassword(
         auth,
@@ -37,7 +41,6 @@ const LogIn = () => {
             <TextInput
               className="log-in__input"
               labelText={"Email"}
-              value={value}
               onChangeEvent={(event) => {
                 setLoginEmail(event.target.value);
               }}
@@ -45,7 +48,6 @@ const LogIn = () => {
             <TextInput
               className="log-in__input"
               labelText={"Password"}
-              value={value}
               onChangeEvent={(event) => {
                 setLoginPassword(event.target.value);
               }}
