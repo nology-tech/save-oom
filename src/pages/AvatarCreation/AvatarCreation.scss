@@ -1,46 +1,7 @@
-
-.avatarCreation{
-  //display: none;
-  //background-size: 100% 100%;
-
-
-
-  &__navBar{
-    z-index: 1;
-    position: fixed;
-  }
-
-  &__containerOne{
-    z-index:1;
-    position: fixed;
-
-  }
-  &__background{
-    width: 100%;
-    // background-size: 100% 100%;
-    // position: fixed;
-    // z-index: 0;
-    height: 100vh;
-    width: 100vw;
-  }
-
-  .avatar-heading {
-    width: 35rem;
-    height: max-content;
-    background-color: transparent;
-    margin-left: auto;
-    margin-right: auto;
-
-
-    &__text {
-        font-family: $font-secondary;
-        color: $color-primary;
-        font-size: 4rem;
-        text-align: center;
-        line-height: 5rem;
-        letter-spacing: 0.02em;
-        text-shadow: -0.05em -0.05em 0 $color-text-border,  0.05em -0.05em 0 $color-text-border, -0.05em 0.05em 0 $color-text-border, 0.05em 0.05em 0 $color-text-border;
-    }
-}
-
+.avatar-creation{
+  display: flex;
+  height: 100vh;
+        background-image: url(../../assets/images/background.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
 }
