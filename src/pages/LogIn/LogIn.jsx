@@ -18,10 +18,17 @@ const LogIn = () => {
             <p className="log-in__top-text">This is the log in page</p>
             <TextInput className="log-in__input" labelText={"Email"} />
             <TextInput className="log-in__input" labelText={"Password"} />
-            <Button className="log-in__button" buttonText={"Log in"} buttonStyle={"button-secondary"} />
+            <Button
+              className="log-in__button"
+              buttonText={"Log in"}
+              buttonStyle={"button-secondary"}
+            />
             <p className="log-in__bottom-text">
               Don&apos;t have an Account?{" "}
-              <a className="log-in__registration-link" href="../Registration/Registration.jsx">
+              <a
+                className="log-in__registration-link"
+                href="../Registration/Registration.jsx"
+              >
                 Sign up
               </a>
             </p>

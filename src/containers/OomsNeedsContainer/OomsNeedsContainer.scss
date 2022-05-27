@@ -1,11 +1,10 @@
 @use "../../styles/variables" as *;
 
-.container{
-    width: 25rem;
-    height: 5rem;
-    background: $color-validation-button-background;
-    border-radius: 4rem;
-    display: flex;
-    justify-content: space-around;
-
+.container {
+  width: 25rem;
+  height: 5rem;
+  background: $color-validation-button-background;
+  border-radius: 4rem;
+  display: flex;
+  justify-content: space-around;
 }

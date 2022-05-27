@@ -1,0 +1,7 @@
+@use "../../styles/variables" as *;
+
+.chart {
+  width: 32rem;
+  height: 14rem;
+  background-color: $color-secondary-dark;
+}

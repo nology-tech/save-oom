@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
 
 // breakpoints
 $mobile-breakpoint: 320px;
@@ -16,13 +16,13 @@ $color-secondary-dark: #0b1226;
 $color-accent: #9baacf;
 $color-border: #3f4f74;
 $color-text-border: #415839;
-$color-button-right: #7DC833;
+$color-dropdown: #424b62;
+$color-button-right: #7dc833;
 $color-button-right-hover: #abe76e;
-$color-button-wrong: #F27B39;
+$color-button-wrong: #f27b39;
 $color-button-wrong-hover: #ee9260;
 $color-validation-button-background: rgba(0, 0, 0, 0.46);
 
-
 //text
-$font-primary:'Inter';
+$font-primary: "Inter";
 $font-secondary: "Koulen";
