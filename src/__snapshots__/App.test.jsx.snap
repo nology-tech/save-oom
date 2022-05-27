@@ -164,6 +164,11 @@ exports[`Should render the app 1`] = `
             >
               LEVEL 2
             </h2>
+            <img
+              alt="LEVEL 2"
+              class="level-select-header__img"
+              src="Vectorlock.png"
+            />
           </div>
           <p
             class="level-select-card__text"
