@@ -6,96 +6,88 @@ exports[`Should render the app 1`] = `
     class="layout"
   >
     <div
-      class="nav-bar"
+      class="layout"
     >
       <div
-        class="nav-bar__section"
+        class="registration"
       >
-        <img
-          alt="Logo image"
-          class="logo__image"
-          src="logo.png"
-        />
         <div
-          class="nav-bar-header"
+          class="registration__image"
         >
-          <h2
-            class="nav-bar-header__heading"
-          >
-            Phonics stages
-          </h2>
+          <img
+            alt="Logo image"
+            class="logo__image"
+            src="logo.png"
+          />
         </div>
-        <h2>
-          Introduction
-        </h2>
-        <div
-          class="nav-bar-header"
+        <form
+          class="registration__container"
         >
-          <h2
-            class="nav-bar-header__heading"
+          <h1
+            class="registration__heading"
           >
-            Level 1
-          </h2>
-        </div>
-        <div
-          class="nav-bar-header"
-        >
-          <h2
-            class="nav-bar-header__heading"
+            Create your account
+          </h1>
+          <p
+            class="registration__top-text"
           >
-            Level 2
-          </h2>
-        </div>
-        <div
-          class="nav-bar-header"
-        >
-          <h2
-            class="nav-bar-header__heading"
+            This is the registration page
+          </p>
+          <div
+            class="text-input-container"
           >
-            Level 3
-          </h2>
-        </div>
-        <div
-          class="nav-bar-header"
-        >
-          <h2
-            class="nav-bar-header__heading"
+            <label
+              class="text-input-container__label"
+            >
+              First Name
+            </label>
+            <input
+              class="text-input-container__input"
+            />
+          </div>
+          <div
+            class="text-input-container"
           >
-            Stats
-          </h2>
-        </div>
-        <h2>
-          Jack
-        </h2>
-        <div
-          class="nav-bar-header"
-        >
-          <h2
-            class="nav-bar-header__heading"
+            <label
+              class="text-input-container__label"
+            >
+              Email Address
+            </label>
+            <input
+              class="text-input-container__input"
+            />
+          </div>
+          <div
+            class="text-input-container"
           >
-            Add Avatar
-          </h2>
-        </div>
+            <label
+              class="text-input-container__label"
+            >
+              Password
+            </label>
+            <input
+              class="text-input-container__input"
+            />
+          </div>
+          <button
+            class="button-secondary"
+          >
+            Create your account
+          </button>
+          <p
+            class="registration__bottom-text"
+          >
+            Already have an account?
+             
+            <a
+              class="registration__link"
+              href="../LogIn/LogIn.jsx"
+            >
+              Sign in
+            </a>
+          </p>
+        </form>
       </div>
-      <button
-        class="button-logout"
-      >
-        Logout
-      </button>
-    </div>
-    <div
-      class="swing-game-play"
-    >
-      <img
-        alt="Animated Image"
-        class="animate__animated swing-game-play__squirrel animate__bounce"
-        src="squirrel.png"
-      />
-      <img
-        alt="Animated Image"
-        class="animate__animated.animate__fast swing-game-play__oom animate__swing"
-        src="Group 146swingingOom.png"
-      />
     </div>
   </div>
 </div>

@@ -1,13 +1,13 @@
 import React from "react";
 import Layout from "../../components/Layout/Layout";
-import NavBar from "../../containers/navBar/NavBar";
-import SwingGamePlay from "../SwingGamePlay/SwingGamePlay";
+// import LogIn from "../LogIn/LogIn";
+import Registration from "../Registration/Registration";
 import "./Home.scss";
-import {
-  getCorrectGameRoundsForUser,
-  getIncorrectGameRoundsForUser,
-  getArrayOfRounds,
-} from "../../utils/firebaseGameUtils";
+// import {
+//   getCorrectGameRoundsForUser,
+//   getIncorrectGameRoundsForUser,
+//   getArrayOfRounds,
+// } from "../../utils/firebaseGameUtils";
 
 const Home = () => {
   //   const currentRound = {
@@ -19,18 +19,17 @@ const Home = () => {
   //   .then(res => console.log(res + "success!"))
   //   .catch(res => res + "nope")
 
-  getArrayOfRounds("dumbo", "swing", getCorrectGameRoundsForUser)
-    .then((res) => console.log(res))
-    .catch();
-  getArrayOfRounds("dumbo", "swing", getIncorrectGameRoundsForUser).then(
-    (res) => console.log(res)
-  );
+  // getArrayOfRounds("dumbo", "swing", getCorrectGameRoundsForUser)
+  //   .then((res) => console.log(res))
+  //   .catch();
+  // getArrayOfRounds("dumbo", "swing", getIncorrectGameRoundsForUser).then(
+  //   (res) => console.log(res)
+  // );
 
   return (
     <>
       <Layout>
-        <NavBar />
-        <SwingGamePlay />
+        <Registration/>
       </Layout>
     </>
   );
