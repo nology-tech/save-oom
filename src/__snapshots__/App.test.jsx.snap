@@ -84,18 +84,91 @@ exports[`Should render the app 1`] = `
       </button>
     </div>
     <div
-      class="swing-game-play"
+      class="layout"
     >
-      <img
-        alt="Animated Image"
-        class="animate__animated swing-game-play__squirrel animate__bounce"
-        src="squirrel.png"
-      />
-      <img
-        alt="Animated Image"
-        class="animate__animated.animate__fast swing-game-play__oom animate__swing"
-        src="Group 146swingingOom.png"
-      />
+      <div
+        class="registration"
+      >
+        <div
+          class="registration__image"
+        >
+          <img
+            alt="Logo image"
+            class="logo__image"
+            src="logo.png"
+          />
+        </div>
+        <form
+          class="registration__container"
+        >
+          <h1
+            class="registration__heading"
+          >
+            Create your account
+          </h1>
+          <p
+            class="registration__top-text"
+          >
+            This is the registration page
+          </p>
+          <div
+            class="text-input-container"
+          >
+            <label
+              class="text-input-container__label"
+            >
+              First Name
+            </label>
+            <input
+              class="text-input-container__input"
+              value=""
+            />
+          </div>
+          <div
+            class="text-input-container"
+          >
+            <label
+              class="text-input-container__label"
+            >
+              Email Address
+            </label>
+            <input
+              class="text-input-container__input"
+              value=""
+            />
+          </div>
+          <div
+            class="text-input-container"
+          >
+            <label
+              class="text-input-container__label"
+            >
+              Password
+            </label>
+            <input
+              class="text-input-container__input"
+              value=""
+            />
+          </div>
+          <button
+            class="button-secondary"
+          >
+            Create your account
+          </button>
+          <p
+            class="registration__bottom-text"
+          >
+            Already have an account?
+             
+            <a
+              class="registration__link"
+              href="../LogIn/LogIn.jsx"
+            >
+              Sign in
+            </a>
+          </p>
+        </form>
+      </div>
     </div>
   </div>
 </div>
