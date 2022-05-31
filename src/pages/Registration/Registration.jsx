@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Button from "../../components/Button/Button";
 import Layout from "../../components/Layout/Layout";
 import Logo from "../../components/Logo/Logo";
+import { Link } from "react-router-dom";
 import TextInput from "../../components/TextInput/TextInput";
 import "./Registration.scss";
 //authentication imports
@@ -83,9 +84,9 @@ const Registration = () => {
             />
             <p className="registration__bottom-text">
               Already have an account?{" "}
-              <a className="registration__link" href="../LogIn/LogIn.jsx">
+              <Link className="registration__link" to="/">
                 Sign in
-              </a>
+              </Link>
             </p>
           </form>
         </div>
