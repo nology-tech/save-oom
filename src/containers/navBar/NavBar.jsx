@@ -8,9 +8,13 @@ import lockImg from "../../assets/images/Vectorlock.png";
 import statImg from "../../assets/images/Vectorstat.png";
 import addImg from "../../assets/images/Vectoradd.png";
 import UserContext from "../../contexts/UserContext";
-
+import { signOut } from "firebase/auth";
+import { auth } from "../../firebase";
 const NavBar = () => {
   const { user } = useContext(UserContext)
+  const logout = async () => {
+    await signOut(auth);
+  };
 
   return (
     <div className="nav-bar">
@@ -50,7 +54,11 @@ const NavBar = () => {
           headingStyle={"nav-bar"}
         />
       </div>
-      <Button buttonText={"Logout"} buttonStyle={"button-logout"} />
+      <Button
+        buttonText={"Logout"}
+        buttonStyle={"button-logout"}
+        onClickEvent={logout}
+      />
     </div>
   );
 };

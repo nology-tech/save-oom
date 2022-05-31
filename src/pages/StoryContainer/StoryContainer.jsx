@@ -1,4 +1,6 @@
 import "./StoryContainer.scss";
+import { useNavigate } from 'react-router';
+
 import React, { useState } from "react";
 import StoryIntro from "../../components/StoryIntro/StoryIntro";
 import Button from "../../components/Button/Button";
@@ -6,10 +8,11 @@ import storyData from "../../data/storyData";
 
 const StoryContainer = () => {
   const [counter, setCounter] = useState(0);
+  let navigate = useNavigate();
 
   const handleIncrement = () => {
-    if (counter >= 5) {
-      setCounter(5);
+    if (counter > 4) {
+      navigate("/LevelSelectCardContainer");
     } else {
       setCounter(counter + 1);
     }
