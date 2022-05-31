@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./NavBar.scss";
 import NavBarHeading from "../../components/navBarHeading/NavBarHeading";
 import vector from "../../assets/images/Vectorvector.png";
@@ -7,8 +7,11 @@ import Logo from "../../components/Logo/Logo";
 import lockImg from "../../assets/images/Vectorlock.png";
 import statImg from "../../assets/images/Vectorstat.png";
 import addImg from "../../assets/images/Vectoradd.png";
+import UserContext from "../../contexts/UserContext";
 
 const NavBar = () => {
+  const { user } = useContext(UserContext)
+
   return (
     <div className="nav-bar">
       <div className="nav-bar__section">
@@ -39,7 +42,8 @@ const NavBar = () => {
           headingImg={statImg}
           headingStyle={"nav-bar"}
         />
-        <h2>Jack</h2>
+        {/* <h2>Jack</h2> */}
+        <h2>{user.name}</h2>
         <NavBarHeading
           headingText={"Add Avatar"}
           headingImg={addImg}
