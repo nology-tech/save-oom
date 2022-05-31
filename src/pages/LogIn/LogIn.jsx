@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from "../../components/Button/Button";
 import Layout from "../../components/Layout/Layout";
 import Logo from "../../components/Logo/Logo";
@@ -8,6 +9,7 @@ import "./LogIn.scss";
 const LogIn = () => {
   
   return (
+
     <>
       <Layout>
         <div className="log-in">
@@ -26,18 +28,17 @@ const LogIn = () => {
             />
             <p className="log-in__bottom-text">
               Don&apos;t have an Account?{" "}
-              <a
-                className="log-in__registration-link"
-                href="../Registration/Registration.jsx"
-              >
-                Sign up
-              </a>
+              <Link to="/registration" className="log-in__registration-link">
+                Sign Up
+              </Link>
             </p>
           </form>
         </div>
       </Layout>
     </>
+
   );
 };
 
 export default LogIn;
+

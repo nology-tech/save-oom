@@ -2,6 +2,7 @@ import React from "react";
 import "./LevelSelectCard.scss";
 import NavBarHeading from "../navBarHeading/NavBarHeading";
 import Button from "../Button/Button";
+import { Link } from "react-router-dom";
 
 const LevelSelectCard = ({
   headingText,
@@ -10,6 +11,7 @@ const LevelSelectCard = ({
   buttonText,
   buttonStyle,
   isLocked,
+  path
 }) => {
   return (
     <div className="level-select-card">
@@ -22,7 +24,8 @@ const LevelSelectCard = ({
       {/* <h3 className='card__heading'>{headingText}</h3> */}
       <p className="level-select-card__text">{paragraphText}</p>
       <div className="level-select-card__button">
-        <Button buttonStyle={buttonStyle} buttonText={buttonText} />
+        <Link to={path}><Button buttonStyle={buttonStyle} buttonText={buttonText} />
+        </Link>
       </div>
     </div>
   );

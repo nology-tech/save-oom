@@ -9,8 +9,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LogIn />} />
         <Route path="/Registration" element={<Registration />} />
-        <Route path="*" element={<Home />} />
-        
+        <Route path="*" element={<Home />} />   
       </Routes>
   );
 };
@@ -18,21 +17,3 @@ const App = () => {
 export default App;
 
 
-/*
-import { Route, Routes } from "react-router-dom";
-import "./styles/main.scss";
-import LogIn from  "./pages/LogIn/LogIn"
-import Registration from "./pages/Registration/Registration"
-
-const App = () => {
-  return (
-      <Routes>
-        <Route path="/" element={<LogIn />} />
-        <Route path="/Registration" element={<Registration />} />
-        
-      </Routes>
-  );
-};
-
-export default App;
-*/

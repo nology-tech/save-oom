@@ -14,6 +14,7 @@ const LevelSelectCardContainer = ({ levelSelectData }) => {
         buttonText={card.buttonText}
         buttonStyle={card.buttonStyle}
         isLocked={card.isLocked}
+        path={card.path}
       />
     );
   });
