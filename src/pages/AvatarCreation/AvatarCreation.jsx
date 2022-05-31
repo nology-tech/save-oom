@@ -5,7 +5,7 @@ import AvatarCreationContainer from "../../containers/AvatarCreationContainer/Av
 
 const AvatarCreation = () => {
   return (
-    <div className="avatar-creation">
+    <div className="avatar-creation" role="AC">
         <NavBar />
         <AvatarCreationContainer />
     </div>

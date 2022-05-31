@@ -31,7 +31,7 @@ const AvatarCreationContainer = () => {
 
 
   return (
-    <div className="avatar-creation-container">
+    <div className="avatar-creation-container" role="ACC">
       <AvatarHeading avatarHeadingText={avatarCreationData[count].title} />
       <div className="avatar-creation-container__text">
       {showText ? <TextInput /> : null}
