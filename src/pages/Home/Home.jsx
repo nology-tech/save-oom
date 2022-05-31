@@ -40,11 +40,11 @@ const Home = () => {
       <Layout>
         <NavBar />
         <Routes>
-          <Route path="/SwingGamePlay" element={<SwingGamePlay />} />
-          <Route path="/StoryContainer" element={<StoryContainer />} />
-          <Route path="/LevelSelectCardContainer" element={<LevelSelectCardContainer levelSelectData={levelSelectData}/>} />
-          <Route path="/GameInstructions" element={<GameInstructions />} />
-          <Route path="/StatsPage" element={<StatsPage />} />
+          <Route path="/swing-gamePlay" element={<SwingGamePlay />} />
+          <Route path="/story-container" element={<StoryContainer />} />
+          <Route path="/level-select-card-container" element={<LevelSelectCardContainer levelSelectData={levelSelectData}/>} />
+          <Route path="/game-instructions" element={<GameInstructions />} />
+          <Route path="/stats-page" element={<StatsPage />} />
         </Routes>
       </Layout>
 

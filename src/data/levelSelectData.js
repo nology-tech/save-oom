@@ -9,7 +9,7 @@ const levelSelectData = [
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
     buttonText: "GET STARTED",
     buttonStyle: "button-secondary",
-    path: "/StoryContainer"
+    path: "/story-container"
   },
   {
     heading: "LEVEL 1",
@@ -19,7 +19,7 @@ const levelSelectData = [
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
     buttonText: "LET’S PLAY",
     buttonStyle: "button-levels",
-    path: "/SwingGamePlay"
+    path: "/swing-game-play"
   },
   {
     heading: "LEVEL 2",
