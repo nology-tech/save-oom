@@ -40,6 +40,7 @@ exports[`Should render the app 1`] = `
           </label>
           <input
             class="text-input-container__input"
+            value=""
           />
         </div>
         <div
@@ -52,6 +53,7 @@ exports[`Should render the app 1`] = `
           </label>
           <input
             class="text-input-container__input"
+            value=""
           />
         </div>
         <button
