@@ -1,14 +1,17 @@
 import { customRender } from '../../utils/testUtils';
 import SwingGamePlay from './SwingGamePlay';
-import AnimatedImage from '../../components/AnimatedImage/AnimatedImage';
+import { render, screen } from '@testing-library/react';
 
 it('Should render the Swing Game Play screen', () => {
   const { container } = customRender(<SwingGamePlay />);
 
   expect(container).toMatchSnapshot();
 });
-it('Should render the the AninatedImage components on screen', () => {
-  const { container } = customRender(<AnimatedImage />);
 
-  expect(container).toMatchSnapshot();
+it('Should render the score count screen', () => {
+  render(<SwingGamePlay />);
+
+  const scoreCount = screen.getByText(/Number Of Correct Sounds:/i);
+
+  expect(scoreCount).toBeInTheDocument();
 });

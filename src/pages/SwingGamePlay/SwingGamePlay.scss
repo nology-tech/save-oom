@@ -2,15 +2,12 @@
 @use '../../../node_modules/animate.css/animate.css';
 
 .swing-game-play {
-
   margin-left: auto;
   margin-right: auto;
   width: 100%;
   background-image: url(../../assets/images/GameBackground.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  // align-items: center;
-  border:2px solid green;
 
   &__phonic {
     width: 100%;
@@ -19,43 +16,69 @@
     align-items: center;
   }
 
-  // write separate scss for __score and __buttons now we have separated them!!!!
-
-  // &__button-and-score {
-  //   // border: 2px solid red;
-  //   bottom: 10%;
-  //   justify-self: center;
-  //   position: absolute;
-  //   bottom: 10%;
-  //   text-align: center;
-  //   align-items: flex-end;
-  //   padding: 2rem;
-  //   border: 2px solid red;
-
-  //   p {
-  //     color: $color-white;
-  //   }
-    
-  // }
-
   &__oom {
     position: absolute;
-    // top: 32.5rem;
-    // left: 65rem;
-    bottom: 5%;
-    left: 63%;
-    // animation-delay: 0s;
-    animation-duration: 12s;
+    bottom: 0.5%;
+    left: 65%;
+    -webkit-animation-duration: 7s;
+    animation-duration: 7s;
   }
 
   &__squirrel {
     position: absolute;
-    // left: 20rem;
-    // top: 37rem;
     bottom: 5%;
     left: 30%;
     animation-duration: 10s;
-    // animation-delay: 1s;
   }
 
+  &__score {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    width: 25rem;
+  }
+}
+
+.animate__swinging {
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-animation-name: swinging;
+  animation-name: swinging;
+}
+
+@-webkit-keyframes swinging {
+  0% {
+    -webkit-transform: rotate(20deg);
+  }
+  50% {
+    -webkit-transform: rotate(-15deg);
+  }
+  75% {
+    -webkit-transform: rotate(50deg);
+  }
+  100% {
+    -webkit-transform: rotate(-15deg);
+  }
+}
+
+@keyframes swinging {
+  0% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  75% {
+    transform: rotate(50deg);
+  }
+  100% {
+    transform: rotate(-15deg);
+  }
+}
+
+.animate__animated.animate__fastest {
+  -webkit-animation-duration: calc(1s * 0.01);
+  animation-duration: calc(1s * 0.01);
+  -webkit-animation-duration: calc(var(--animate-duration) * 0.01);
+  animation-duration: calc(var(--animate-duration) * 0.01);
 }

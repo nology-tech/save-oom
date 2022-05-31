@@ -86,21 +86,75 @@ exports[`Should render the app 1`] = `
     <div
       class="swing-game-play"
     >
-      <img
-        alt="background"
-        class="swing-game-play__background"
-        src="GameBackground.png"
-      />
-      <img
-        alt="Animated Image"
-        class="animate__animated swing-game-play__squirrel animate__bounce"
-        src="squirrel.png"
-      />
-      <img
-        alt="Animated Image"
-        class="animate__animated.animate__fast swing-game-play__oom animate__swing"
-        src="Group 146swingingOom.png"
-      />
+      <div
+        class="swing-game-play__images"
+      >
+        <div
+          class="swing-game-play__phonic"
+        >
+          <h1
+            class="timer"
+          >
+            60
+            <span
+              class="timer__s"
+            >
+              s
+            </span>
+          </h1>
+          <div
+            class="phonic-component"
+          >
+            <h1
+              class="phonic-component__heading"
+            >
+              s
+            </h1>
+          </div>
+        </div>
+        <button>
+          <img
+            alt="Animated Image"
+            class="animate__animated swing-game-play__squirrel  "
+            src="squirrel.png"
+          />
+        </button>
+        <img
+          alt="Animated Image"
+          class="animate__animated.animate__fast swing-game-play__oom "
+          src="Group 146swingingOom.png"
+        />
+        <div
+          class="swing-game-play__buttons"
+        >
+          <div
+            class="validation"
+          >
+            <button
+              class="validation__button validation__button--wrong"
+            >
+              <img
+                alt="cross"
+                src="Cross.png"
+              />
+            </button>
+            <button
+              class="validation__button validation__button--right"
+            >
+              <img
+                alt="tick"
+                src="Tick.png"
+              />
+            </button>
+          </div>
+        </div>
+        <p
+          class="swing-game-play__score"
+        >
+          Number Of Correct Sounds: 
+          0
+        </p>
+      </div>
     </div>
   </div>
 </div>

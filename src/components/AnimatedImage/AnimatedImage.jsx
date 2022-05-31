@@ -6,10 +6,12 @@ const AnimatedImage = ({
   animationClass,
   imageStylesClass,
   animationType,
+  keyId,
 }) => {
   return (
     <>
       <img
+        key={keyId}
         className={`${animationClass} ${imageStylesClass} ${animationType}`}
         src={imageToAnimate}
         alt='Animated Image'
