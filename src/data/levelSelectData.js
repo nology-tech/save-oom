@@ -17,7 +17,7 @@ const levelSelectData = [
     paragraph:
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
     buttonText: "LET’S PLAY",
-    buttonStyle: "button-levels",
+    buttonStyle: "button-disabled",
   },
   {
     heading: "LEVEL 2",

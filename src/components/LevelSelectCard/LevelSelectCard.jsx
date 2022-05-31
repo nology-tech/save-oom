@@ -10,8 +10,7 @@ const LevelSelectCard = ({
   paragraphText,
   buttonText,
   buttonStyle,
-  isLocked,
-  onClickEvent
+  isLocked
 }) => {
 
 
@@ -26,7 +25,7 @@ const LevelSelectCard = ({
       {/* <h3 className='card__heading'>{headingText}</h3> */}
       <p className="level-select-card__text">{paragraphText}</p>
       <div className="level-select-card__button">
-        <Button buttonStyle={buttonStyle} buttonText={buttonText} onClickEvent={onClickEvent}/>
+        <Button buttonStyle={buttonStyle} buttonText={buttonText} disabled={true}/>
       </div>
     </div>
   );

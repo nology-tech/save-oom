@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./LevelSelectCardContainer.scss";
 import LevelSelectCard from "../../components/LevelSelectCard/LevelSelectCard";
-// import Button from "../../components/Button/Button";
 
 
 const LevelSelectCardContainer = ({ levelSelectData }) => {
@@ -9,17 +8,20 @@ const LevelSelectCardContainer = ({ levelSelectData }) => {
     const [buttonLock, setButtonLock] = useState(true);
     const [imageLock, setImageLock] = useState(card.headingImg);
 
-    const activeButton = () => {
+ const activeButton = () => {
+      //locked
       if (card.isLocked == true) {
         setButtonLock(!buttonLock);
         setImageLock(!imageLock);
         console.log("locked")
       } else {
+      //unlocked
         setButtonLock(buttonLock);
-        setImageLock(card.headingImg);
+        setImageLock(imageLock);
         console.log("unlocked")
       }
-    };
+ }
+      
 
     return (
       <>
@@ -31,7 +33,6 @@ const LevelSelectCardContainer = ({ levelSelectData }) => {
         buttonText={card.buttonText}
         buttonStyle={card.buttonStyle}
         isLocked={card.isLocked}
-        onClickEvent={activeButton} 
       />
       </>
     );

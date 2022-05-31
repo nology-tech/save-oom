@@ -3,7 +3,6 @@ import Layout from "../../components/Layout/Layout";
 import NavBar from "../../containers/navBar/NavBar";
 // import SwingGamePlay from "../SwingGamePlay/SwingGamePlay";
 import "./Home.scss";
-// import LevelSelectCard from "../../components/LevelSelectCard/LevelSelectCard";
 // import {
 //   getCorrectGameRoundsForUser,
 //   getIncorrectGameRoundsForUser,
