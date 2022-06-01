@@ -21,12 +21,11 @@
   font-family: $font-secondary;
 }
 
-
 .button-logout {
   width: 11.9rem;
   height: 3.3rem;
   padding: 0.5rem;
-  background-color: #272E3F;
+  background-color: #272e3f;
   border: none;
   color: $color-white;
   font-family: $font-primary;
@@ -38,6 +37,18 @@
   padding: 0.5rem;
   background-color: transparent;
   border: 1px solid $color-white;
+  border-radius: 0.2rem;
+  color: $color-white;
+  font-family: $font-secondary;
+}
+
+.button-name {
+  width: 16.8rem;
+  height: 2.8rem;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  background-color: transparent;
+  border: 1px solid $color-accent;
   border-radius: 0.2rem;
   color: $color-white;
   font-family: $font-secondary;

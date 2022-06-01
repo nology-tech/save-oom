@@ -2,7 +2,7 @@ import { customRender } from '../../utils/testUtils';
 import SwingGamePlay from './SwingGamePlay';
 import { render, screen } from '@testing-library/react';
 
-it('Should render the Swing Game Play screen', () => {
+it("Should render the Swing Game Play screen", () => {
   const { container } = customRender(<SwingGamePlay />);
 
   expect(container).toMatchSnapshot();

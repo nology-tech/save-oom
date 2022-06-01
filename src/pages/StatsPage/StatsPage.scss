@@ -1,0 +1,64 @@
+@use "../../styles/_variables.scss" as *;
+
+.stats-page {
+  background-color: $color-secondary-dark;
+
+  &__top-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem;
+    margin-left: 3rem;
+  }
+
+  &__heading {
+    margin: 1rem;
+  }
+
+  &__buttons {
+    width: 35%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__score-graph {
+    margin-top: 1rem;
+    margin-left: 3rem;
+    padding: 1rem;
+    width: 35rem;
+    height: 18rem;
+    background-color: $color-secondary-light;
+  }
+
+  &__correct-phonemes {
+    margin-top: 1rem;
+    margin-left: 3rem;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    width: 56rem;
+    height: 13rem;
+    background-color: $color-secondary-light;
+  }
+
+  &__buttons-name {
+    background-color: black;
+    border: 1px solid $color-accent;
+  }
+}
+
+li {
+  float: left;
+  color: $color-white;
+  list-style: none;
+  margin: 0.5rem;
+}
+
+h2 {
+  color: $color-white;
+}
+
+.stats-page__button-level {
+  background-color: black;
+  border: 1px solid $color-accent;
+}

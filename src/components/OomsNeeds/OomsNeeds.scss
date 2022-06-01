@@ -1,11 +1,11 @@
 @use "../../styles/variables" as *;
 
-.needs{
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    &__percentage{
-        color: $color-white;
-        font-family: $font-secondary;
-    }
+.needs {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  &__percentage {
+    color: $color-white;
+    font-family: $font-secondary;
+  }
 }

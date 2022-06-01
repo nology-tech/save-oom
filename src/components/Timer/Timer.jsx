@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import './Timer.scss';
+import { useState } from "react";
+import "./Timer.scss";
 
 const Timer = ({ startTime, handleGameEnd }) => {
   const [counter, setCounter] = useState(startTime);
@@ -9,9 +9,9 @@ const Timer = ({ startTime, handleGameEnd }) => {
   }
 
   return (
-    <h1 className='timer'>
+    <h1 className="timer">
       {counter}
-      <span className='timer__s'>s</span>
+      <span className="timer__s">s</span>
     </h1>
   );
 };

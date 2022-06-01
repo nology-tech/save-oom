@@ -1,0 +1,54 @@
+@use "../../styles/variables" as *;
+
+.registration {
+  margin: auto;
+
+  &__image {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__container {
+    display: flex;
+    margin: auto;
+    background-color: $color-secondary-light;
+    text-align: left;
+    border-radius: 1.5rem; //25px
+    flex-direction: column;
+    justify-content: left;
+    padding: 1.2rem; //20px
+  }
+
+  &__heading {
+    color: white;
+  }
+
+  &__top-text {
+    color: #9baacf;
+  }
+
+  &__bottom-text {
+    color: white;
+    text-align: center;
+  }
+
+  &__registration-link {
+    color: white;
+  }
+}
+
+.text-input-container {
+  justify-items: left;
+  align-content: left;
+
+  &__input {
+    width: 100%;
+  }
+}
+
+.button-secondary {
+  margin-top: 1rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}

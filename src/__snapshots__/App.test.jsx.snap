@@ -6,80 +6,21 @@ exports[`Should render the app 1`] = `
     class="layout"
   >
     <div
-      class="nav-bar"
+      class="log-in"
     >
       <div
-        class="nav-bar__section"
+        class="log-in__image"
       >
         <img
           alt="Logo image"
           class="logo__image"
           src="logo.png"
         />
-        <div
-          class="nav-bar-header"
-        >
-          <h2
-            class="nav-bar-header__heading"
-          >
-            Phonics stages
-          </h2>
-        </div>
-        <h2>
-          Introduction
-        </h2>
-        <div
-          class="nav-bar-header"
-        >
-          <h2
-            class="nav-bar-header__heading"
-          >
-            Level 1
-          </h2>
-        </div>
-        <div
-          class="nav-bar-header"
-        >
-          <h2
-            class="nav-bar-header__heading"
-          >
-            Level 2
-          </h2>
-        </div>
-        <div
-          class="nav-bar-header"
-        >
-          <h2
-            class="nav-bar-header__heading"
-          >
-            Level 3
-          </h2>
-        </div>
-        <div
-          class="nav-bar-header"
-        >
-          <h2
-            class="nav-bar-header__heading"
-          >
-            Stats
-          </h2>
-        </div>
-        <h2>
-          Jack
-        </h2>
-        <div
-          class="nav-bar-header"
-        >
-          <h2
-            class="nav-bar-header__heading"
-          >
-            Add Avatar
-          </h2>
-        </div>
       </div>
-      <button
-        class="button-logout"
+      <form
+        class="log-in__container"
       >
+<<<<<<< HEAD
         Logout
       </button>
     </div>
@@ -155,6 +96,62 @@ exports[`Should render the app 1`] = `
           0
         </p>
       </div>
+=======
+        <h1
+          class="log-in__heading"
+        >
+          Welcome!
+        </h1>
+        <p
+          class="log-in__top-text"
+        >
+          This is the log in page
+        </p>
+        <div
+          class="text-input-container"
+        >
+          <label
+            class="text-input-container__label"
+          >
+            Email
+          </label>
+          <input
+            class="text-input-container__input"
+            value=""
+          />
+        </div>
+        <div
+          class="text-input-container"
+        >
+          <label
+            class="text-input-container__label"
+          >
+            Password
+          </label>
+          <input
+            class="text-input-container__input"
+            value=""
+          />
+        </div>
+        <button
+          class="button-secondary"
+        >
+          Log in
+        </button>
+        <p
+          class="log-in__bottom-text"
+        >
+          Don't have an Account?
+           
+          <a
+            class="log-in__registration-link"
+            href="/registration"
+          >
+            Sign Up
+          </a>
+        </p>
+      </form>
+>>>>>>> main
     </div>
   </div>
 </div>

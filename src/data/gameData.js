@@ -1,4 +1,3 @@
-let gameData = []
+let gameData = [];
 
 export default gameData;
-
