@@ -4,15 +4,23 @@ import Layout from "../../components/Layout/Layout";
 import Logo from "../../components/Logo/Logo";
 import TextInput from "../../components/TextInput/TextInput";
 import "./LogIn.scss";
-import PopUp from "../../components/PopUp/PopUp";
+// import PopUp from "../../components/PopUp/PopUp";
 
 const LogIn = () => {
   const [showPopUp, setShowPopUp] = useState(false);
 
+
   const loginMessage = (event) => {
-    event.preventDefault();
-    console.log("working");
-    setShowPopUp(!showPopUp);
+
+      event.preventDefault();
+      console.log("working");
+      setShowPopUp(!showPopUp);  
+
+  };
+
+  const handleSubmit = (e) => {
+    e.prevent.default();
+    console.log('it works!');
   };
 
   return (
@@ -22,14 +30,14 @@ const LogIn = () => {
           <div className="log-in__image">
             <Logo />
           </div>
-          <form className="log-in__container">
-            {showPopUp && (
+          <form className="log-in__container" onSubmit={handleSubmit}>
+            {/* {showPopUp && (
               <PopUp togglePopUp={loginMessage} content={"logged in"} />
-            )}
+            )} */}
             <h1 className="log-in__heading">Welcome!</h1>
             <p className="log-in__top-text">This is the log in page</p>
-            <TextInput className="log-in__input" labelText={"Email"} />
-            <TextInput className="log-in__input" labelText={"Password"} />
+            <TextInput className="log-in__input" labelText={"Email"} inputType="email" />
+            <TextInput className="log-in__input" labelText={"Password"} inputType="password"/>
             <Button
               className="log-in__button"
               buttonText={"Log in"}

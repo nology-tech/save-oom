@@ -1,7 +1,6 @@
 import React from "react";
 import Layout from "../../components/Layout/Layout";
-// import LogIn from "../LogIn/LogIn";
-import Registration from "../Registration/Registration";
+import LogIn from "../LogIn/LogIn";
 import "./Home.scss";
 // import {
 //   getCorrectGameRoundsForUser,
@@ -29,7 +28,7 @@ const Home = () => {
   return (
     <>
       <Layout>
-        <Registration/>
+        <LogIn/>
       </Layout>
     </>
   );

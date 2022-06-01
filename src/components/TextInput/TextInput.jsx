@@ -12,6 +12,8 @@ const TextInput = ({ labelText, inputType, inputName }) => {
         </label>
         <input
           type={inputType}
+          required 
+          maxLength="30"
           name={inputName}
           className="text-input-container__input"
         />
