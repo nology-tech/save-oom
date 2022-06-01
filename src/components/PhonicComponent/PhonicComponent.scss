@@ -1,12 +1,12 @@
-@use "../../styles/reset.scss" as *;
-@use "../../styles/variables.scss" as *;
+@use '../../styles/reset.scss' as *;
+@use '../../styles/variables.scss' as *;
 
 .phonic-component {
   height: 18rem;
   width: 12rem;
 
   &__heading {
-    font-family: $font-secondary;
+    font-family: $font-primary;
     color: $color-primary;
     font-size: 11.5rem;
     display: flex;

@@ -1,6 +1,9 @@
 @use "../../styles/variables" as *;
 
 .container {
+  position: absolute;
+  top: 1%;
+  left: 74%;
   width: 25rem;
   height: 5rem;
   background: $color-validation-button-background;
