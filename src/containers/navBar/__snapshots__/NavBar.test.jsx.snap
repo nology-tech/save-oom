@@ -61,9 +61,7 @@ exports[`Should render the navbar 1`] = `
           Stats
         </h2>
       </div>
-      <h2>
-        Jack
-      </h2>
+      <h2 />
       <div
         class="nav-bar-header"
       >
