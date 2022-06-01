@@ -1,5 +1,5 @@
-@use "../../styles/variables" as *;
-@use "../../../node_modules/animate.css/animate.css";
+@use '../../styles/variables' as *;
+@use '../../../node_modules/animate.css/animate.css';
 
 .swing-game-play {
   margin-left: auto;
@@ -28,7 +28,8 @@
     position: absolute;
     bottom: 5%;
     left: 30%;
-    animation-duration: 10s;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
   }
 
   &__score {
@@ -77,8 +78,15 @@
 }
 
 .animate__animated.animate__fastest {
-  -webkit-animation-duration: calc(1s * 0.01);
-  animation-duration: calc(1s * 0.01);
-  -webkit-animation-duration: calc(var(--animate-duration) * 0.01);
-  animation-duration: calc(var(--animate-duration) * 0.01);
+  -webkit-animation-duration: calc(1s * 0.1);
+  animation-duration: calc(1s * 0.1);
+  -webkit-animation-duration: calc(var(--animate-duration) * 0.1);
+  animation-duration: calc(var(--animate-duration) * 0.1);
+}
+
+.animate__animated.animate__lightspeed {
+  -webkit-animation-duration: calc(1s * 0.001);
+  animation-duration: calc(1s * 0.001);
+  -webkit-animation-duration: calc(var(--animate-duration) * 0.001);
+  animation-duration: calc(var(--animate-duration) * 0.001);
 }
