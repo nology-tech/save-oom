@@ -9,15 +9,17 @@ import "./LogIn.scss";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 import { useState } from "react";
+import { useContext } from "react";
+import UserContext from "../../contexts/UserContext";
 
 const LogIn = () => {
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
+  const userContext  = useContext(UserContext)
 
+  console.log(userContext)
   const login = async (e) => {
     e.preventDefault();
-
-    console.log(auth, loginEmail, loginPassword);
 
     try {
       const user = await signInWithEmailAndPassword(
@@ -25,7 +27,15 @@ const LogIn = () => {
         loginEmail,
         loginPassword
       );
-      console.log(user);
+      console.log(user)
+      const currentUser = {
+        userId: user.user.uid,
+        name: user.user.email 
+      }
+      console.log(currentUser)
+      console.log(userContext)
+      userContext.setUser(currentUser)
+      console.log(userContext.user)
     } catch (error) {
       console.log(error.message);
     }
