@@ -40,7 +40,7 @@ const Home = () => {
       <Layout>
         <NavBar />
         <Routes>
-          <Route path="/swing-gamePlay" element={<SwingGamePlay />} />
+          <Route path="/swing-gameplay" element={<SwingGamePlay />} />
           <Route path="/story-container" element={<StoryContainer />} />
           <Route path="/level-select-card-container" element={<LevelSelectCardContainer levelSelectData={levelSelectData}/>} />
           <Route path="/game-instructions" element={<GameInstructions />} />
