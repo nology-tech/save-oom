@@ -45,6 +45,7 @@ const Home = () => {
           <Route path="/level-select-card-container" element={<LevelSelectCardContainer levelSelectData={levelSelectData}/>} />
           <Route path="/game-instructions" element={<GameInstructions />} />
           <Route path="/stats-page" element={<StatsPage />} />
+          <Route path="/avatar-creation" element={<SwingGamePlay />} />
         </Routes>
       </Layout>
 

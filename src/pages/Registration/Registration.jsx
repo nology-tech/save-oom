@@ -75,13 +75,14 @@ const Registration = () => {
                 setRegisterPassword(e.target.value);
               }}
             />
-
-            <Button
-              className="registration__button"
-              buttonText={"Create your account"}
-              buttonStyle={"button-secondary"}
-              onClickEvent={register}
-            />
+            <Link className = "registration__avatar-link" to="/avatar-creation">
+              <Button
+                className="registration__button"
+                buttonText={"Create your account"}
+                buttonStyle={"button-secondary"}
+                onClickEvent={register}
+              />
+            </Link>
             <p className="registration__bottom-text">
               Already have an account?{" "}
               <Link className="registration__link" to="/">
