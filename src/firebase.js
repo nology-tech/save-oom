@@ -8,7 +8,10 @@ import {
   getDocs,
   doc,
   getDoc,
+  setDoc,
 } from "firebase/firestore";
+
+import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -23,8 +26,11 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
+export const auth = getAuth(app);
+
 // Reference the firestore DB
 export const db = getFirestore(app);
+
 
 export const getUsers = async (db) => {
   const usersCol = collection(db, "users");
@@ -43,4 +49,12 @@ export const getUserFromId = async (userId) => {
   const docRef = doc(db, "users", userId);
   const docSnap = await getDoc(docRef);
   return docSnap;
+};
+
+
+export const createUser = async (userId, key, value) => {
+  const docRef = doc(db, 'users', userId);
+   await setDoc(docRef, {
+   key: value
+  })
 };

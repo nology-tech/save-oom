@@ -1,6 +1,9 @@
-@use "../../styles/variables.scss" as *;
+@use '../../styles/variables.scss' as *;
 
 .validation {
+  position: absolute;
+  bottom: 1%;
+  left: 90%;
   width: 6.6rem;
   height: 3.5rem;
   background: $color-validation-button-background;

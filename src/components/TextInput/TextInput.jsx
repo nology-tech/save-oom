@@ -1,7 +1,13 @@
 import React from "react";
 import "./TextInput.scss";
 
-const TextInput = ({ labelText, inputType, inputName }) => {
+const TextInput = ({
+  labelText,
+  inputType,
+  onChangeEvent,
+  inputName,
+  value,
+}) => {
   // Displays Text Input & Label
 
   return (
@@ -14,6 +20,8 @@ const TextInput = ({ labelText, inputType, inputName }) => {
           type={inputType}
           name={inputName}
           className="text-input-container__input"
+          value={value}
+          onChange={onChangeEvent}
         />
       </div>
     </>
