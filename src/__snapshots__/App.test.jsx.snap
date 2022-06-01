@@ -6,6 +6,7 @@ exports[`Should render the app 1`] = `
     class="layout"
   >
     <div
+<<<<<<< HEAD
       class="layout"
     >
       <div
@@ -88,6 +89,76 @@ exports[`Should render the app 1`] = `
           </p>
         </form>
       </div>
+=======
+      class="log-in"
+    >
+      <div
+        class="log-in__image"
+      >
+        <img
+          alt="Logo image"
+          class="logo__image"
+          src="logo.png"
+        />
+      </div>
+      <form
+        class="log-in__container"
+      >
+        <h1
+          class="log-in__heading"
+        >
+          Welcome!
+        </h1>
+        <p
+          class="log-in__top-text"
+        >
+          This is the log in page
+        </p>
+        <div
+          class="text-input-container"
+        >
+          <label
+            class="text-input-container__label"
+          >
+            Email
+          </label>
+          <input
+            class="text-input-container__input"
+            value=""
+          />
+        </div>
+        <div
+          class="text-input-container"
+        >
+          <label
+            class="text-input-container__label"
+          >
+            Password
+          </label>
+          <input
+            class="text-input-container__input"
+            value=""
+          />
+        </div>
+        <button
+          class="button-secondary"
+        >
+          Log in
+        </button>
+        <p
+          class="log-in__bottom-text"
+        >
+          Don't have an Account?
+           
+          <a
+            class="log-in__registration-link"
+            href="/registration"
+          >
+            Sign Up
+          </a>
+        </p>
+      </form>
+>>>>>>> 0b4b1bff148d6c468e65373d0a36e32f94100b0d
     </div>
   </div>
 </div>
