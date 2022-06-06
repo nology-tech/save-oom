@@ -59,7 +59,7 @@ const LogIn = () => {
             <Button
               className="log-in__button"
               buttonText={"Log in"}
-              buttonStyle={"button-secondary"}
+              buttonStyle={"button-secondary button-login-signup"}
               onClickEvent={login}
             />
             <p className="log-in__bottom-text">

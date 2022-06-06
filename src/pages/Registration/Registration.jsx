@@ -79,7 +79,7 @@ const Registration = () => {
               <Button
                 className="registration__button"
                 buttonText={"Create your account"}
-                buttonStyle={"button-secondary"}
+                buttonStyle={"button-secondary button-login-signup"}
                 onClickEvent={register}
               />
             </Link>

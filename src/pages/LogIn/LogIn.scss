@@ -35,6 +35,10 @@
   &__registration-link {
     color: white;
   }
+  &__button {
+    margin-top: 1rem;
+    width: 80%;
+  }
 }
 
 .text-input-container {
@@ -46,9 +50,4 @@
   }
 }
 
-.button-secondary {
-  margin-top: 1rem;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-}
+

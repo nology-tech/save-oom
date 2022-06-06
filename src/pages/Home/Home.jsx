@@ -34,18 +34,18 @@ const Home = () => {
     (res) => console.log(res)
   );
   //if (!loggedIn) navigate("/login")
+  // Hello
 
   return (
 
       <Layout>
         <NavBar />
         <Routes>
-          <Route path="/swing-gameplay" element={<SwingGamePlay />} />
-          <Route path="/story-container" element={<StoryContainer />} />
-          <Route path="/level-select-card-container" element={<LevelSelectCardContainer levelSelectData={levelSelectData}/>} />
-          <Route path="/game-instructions" element={<GameInstructions />} />
-          <Route path="/stats-page" element={<StatsPage />} />
-          <Route path="/avatar-creation" element={<SwingGamePlay />} />
+          <Route path="/swinggameplay" element={<SwingGamePlay />} />
+          <Route path="/story" element={<StoryContainer />} />
+          <Route path="/levelselect" element={<LevelSelectCardContainer levelSelectData={levelSelectData}/>} />
+          <Route path="/instructions" element={<GameInstructions />} />
+          <Route path="/stats" element={<StatsPage />} />
         </Routes>
       </Layout>
 
@@ -53,6 +53,8 @@ const Home = () => {
 };
 
 export default Home;
+
+
 
 
 
