@@ -14,6 +14,7 @@ import {
 } from "../../utils/firebaseGameUtils";
 import { Route, Routes } from "react-router-dom";
 import levelSelectData from "../../data/levelSelectData"
+import AvatarCreationContainer from "../../containers/AvatarCreationContainer/AvatarCreationContainer";
 //import { useNavigate } from 'react-router';
 //const loggedIn = false
 
@@ -45,6 +46,7 @@ const Home = () => {
           <Route path="/level-select-card-container" element={<LevelSelectCardContainer levelSelectData={levelSelectData}/>} />
           <Route path="/game-instructions" element={<GameInstructions />} />
           <Route path="/stats-page" element={<StatsPage />} />
+          <Route path="/avatarcreationcontainer" element={<AvatarCreationContainer />} />
         </Routes>
       </Layout>
 

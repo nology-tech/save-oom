@@ -10,7 +10,7 @@ const AvatarCreationContainer = () => {
   //use state for container - which changes upon an index value that changes with button click - and if page is exited resets
 
   const [count, setCount] = useState(0);
-  const [showText, setShowText] = useState(false);
+  const [name, setName] = useState("");
 
   const increment = () => {
     if (count >= 2) {
@@ -19,22 +19,22 @@ const AvatarCreationContainer = () => {
     else {
       setCount(count + 1);
     }
-
-    if(count> 0 || count < 2){
-      setShowText(!showText);
-    } else {
-      setShowText(showText);
+    };
+    const handleName = (e) => {
+      setName(e.target.value)
     }
-    
-  };
+
+    const headerText = (avatarCreationData[count].appendName ? name: " " )+ avatarCreationData[count].title
 
 
 
   return (
     <div className="avatar-creation-container" role="ACC">
-      <AvatarHeading avatarHeadingText={avatarCreationData[count].title} />
+      <AvatarHeading avatarHeadingText={headerText} />
       <div className="avatar-creation-container__text">
-      {showText ? <TextInput /> : null}
+      {/* {showText ? <TextInput /> : null} */}
+      {avatarCreationData[count].inputBox  && <TextInput onChangeEvent={handleName}/> }
+
       </div>
       <Button
         buttonStyle={"button-primary"}
