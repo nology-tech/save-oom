@@ -57,7 +57,7 @@ exports[`Should render the app 1`] = `
           />
         </div>
         <button
-          class="button-secondary"
+          class="button-secondary button-login-signup"
         >
           Log in
         </button>
