@@ -92,7 +92,7 @@ const SwingGamePlay = () => {
         <>
           <OomsNeedsContainer />
           <div className="swing-game-play__phonic">
-            <Timer startTime={60} handleGameEnd={handleGameEnd} />
+            <Timer startTime={600} handleGameEnd={handleGameEnd} />
             <PhonicComponent phonicText={phonicsArray[gameState.index]} />
           </div>
 
