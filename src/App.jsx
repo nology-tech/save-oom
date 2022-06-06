@@ -6,6 +6,7 @@ import { useContext } from "react";
 import UserContext from "./contexts/UserContext";
 const App = () => {
   const user = useContext(UserContext)
+  console.log(user)
   return (
     <>
       {!user.user ?

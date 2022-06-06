@@ -1,7 +1,7 @@
 import "./NavBar";
 import { customRender } from "../../utils/testUtils";
 import NavBar from "./NavBar";
-import { UserProvider } from "../../contexts/UserContext";
+import UserContext, { UserProvider } from "../../contexts/UserContext";
 import { render, screen } from "@testing-library/react";
 
 const userObj = {
@@ -9,6 +9,13 @@ const userObj = {
   id: "UserId1",
   email: "jack@gamil.com",
 };
+
+
+test('NameConsumer shows value from provider', () => {
+  customRender(<NavBar/>, {userObj})
+  expect(screen.getByText(/Jack:/)).toBeInTheDocument();
+})
+
 
 it("Should render the navbar", () => {
   const { container } = customRender(

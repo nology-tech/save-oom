@@ -11,7 +11,14 @@ import UserContext from "../../contexts/UserContext";
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebase";
 const NavBar = () => {
-  const { user } = useContext(UserContext)
+  let currentUserName;
+  try {
+    const { user } = useContext(UserContext);
+    currentUserName = user.name;
+  } catch {
+    currentUserName = "";
+  }
+
   const logout = async () => {
     await signOut(auth);
   };
@@ -46,8 +53,7 @@ const NavBar = () => {
           headingImg={statImg}
           headingStyle={"nav-bar"}
         />
-        {/* <h2>Jack</h2> */}
-        <h2>{user.name}</h2>
+        <h2>{currentUserName}</h2>
         <NavBarHeading
           headingText={"Add Avatar"}
           headingImg={addImg}
