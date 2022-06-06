@@ -12,13 +12,15 @@ import {
 } from "firebase/auth";
 // import { doc, setDoc } from "firebase/firestore";
 import { auth, createUser } from "../../firebase";
+import PopUp from "../../components/PopUp/PopUp";
 
 const Registration = () => {
   const [firstName, setFirstName] = useState("");
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
-
   const [user, setUser] = useState({});
+  const [showPopUp, setShowPopUp] = useState(false);
+  const [showValue, setShowValue] = useState("");
 
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
@@ -27,6 +29,9 @@ const Registration = () => {
 
   const register = async (e) => {
     e.preventDefault();
+    console.log("working");
+    console.log(showValue);
+    setShowPopUp(!showPopUp);
     console.log(auth, firstName, registerEmail, registerPassword);
     const user = await createUserWithEmailAndPassword(
       auth,
@@ -49,7 +54,10 @@ const Registration = () => {
           <div className="registration__image">
             <Logo />
           </div>
-          <form className="registration__container">
+          <form className="registration__container" onSubmit={register}>
+          {showPopUp && (
+              <PopUp togglePopUp={register} content={"User has registered"} />
+            )}
             <h1 className="registration__heading">Create your account</h1>
             <p className="registration__top-text">
               This is the registration page
@@ -58,8 +66,10 @@ const Registration = () => {
               className="registration__input"
               labelText={"First Name"}
               onChangeEvent={(e) => {
+                setShowValue(e.target.value);
                 setFirstName(e.target.value);
               }}
+              inputType="text"
             />
             <TextInput
               className="registration__input"
@@ -67,6 +77,7 @@ const Registration = () => {
               onChangeEvent={(e) => {
                 setRegisterEmail(e.target.value);
               }}
+              inputType="email"
             />
             <TextInput
               className="registration__input"
@@ -74,13 +85,14 @@ const Registration = () => {
               onChangeEvent={(e) => {
                 setRegisterPassword(e.target.value);
               }}
+              inputType="password"
             />
 
             <Button
               className="registration__button"
               buttonText={"Create your account"}
               buttonStyle={"button-secondary"}
-              onClickEvent={register}
+              type="submit"
             />
             <p className="registration__bottom-text">
               Already have an account?{" "}
