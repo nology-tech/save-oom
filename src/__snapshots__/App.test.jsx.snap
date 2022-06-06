@@ -40,6 +40,9 @@ exports[`Should render the app 1`] = `
           </label>
           <input
             class="text-input-container__input"
+            maxlength="30"
+            required=""
+            type="email"
             value=""
           />
         </div>
@@ -53,11 +56,15 @@ exports[`Should render the app 1`] = `
           </label>
           <input
             class="text-input-container__input"
+            maxlength="30"
+            required=""
+            type="password"
             value=""
           />
         </div>
         <button
           class="button-secondary"
+          type="submit"
         >
           Log in
         </button>
