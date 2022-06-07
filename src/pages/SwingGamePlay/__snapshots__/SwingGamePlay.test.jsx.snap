@@ -77,7 +77,7 @@ exports[`Should render the Swing Game Play screen 1`] = `
     <div>
       <img
         alt="Animated Image"
-        class="animate__animated swing-game-play__squirrel  "
+        class="animate__animated.animate__lightspeed swing-game-play__squirrel  "
         src="squirrel.png"
       />
     </div>
