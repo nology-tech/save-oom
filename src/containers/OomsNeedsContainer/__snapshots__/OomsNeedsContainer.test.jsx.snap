@@ -3,13 +3,14 @@
 exports[`Should render the Ooms need container 1`] = `
 <div>
   <div
-    class="container"
+    class="needs-container"
   >
     <div
       class="needs"
     >
       <img
         alt="ooms needs"
+        class="needs__image"
         src="Battery-0.svg"
       />
       <p
@@ -24,6 +25,7 @@ exports[`Should render the Ooms need container 1`] = `
     >
       <img
         alt="ooms needs"
+        class="needs__image"
         src="Smiley.svg"
       />
       <p
@@ -38,6 +40,7 @@ exports[`Should render the Ooms need container 1`] = `
     >
       <img
         alt="ooms needs"
+        class="needs__image"
         src="Battery-20.svg"
       />
       <p
