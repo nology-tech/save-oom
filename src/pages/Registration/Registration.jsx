@@ -13,18 +13,22 @@ import {
 // import { doc, setDoc } from "firebase/firestore";
 import { auth, createUser } from "../../firebase";
 import PopUp from "../../components/PopUp/PopUp";
+import { useContext } from "react";
+import UserContext from "../../contexts/UserContext";
 
 const Registration = () => {
   const [firstName, setFirstName] = useState("");
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
+  const userContext  = useContext(UserContext)
+
   const [user, setUser] = useState({});
   const [showPopUp, setShowPopUp] = useState(false);
   const [showValue, setShowValue] = useState("");
 
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
-    console.log(user)
+    userContext.setUser(user)
   });
 
   const register = async (e) => {
@@ -64,7 +68,7 @@ const Registration = () => {
             </p>
             <TextInput
               className="registration__input"
-              labelText={"First Name"}
+              labelText={"Child Name"}
               onChangeEvent={(e) => {
                 setShowValue(e.target.value);
                 setFirstName(e.target.value);
