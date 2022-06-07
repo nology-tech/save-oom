@@ -1,11 +1,12 @@
-@use "../../styles/variables" as *;
+@use '../../styles/variables' as *;
 
 .timer {
   font-family: $font-secondary;
   color: $color-white;
   background: none;
-  font-size: 5rem;
+  font-size: 3rem;
   text-align: center;
+  margin-top: 10%;
 
   &__s {
     font-family: $font-secondary;

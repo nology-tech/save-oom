@@ -1,11 +1,13 @@
-import React from "react";
+// import React, { useEffect,useContext } from "react";
 import Layout from "../../components/Layout/Layout";
 import NavBar from "../../containers/navBar/NavBar";
 import SwingGamePlay from "../SwingGamePlay/SwingGamePlay";
+// import UserContext from "../../contexts/UserContext";
 import StoryContainer from "../StoryContainer/StoryContainer";
 import LevelSelectCardContainer from "../../containers/LevelSelectCardContainer/LevelSelectCardContainer";
 import GameInstructions from "../../components/GameInstructions/GameInstructions"
-import StatsPage from "../../pages/StatsPage/StatsPage"
+import StatsPage from "../../pages/StatsPage/StatsPage";
+import AvatarCreation from "../AvatarCreation/AvatarCreation";
 import "./Home.scss";
 import {
   getCorrectGameRoundsForUser,
@@ -14,8 +16,6 @@ import {
 } from "../../utils/firebaseGameUtils";
 import { Route, Routes } from "react-router-dom";
 import levelSelectData from "../../data/levelSelectData"
-//import { useNavigate } from 'react-router';
-//const loggedIn = false
 
 const Home = () => {
   //   const currentRound = {
@@ -33,7 +33,6 @@ const Home = () => {
   getArrayOfRounds("dumbo", "swing", getIncorrectGameRoundsForUser).then(
     (res) => console.log(res)
   );
-  //if (!loggedIn) navigate("/login")
 
   return (
 
@@ -45,6 +44,8 @@ const Home = () => {
           <Route path="/level-select-card-container" element={<LevelSelectCardContainer levelSelectData={levelSelectData}/>} />
           <Route path="/game-instructions" element={<GameInstructions />} />
           <Route path="/stats-page" element={<StatsPage />} />
+          <Route path="/avatarcreation" element={<AvatarCreation />} />
+
         </Routes>
       </Layout>
 

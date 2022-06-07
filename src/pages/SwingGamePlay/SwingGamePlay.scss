@@ -28,8 +28,12 @@
     position: absolute;
     bottom: 5%;
     left: 30%;
+<<<<<<< HEAD
     -webkit-animation-duration: 2s;
     animation-duration: 2s;
+=======
+    animation-duration: 10s;
+>>>>>>> 3705289979c98f907c1d4a8ee4aa93bfb7ed5869
   }
 
   &__score {
@@ -78,15 +82,8 @@
 }
 
 .animate__animated.animate__fastest {
-  -webkit-animation-duration: calc(1s * 0.1);
-  animation-duration: calc(1s * 0.1);
-  -webkit-animation-duration: calc(var(--animate-duration) * 0.1);
-  animation-duration: calc(var(--animate-duration) * 0.1);
-}
-
-.animate__animated.animate__lightspeed {
-  -webkit-animation-duration: calc(1s * 0.001);
-  animation-duration: calc(1s * 0.001);
-  -webkit-animation-duration: calc(var(--animate-duration) * 0.001);
-  animation-duration: calc(var(--animate-duration) * 0.001);
+  -webkit-animation-duration: calc(1s * 0.01);
+  animation-duration: calc(1s * 0.01);
+  -webkit-animation-duration: calc(var(--animate-duration) * 0.01);
+  animation-duration: calc(var(--animate-duration) * 0.01);
 }
