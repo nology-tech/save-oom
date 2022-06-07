@@ -1,22 +1,22 @@
 @use '../../styles/variables' as *;
 
 .needs-container {
-  position: absolute;
   top: 1%;
-  left: 74%;
-  width: 25rem;
-  height: 5rem;
+  position: relative;
+  width: 9rem;
+  height: 2rem;
+  left: 70%;
   background: $color-validation-button-background;
   border-radius: 4rem;
   display: flex;
   justify-content: space-evenly;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (min-width: 1100px) {
   .needs-container {
-    position: relative;
-    width: 9rem;
-    height: 2rem;
-    left: 70%;
+    position: absolute;
+    left: 74%;
+    width: 25rem;
+    height: 5rem;
   }
 }

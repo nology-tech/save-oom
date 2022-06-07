@@ -1,29 +1,29 @@
 @use '../../styles/variables' as *;
 
 .intro {
-  height: 20rem;
-  width: 51rem;
   margin: auto;
-  margin-top: 15rem;
+  width: 30rem;
+  margin-top: 10rem;
+  height: 15rem;
 
   &__paragraph {
     color: $color-primary;
     font-family: $font-primary;
-    font-size: 1.5rem;
     text-align: center;
+    height: 15rem;
+    width: 30rem;
+    margin-right: 2rem;
+    font-size: 1.2rem;
   }
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (min-width: 1100px) {
   .intro {
-    width: 30rem;
-    margin-top: 10rem;
-    height: 15rem;
+    height: 20rem;
+    width: 51rem;
+    margin-top: 15rem;
     &__paragraph {
-      height: 15rem;
-      width: 30rem;
-      margin-right: 2rem;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
     }
   }
 }
