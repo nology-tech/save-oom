@@ -5,7 +5,8 @@ import SwingGamePlay from "../SwingGamePlay/SwingGamePlay";
 import StoryContainer from "../StoryContainer/StoryContainer";
 import LevelSelectCardContainer from "../../containers/LevelSelectCardContainer/LevelSelectCardContainer";
 import GameInstructions from "../../components/GameInstructions/GameInstructions"
-import StatsPage from "../../pages/StatsPage/StatsPage"
+import StatsPage from "../../pages/StatsPage/StatsPage";
+import AvatarCreation from "../AvatarCreation/AvatarCreation";
 import "./Home.scss";
 import {
   getCorrectGameRoundsForUser,
@@ -45,6 +46,8 @@ const Home = () => {
           <Route path="/level-select-card-container" element={<LevelSelectCardContainer levelSelectData={levelSelectData}/>} />
           <Route path="/game-instructions" element={<GameInstructions />} />
           <Route path="/stats-page" element={<StatsPage />} />
+          <Route path="/avatarcreation" element={<AvatarCreation />} />
+
         </Routes>
       </Layout>
 
