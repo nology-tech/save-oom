@@ -1,6 +1,6 @@
-@use "../../styles/variables" as *;
+@use '../../styles/variables' as *;
 
-.container {
+.needs-container {
   position: absolute;
   top: 1%;
   left: 74%;
@@ -9,5 +9,14 @@
   background: $color-validation-button-background;
   border-radius: 4rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width: 1100px) {
+  .needs-container {
+    position: relative;
+    width: 9rem;
+    height: 2rem;
+    left: 70%;
+  }
 }

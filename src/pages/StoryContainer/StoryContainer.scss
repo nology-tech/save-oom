@@ -1,10 +1,11 @@
-@use "../../styles/variables.scss" as *;
+@use '../../styles/variables.scss' as *;
 
 .story__container {
-  height: 100vh;
-  width: 100vw;
   background-image: url(../../assets/images/background.png);
-  background-size: 100vw 100vh;
+  background-size: cover;
+  height: auto;
+  width: 100%;
+  background-position: center;
   background-repeat: no-repeat;
   text-align: center;
 }
