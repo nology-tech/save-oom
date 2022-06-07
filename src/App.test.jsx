@@ -1,6 +1,6 @@
 import App from "./App";
 import { screen } from "@testing-library/react";
-import {customContextRender } from "./utils/testUtils";;
+import {customContextRender } from "./utils/testUtils";
 import { BrowserRouter } from "react-router-dom";
 const userObj = {
   user: {
