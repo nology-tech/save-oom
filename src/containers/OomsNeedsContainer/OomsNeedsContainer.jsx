@@ -7,7 +7,7 @@ import smiley from "../../assets/images/Smiley.svg";
 
 const OomsNeedsContainer = () => {
   return (
-    <div className="container">
+    <div className="oomsneeds-container">
       <OomsNeeds oomsNeed={battery0} percentage={0} />
       <OomsNeeds oomsNeed={smiley} percentage={90} />
       <OomsNeeds oomsNeed={battery20} percentage={20} />

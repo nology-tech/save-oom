@@ -1,7 +1,10 @@
 @use "../../styles/variables" as *;
 
-.container {
-  width: 25rem;
+.oomsneeds-container{
+  position: absolute;
+  top: 1%;
+  left: 69%;
+  width: 30%;
   height: 5rem;
   background: $color-validation-button-background;
   border-radius: 4rem;
