@@ -4,9 +4,9 @@ import GameInstructions from "./GameInstructions";
 import Button from "../Button/Button";
 
 it("Should render the game instructions", () => {
-  render(<GameInstructions text={"test"} />);
+  render(<GameInstructions/>);
 
-  const paragraph1 = screen.getByText(/test/i);
+  const paragraph1 = screen.getByRole("text");
 
   expect(paragraph1).toBeInTheDocument();
 });

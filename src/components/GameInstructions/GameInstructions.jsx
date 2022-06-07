@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 
 const GameInstructions = () => {
   return (
-    <div className="gameInstructions">
+    <div className="gameInstructions" role="text">
       <h1 className="gameInstructions__heading">HOW TO PLAY</h1>
       <ul className="gameInstructions__text">
         <li>
