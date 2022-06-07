@@ -16,7 +16,9 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+ul,
+li {
   // adding display and width prevents margin collapse on these semantic text elements
   margin: 0.5rem 0;
   display: inline-block;
