@@ -8,11 +8,15 @@ import Registration from "./Registration";
 
 import UserContext from "../../contexts/UserContext";
 
+const userFnctn = () => {
+  console.log("set")
+}
 const userObj = {
   user: {
     name: "Jack", 
     email:"Hello@gmail"
-  }
+  },
+  setUser: userFnctn,
 };
 
 it("Should render the Registration screen", async () => {
