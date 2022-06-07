@@ -1,0 +1,10 @@
+.dashboard-container{
+    background-image: url(../../assets/images/Dashboard-Background-image.png);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    &__heading{
+        display: inline-block;
+    }
+}
