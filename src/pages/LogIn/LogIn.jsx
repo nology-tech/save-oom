@@ -8,6 +8,7 @@ import "./LogIn.scss";
 //authentication imports
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
+import { getUserById } from "../../utils/firebaseGameUtils";
 import { useState } from "react";
 import { useContext } from "react";
 import UserContext from "../../contexts/UserContext";
@@ -15,7 +16,7 @@ import UserContext from "../../contexts/UserContext";
 const LogIn = () => {
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
-  const userContext  = useContext(UserContext)
+  const userContext = useContext(UserContext)
 
   console.log(userContext)
   const login = async (e) => {
@@ -27,13 +28,15 @@ const LogIn = () => {
         loginEmail,
         loginPassword
       );
+      const fbUser = await getUserById(user.user.uid);
       console.log(user)
       const currentUser = {
         userId: user.user.uid,
-        name: user.user.email 
+        name: fbUser.data() && fbUser.data().name ? fbUser.data().name : user.user.email 
       }
-      console.log(currentUser)
-      console.log(userContext)
+      console.log("currentUser", currentUser)
+      console.log("userContext", userContext)
+      console.log("fbUser", fbUser.data())
       userContext.setUser(currentUser)
       console.log(userContext.user)
     } catch (error) {

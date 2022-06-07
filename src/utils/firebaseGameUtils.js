@@ -2,12 +2,28 @@ import { db } from "../firebase";
 import {
   addDoc,
   collection,
+  doc,
   getDocs,
+  getDoc,
   query,
   where,
   orderBy,
   Timestamp,
 } from "firebase/firestore";
+
+
+/**
+ * Gets a user object using the userId.
+ * @param {*} userId 
+ * @returns 
+ */
+export const getUserById = async( userId ) => {
+  console.log("getUserbyId", userId);
+  const docRef = doc(db, "users", userId);
+  const docSnap = await getDoc( docRef );
+  return docSnap;
+}
+
 /** 
  * Get all the rounds of a specific game for a given user, ordered by most recent first 
  @param {*} userId
