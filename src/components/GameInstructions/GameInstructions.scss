@@ -1,22 +1,33 @@
 @use "../../styles/variables" as *;
+@use "../../styles/typography" as *;
 
 .gameInstructions {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("../../assets/images/backgroundGameInstructions.svg");
+  background-image: url("../../assets/images/gameplaybg.svg");
   background-size: cover;
   background-repeat: no-repeat;
   height: auto;
   width: 100%;
   background-position: center;
 
+  &__heading {
+    text-align: center;
+  }
+
   &__text {
     width: 40rem;
-    font-size: 2rem;
+    font-size: 1.2rem;
     text-align: center;
-    line-height: 3rem;
+    line-height: 2rem;
     margin-bottom: 2rem;
+
+    li {
+      color: $color-primary;
+    }
   }
+
+  
 }
