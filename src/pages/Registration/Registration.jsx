@@ -12,17 +12,20 @@ import {
 } from "firebase/auth";
 // import { doc, setDoc } from "firebase/firestore";
 import { auth, createUser } from "../../firebase";
+import { useContext } from "react";
+import UserContext from "../../contexts/UserContext";
 
 const Registration = () => {
   const [firstName, setFirstName] = useState("");
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
+  const userContext  = useContext(UserContext)
 
   const [user, setUser] = useState({});
 
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
-    console.log(user)
+    userContext.setUser(user)
   });
 
   const register = async (e) => {
