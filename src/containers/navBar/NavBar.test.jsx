@@ -11,27 +11,35 @@ const userObj = {
   }
 };
 
+
 it("Should render the navbar", () => {
   const { container } = customRender(
-    <UserContext.Provider value={userObj}>
-      <NavBar />
-    </UserContext.Provider>
+    <NavBar />, 
+    true, 
+    {useContext: true,
+    value: userObj}
   );
   expect(container).toMatchSnapshot();
 });
 
 it("Should render the navbar", () => {
   const { container } = customRender(
-    <UserContext.Provider value={userObj}>
-      <NavBar />
-    </UserContext.Provider>
+    <NavBar />, 
+    true, 
+    {useContext: true,
+    value: userObj}
   );
   expect(container).toMatchSnapshot();
 });
 
 
 it("Should contain the navbar list that contains levels, stats and name from context provider ", () => {
-  customContextRender(<NavBar />, userObj);
+  customRender(
+    <NavBar />, 
+    true, 
+    {useContext: true,
+    value: userObj}
+  );
   const navItem1 = screen.getByText(/Level 1/i);
   const navItem2 = screen.getByText(/Level 2/i);
   const name = screen.getByText(/Jack/i);
