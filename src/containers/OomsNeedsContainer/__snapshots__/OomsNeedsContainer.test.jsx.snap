@@ -3,7 +3,7 @@
 exports[`Should render the Ooms need container 1`] = `
 <div>
   <div
-    class="needs-container"
+    class="oomsneeds-container"
   >
     <div
       class="needs"

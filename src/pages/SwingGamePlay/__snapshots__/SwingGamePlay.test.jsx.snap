@@ -6,7 +6,7 @@ exports[`Should render the Swing Game Play screen 1`] = `
     class="swing-game-play"
   >
     <div
-      class="needs-container"
+      class="oomsneeds-container"
     >
       <div
         class="needs"
