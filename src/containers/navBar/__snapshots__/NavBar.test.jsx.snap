@@ -61,7 +61,92 @@ exports[`Should render the navbar 1`] = `
           Stats
         </h2>
       </div>
-      <h2 />
+      <h2>
+        Jack
+      </h2>
+      <div
+        class="nav-bar-header"
+      >
+        <h2
+          class="nav-bar-header__heading"
+        >
+          Add Avatar
+        </h2>
+      </div>
+    </div>
+    <button
+      class="button-logout"
+    >
+      Logout
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Should render the navbar 2`] = `
+<div>
+  <div
+    class="nav-bar"
+  >
+    <div
+      class="nav-bar__section"
+    >
+      <img
+        alt="Logo image"
+        class="logo__image"
+        src="logo.png"
+      />
+      <div
+        class="nav-bar-header"
+      >
+        <h2
+          class="nav-bar-header__heading"
+        >
+          Phonics stages
+        </h2>
+      </div>
+      <h2>
+        Introduction
+      </h2>
+      <div
+        class="nav-bar-header"
+      >
+        <h2
+          class="nav-bar-header__heading"
+        >
+          Level 1
+        </h2>
+      </div>
+      <div
+        class="nav-bar-header"
+      >
+        <h2
+          class="nav-bar-header__heading"
+        >
+          Level 2
+        </h2>
+      </div>
+      <div
+        class="nav-bar-header"
+      >
+        <h2
+          class="nav-bar-header__heading"
+        >
+          Level 3
+        </h2>
+      </div>
+      <div
+        class="nav-bar-header"
+      >
+        <h2
+          class="nav-bar-header__heading"
+        >
+          Stats
+        </h2>
+      </div>
+      <h2>
+        Jack
+      </h2>
       <div
         class="nav-bar-header"
       >

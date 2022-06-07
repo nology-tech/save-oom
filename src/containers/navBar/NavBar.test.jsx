@@ -1,40 +1,43 @@
 import "./NavBar";
-import { customRender } from "../../utils/testUtils";
 import NavBar from "./NavBar";
-import UserContext, { UserProvider } from "../../contexts/UserContext";
-import { render, screen } from "@testing-library/react";
+import UserContext from "../../contexts/UserContext";
+import {customRender, customContextRender} from "../../utils/testUtils"
+import { screen } from "@testing-library/react";
 
 const userObj = {
-  name: "Jack",
-  id: "UserId1",
-  email: "jack@gamil.com",
+  user: {
+    name: "Jack", 
+    email:"Hello@gmail"
+  }
 };
-
-
-test('NameConsumer shows value from provider', () => {
-  customRender(<NavBar/>, {userObj})
-  expect(screen.getByText(/Jack:/)).toBeInTheDocument();
-})
-
 
 it("Should render the navbar", () => {
   const { container } = customRender(
-    <UserProvider value={userObj}>
+    <UserContext.Provider value={userObj}>
       <NavBar />
-    </UserProvider>
+    </UserContext.Provider>
   );
   expect(container).toMatchSnapshot();
 });
-it("Should contain the navbar list that contains Level 1 ", () => {
-  render(
-    <UserProvider value={userObj}>
+
+it("Should render the navbar", () => {
+  const { container } = customRender(
+    <UserContext.Provider value={userObj}>
       <NavBar />
-    </UserProvider>
+    </UserContext.Provider>
   );
+  expect(container).toMatchSnapshot();
+});
+
+
+it("Should contain the navbar list that contains levels, stats and name from context provider ", () => {
+  customContextRender(<NavBar />, userObj);
   const navItem1 = screen.getByText(/Level 1/i);
   const navItem2 = screen.getByText(/Level 2/i);
+  const name = screen.getByText(/Jack/i);
   const stats = screen.getByText(/Stats/i);
   expect(navItem1).toBeInTheDocument();
   expect(navItem2).toBeInTheDocument();
   expect(stats).toBeInTheDocument();
+  expect(name).toBeInTheDocument();
 });
