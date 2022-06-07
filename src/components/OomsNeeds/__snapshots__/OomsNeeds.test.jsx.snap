@@ -5,14 +5,19 @@ exports[`Should render the Ooms needs 1`] = `
   <div
     class="needs"
   >
-    <img
-      alt="ooms needs"
-    />
-    <p
-      class="needs__percentage"
+    <div
+      class="needs__image-div"
     >
-      %
-    </p>
+      <img
+        alt="ooms needs"
+        class="needs__image"
+      />
+    </div>
   </div>
+  <p
+    class="needs__percentage"
+  >
+    %
+  </p>
 </div>
 `;

@@ -11,45 +11,60 @@ exports[`Should render the Swing Game Play screen 1`] = `
       <div
         class="needs"
       >
-        <img
-          alt="ooms needs"
-          src="Battery-0.svg"
-        />
-        <p
-          class="needs__percentage"
+        <div
+          class="needs__image-div"
         >
-          0
-          %
-        </p>
+          <img
+            alt="ooms needs"
+            class="needs__image"
+            src="Battery-0.svg"
+          />
+        </div>
       </div>
+      <p
+        class="needs__percentage"
+      >
+        0
+        %
+      </p>
       <div
         class="needs"
       >
-        <img
-          alt="ooms needs"
-          src="Smiley.svg"
-        />
-        <p
-          class="needs__percentage"
+        <div
+          class="needs__image-div"
         >
-          90
-          %
-        </p>
+          <img
+            alt="ooms needs"
+            class="needs__image"
+            src="Smiley.svg"
+          />
+        </div>
       </div>
+      <p
+        class="needs__percentage"
+      >
+        0
+        %
+      </p>
       <div
         class="needs"
       >
-        <img
-          alt="ooms needs"
-          src="Battery-20.svg"
-        />
-        <p
-          class="needs__percentage"
+        <div
+          class="needs__image-div"
         >
-          20
-          %
-        </p>
+          <img
+            alt="ooms needs"
+            class="needs__image"
+            src="Battery-20.svg"
+          />
+        </div>
       </div>
+      <p
+        class="needs__percentage"
+      >
+        0
+        %
+      </p>
     </div>
     <div
       class="swing-game-play__phonic"
