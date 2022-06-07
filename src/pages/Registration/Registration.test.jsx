@@ -5,11 +5,12 @@ import { act } from "react-dom/test-utils";
 import { Router } from "react-router-dom";
 import Button from "../../components/Button/Button";
 import Registration from "./Registration";
+import { customContextRender } from "../../utils/testUtils";
 
 import UserContext from "../../contexts/UserContext";
 
 const userFnctn = () => {
-  console.log("set")
+  console.log("Updates user context ")
 }
 const userObj = {
   user: {
@@ -33,7 +34,7 @@ it("Should render the Registration screen", async () => {
   expect(paragraph1).toBeInTheDocument();
 })
 it("Should display the button with the text - Create your account", () => {
-  render(<Button buttonText="Create your account" />);
+  customContextRender(<Button buttonText="Create your account" />);
   const paragraph1 = screen.getByText(/Create your account/i);
   expect(paragraph1).toBeInTheDocument();
 });

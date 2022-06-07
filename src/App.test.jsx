@@ -1,17 +1,34 @@
 import App from "./App";
 import { screen } from "@testing-library/react";
-import { customRender } from "./utils/testUtils";
-// import { Router } from "react-router-dom";
-// import { render } from "@testing-library/react";
+import {customContextRender } from "./utils/testUtils";;
+import { BrowserRouter } from "react-router-dom";
+const userObj = {
+  user: {
+    name: "Jack", 
+    email:"Hello@gmail"
+  },
+};
 
+const nullObj = {
+  name:null
+};
 
-it("Should render the app", () => {
-  const { container } = customRender(<App />);
-  expect(container).toMatchSnapshot();
-});
-
+// If user name is null - that will show log in 
 it('Should land on the Login Page', () => {
-  customRender(<App />);
-  expect(screen.getByText(/This is the log in page/i)).toBeInTheDocument()
+  customContextRender( 
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>, nullObj);
+  expect(screen.getByText(/Email/i)).toBeInTheDocument()
 })
+
+//If user is not null it will show main app 
+it('Should not land on log in if not null', () => {
+  customContextRender(
+  <BrowserRouter>
+    <App/>
+  </BrowserRouter>, userObj);
+  expect(screen.getByText(/Introduction/i)).toBeInTheDocument()
+})
+
 
