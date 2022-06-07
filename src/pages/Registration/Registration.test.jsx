@@ -4,15 +4,25 @@ import { createMemoryHistory } from "history";
 import { act } from "react-dom/test-utils";
 import { Router } from "react-router-dom";
 import Button from "../../components/Button/Button";
-
 import Registration from "./Registration";
+
+import UserContext from "../../contexts/UserContext";
+
+const userObj = {
+  user: {
+    name: "Jack", 
+    email:"Hello@gmail"
+  }
+};
 
 it("Should render the Registration screen", async () => {
   const history = createMemoryHistory();
 
   await act(async () => render(    
     <Router location={history.location} navigator={history}>
-      <Registration />
+      <UserContext.Provider value={userObj}>
+        <Registration />
+      </UserContext.Provider>
     </Router>));
 
   const paragraph1 = screen.getByText(/This is the registration page/i);
