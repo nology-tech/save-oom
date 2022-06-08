@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import swingingOom from "../../assets/images/Group 146swingingOom.png";
-import squirrel from "../../assets/images/squirrel.png";
-import AnimatedImage from "../../components/AnimatedImage/AnimatedImage";
-import ValidateAnswerButtons from "../../components/ValidateAnswerButtons/ValidateAnswerButtons";
-import PhonicComponent from "../../components/PhonicComponent/PhonicComponent";
-import phonicsData from "../../data/phonicsData";
-import GameEnd from "../GameEnd/GameEnd";
-import "./SwingGamePlay.scss";
-import Timer from "../../components/Timer/Timer";
-import shortid from "shortid";
-import OomsNeedsContainer from "../../containers/OomsNeedsContainer/OomsNeedsContainer";
+import React, { useState } from 'react';
+import swingingOom from '../../assets/images/Group 146swingingOom.png';
+import squirrel from '../../assets/images/squirrel.png';
+import AnimatedImage from '../../components/AnimatedImage/AnimatedImage';
+import ValidateAnswerButtons from '../../components/ValidateAnswerButtons/ValidateAnswerButtons';
+import PhonicComponent from '../../components/PhonicComponent/PhonicComponent';
+import phonicsData from '../../data/phonicsData';
+import GameEnd from '../GameEnd/GameEnd';
+import './SwingGamePlay.scss';
+import Timer from '../../components/Timer/Timer';
+import shortid from 'shortid';
+import OomsNeedsContainer from '../../containers/OomsNeedsContainer/OomsNeedsContainer';
 
 let gameScore = 0;
 const SwingGamePlay = () => {
@@ -34,7 +34,7 @@ const SwingGamePlay = () => {
     newGameState.counter = newGameState.counter + 1;
     newGameState.index = handleIndexChange();
     setGameState(newGameState);
-    console.log(newGameState, gameState, "handleCorrect");
+    console.log(newGameState, gameState, 'handleCorrect');
   };
 
   const handleIncorrect = () => {
@@ -44,7 +44,7 @@ const SwingGamePlay = () => {
     console.log(newGameState.isCorrect);
     newGameState.index = newGameState.index + 1;
     setGameState(newGameState);
-    console.log(newGameState, gameState, "handleIncorrect");
+    console.log(newGameState, gameState, 'handleIncorrect');
   };
 
   const handleHint = () => {
@@ -72,7 +72,7 @@ const SwingGamePlay = () => {
     let newGameState = { ...gameState };
     newGameState.isGameOver = true;
     setGameState(newGameState);
-    console.log(newGameState, gameState, "handleGameEnd");
+    console.log(newGameState, gameState, 'handleGameEnd');
   };
 
   const getId = () => {
@@ -81,17 +81,17 @@ const SwingGamePlay = () => {
     return id;
   };
 
-  const squirrelAnimationType2 = hintAnimation ? "animate__bounce" : "";
-  const oomAnimationType = gameState.isCorrect ? "animate__swinging" : "";
+  const squirrelAnimationType2 = hintAnimation ? 'animate__bounce' : '';
+  const oomAnimationType = gameState.isCorrect ? 'animate__swinging' : '';
 
   return (
-    <div className="swing-game-play">
+    <div className='swing-game-play'>
       {gameState.isGameOver ? (
         <GameEnd score={gameScore} />
       ) : (
         <>
           <OomsNeedsContainer />
-          <div className="swing-game-play__phonic">
+          <div className='swing-game-play__phonic'>
             <Timer startTime={60} handleGameEnd={handleGameEnd} />
             <PhonicComponent phonicText={phonicsArray[gameState.index]} />
           </div>
@@ -100,17 +100,17 @@ const SwingGamePlay = () => {
             <AnimatedImage
               key={getId()}
               imageToAnimate={squirrel}
-              animationClass={"animate__animated"}
+              animationClass={'animate__animated.animate__fastest'}
               animationType={` ${squirrelAnimationType2}`}
-              imageStylesClass={"swing-game-play__squirrel"}
+              imageStylesClass={'swing-game-play__squirrel'}
             />
           </div>
           <AnimatedImage
             key={getId()}
             imageToAnimate={swingingOom}
-            animationClass={"animate__animated.animate__fastest"}
+            animationClass={'animate__animated.animate__fastest'}
             animationType={oomAnimationType}
-            imageStylesClass={"swing-game-play__oom"}
+            imageStylesClass={'swing-game-play__oom'}
           />
 
           <ValidateAnswerButtons
@@ -118,7 +118,7 @@ const SwingGamePlay = () => {
             handleIncorrect={handleIncorrect}
           />
 
-          <p className="swing-game-play__score">
+          <p className='swing-game-play__score'>
             Number Of Correct Sounds: {gameState.score}
           </p>
         </>

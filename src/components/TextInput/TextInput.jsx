@@ -22,6 +22,8 @@ const TextInput = ({
           className="text-input-container__input"
           value={value}
           onChange={onChangeEvent}
+          required
+          maxLength={30}
         />
       </div>
     </>

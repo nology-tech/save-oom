@@ -1,12 +1,11 @@
-@use "../../styles/variables.scss" as *;
+@use '../../styles/variables.scss' as *;
 
 .story__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background-image: url(../../assets/images/background.png);
   background-size: cover;
+  height: auto;
+  width: 100vw;
+  background-position: center;
   background-repeat: no-repeat;
   height: auto;
   width: 100%;

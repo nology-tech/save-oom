@@ -1,7 +1,7 @@
-@use "../../styles/variables.scss" as *;
+@use '../../styles/variables.scss' as *;
 
 .button-primary {
-  width: 12rem;
+  width: 8rem;
   height: 4rem;
   padding: 1rem;
   background-color: transparent;
@@ -25,7 +25,7 @@
 }
 
 .button-logout {
-  width: 11.9rem;
+  width: 8rem;
   height: 3.3rem;
   padding: 0.5rem;
   background-color: #272e3f;
@@ -57,3 +57,11 @@
   font-family: $font-secondary;
 }
 
+@media screen and (min-width: 1100px) {
+  .button-primary {
+    width: 12rem;
+  }
+  .button-logout {
+    width: 11.9rem;
+  }
+}
