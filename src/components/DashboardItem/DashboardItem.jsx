@@ -1,5 +1,6 @@
 import React from 'react'
 import "./DashboardItem.scss"
+// import smiley from "./../../assets/images/Smiley.svg"
 
 const DashboardItem = ({imageSRC, headingText, contentText}) => {
   return (
