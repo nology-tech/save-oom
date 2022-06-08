@@ -15,11 +15,13 @@ import UserContext from "../../contexts/UserContext";
 const LogIn = () => {
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
+  const [showValue, setShowValue] = useState("");
   const userContext  = useContext(UserContext)
 
   console.log(userContext)
   const login = async (e) => {
     e.preventDefault();
+    console.log(showValue);
 
     try {
       const user = await signInWithEmailAndPassword(
@@ -49,15 +51,17 @@ const LogIn = () => {
           <div className="log-in__image">
             <Logo />
           </div>
-          <form className="log-in__container">
+          <form className="log-in__container" onSubmit={login}>
             <h1 className="log-in__heading">Welcome!</h1>
             <p className="log-in__top-text">This is the log in page</p>
             <TextInput
               className="log-in__input"
               labelText={"Email"}
               onChangeEvent={(event) => {
+                setShowValue(event.target.value);
                 setLoginEmail(event.target.value);
               }}
+              inputType="email"
             />
             <TextInput
               className="log-in__input"
@@ -65,12 +69,13 @@ const LogIn = () => {
               onChangeEvent={(event) => {
                 setLoginPassword(event.target.value);
               }}
+              inputType="password"
             />
             <Button
               className="log-in__button"
               buttonText={"Log in"}
               buttonStyle={"button-secondary"}
-              onClickEvent={login}
+              type="submit"
             />
             <p className="log-in__bottom-text">
               Don&apos;t have an Account?{" "}

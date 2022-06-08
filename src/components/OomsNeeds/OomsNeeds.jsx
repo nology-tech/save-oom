@@ -1,22 +1,15 @@
-import React from "react";
-import "./OomsNeeds.scss";
+import React from 'react';
+import './OomsNeeds.scss';
 
 const OomsNeeds = ({ oomsNeed, percentage }) => {
 
 
 
   return (
-    <>
-      <div className="needs">
-        <div className="needs__image-div">
-          <img className="needs__image" src={oomsNeed} alt="ooms needs" />
-
-        </div>
-
-      </div>
-      <p className="needs__percentage">{percentage}%</p>
-
-    </>
+    <div className='needs'>
+      <img src={oomsNeed} alt='ooms needs' className='needs__image' />
+      <p className='needs__percentage'>{percentage}%</p>
+    </div>
   );
 };
 

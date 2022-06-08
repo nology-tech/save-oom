@@ -1,9 +1,9 @@
-import React from "react";
-import OomsNeeds from "../../components/OomsNeeds/OomsNeeds";
-import "./OomsNeedsContainer.scss";
-import battery0 from "../../assets/images/Battery-0.svg";
-import battery20 from "../../assets/images/Battery-20.svg";
-import smiley from "../../assets/images/Smiley.svg";
+import React from 'react';
+import OomsNeeds from '../../components/OomsNeeds/OomsNeeds';
+import './OomsNeedsContainer.scss';
+import battery0 from '../../assets/images/Battery-0.svg';
+import battery20 from '../../assets/images/Battery-20.svg';
+import smiley from '../../assets/images/Smiley.svg';
 
 const OomsNeedsContainer = ({percentage}) => {
   return (
