@@ -35,7 +35,7 @@ const Registration = () => {
     console.log("working");
     console.log(showValue);
     console.log(auth, firstName, registerEmail, registerPassword);
-    navigate('../avatarcreation');
+    navigate('/avatarcreation');
     const user = await createUserWithEmailAndPassword(
       auth,
       registerEmail,
