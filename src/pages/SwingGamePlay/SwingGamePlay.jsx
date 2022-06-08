@@ -10,22 +10,24 @@ import "./SwingGamePlay.scss";
 import Timer from "../../components/Timer/Timer";
 import shortid from "shortid";
 import OomsNeedsContainer from "../../containers/OomsNeedsContainer/OomsNeedsContainer";
-// import {getUserById} from "../../utils/firebaseGameUtils";
+import {saveUserRound} from "../../utils/firebaseGameUtils";
 import UserContext from "../../contexts/UserContext";
 import {getArrayForSwing} from "../../utils/gameUtils";
 
 let gameScore = 0;
 const SwingGamePlay = () => {
 
-  // let currentUserName;
+  const game = "swing";
+  // should become props?
+  const level = 1;
+
   let currentUserId = 0;
   try {
     const { user } = useContext(UserContext);
-    // currentUserName = user.name;
-    currentUserId = user.name;
+    currentUserId = user.userId;
 
   } catch {
-    // currentUserName = "";
+    console.error("Error!");
   }
 
   const [gameState, setGameState] = useState({
@@ -53,6 +55,7 @@ const SwingGamePlay = () => {
   }, []  );
 
   const handleCorrect = () => {
+    const currentPhonic = phonicsArray[gameState.index];
     let newGameState = { ...gameState };
     newGameState.isCorrect = true;
     setHintAnimation(false);
@@ -62,9 +65,13 @@ const SwingGamePlay = () => {
     newGameState.index = handleIndexChange();
     setGameState(newGameState);
     console.log(newGameState, gameState, "handleCorrect");
+    // save game results
+    saveUserRound( currentUserId, game, level, newGameState, currentPhonic)
+      .then(() => {console.log("Saved user round - correct!")});
   };
 
   const handleIncorrect = () => {
+    const currentPhonic = phonicsArray[gameState.index];
     let newGameState = { ...gameState };
     newGameState.isCorrect = false;
     setHintAnimation(false);
@@ -72,6 +79,9 @@ const SwingGamePlay = () => {
     newGameState.index = newGameState.index + 1;
     setGameState(newGameState);
     console.log(newGameState, gameState, "handleIncorrect");
+    // save game results
+    saveUserRound( currentUserId, game, level, newGameState, currentPhonic)
+      .then(() => {console.log("Saved user round - incorrect!")});
   };
 
   const handleHint = () => {

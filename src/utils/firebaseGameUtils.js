@@ -93,7 +93,6 @@ export const getArrayOfRounds = async (id, game, getGameRounds) => {
   @param {String} answer
   *@returns returs a promise.
   */
-
 export const saveUserRound = async (id, game, level, gameStats, answer) => {
   const { isCorrect, score } = gameStats;
   await addDoc(collection(db, "users", id, "rounds_played"), {
