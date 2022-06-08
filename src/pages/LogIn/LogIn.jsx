@@ -4,7 +4,6 @@ import Button from "../../components/Button/Button";
 import Layout from "../../components/Layout/Layout";
 import Logo from "../../components/Logo/Logo";
 import TextInput from "../../components/TextInput/TextInput";
-import PopUp from "../../components/PopUp/PopUp";
 import "./LogIn.scss";
 //authentication imports
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -16,7 +15,6 @@ import UserContext from "../../contexts/UserContext";
 const LogIn = () => {
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
-  const [showPopUp, setShowPopUp] = useState(false);
   const [showValue, setShowValue] = useState("");
   const userContext  = useContext(UserContext)
 
@@ -24,7 +22,6 @@ const LogIn = () => {
   const login = async (e) => {
     e.preventDefault();
     console.log(showValue);
-    setShowPopUp(!showPopUp);
 
     try {
       const user = await signInWithEmailAndPassword(
@@ -55,9 +52,6 @@ const LogIn = () => {
             <Logo />
           </div>
           <form className="log-in__container" onSubmit={login}>
-          {showPopUp && (
-              <PopUp togglePopUp={login} content={"User has succesfully logged in"} />
-            )}
             <h1 className="log-in__heading">Welcome!</h1>
             <p className="log-in__top-text">This is the log in page</p>
             <TextInput

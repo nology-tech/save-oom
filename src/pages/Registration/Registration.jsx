@@ -12,19 +12,18 @@ import {
 } from "firebase/auth";
 // import { doc, setDoc } from "firebase/firestore";
 import { auth, createUser } from "../../firebase";
-import PopUp from "../../components/PopUp/PopUp";
 import { useContext } from "react";
 import UserContext from "../../contexts/UserContext";
+import { useNavigate } from "react-router-dom";
 
 const Registration = () => {
   const [firstName, setFirstName] = useState("");
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
   const userContext  = useContext(UserContext)
-
   const [user, setUser] = useState({});
-  const [showPopUp, setShowPopUp] = useState(false);
   const [showValue, setShowValue] = useState("");
+  let navigate = useNavigate();
 
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
@@ -35,8 +34,8 @@ const Registration = () => {
     e.preventDefault();
     console.log("working");
     console.log(showValue);
-    setShowPopUp(!showPopUp);
     console.log(auth, firstName, registerEmail, registerPassword);
+    navigate('../avatarcreation');
     const user = await createUserWithEmailAndPassword(
       auth,
       registerEmail,
@@ -48,8 +47,9 @@ const Registration = () => {
         parentName: firstName,
         userId: user.user.uid,
       }
-    )
+    ) 
   };
+
 
   return (
     <>
@@ -59,9 +59,6 @@ const Registration = () => {
             <Logo />
           </div>
           <form className="registration__container" onSubmit={register}>
-          {showPopUp && (
-              <PopUp togglePopUp={register} content={"User has registered"} />
-            )}
             <h1 className="registration__heading">Create your account</h1>
             <p className="registration__top-text">
               This is the registration page
