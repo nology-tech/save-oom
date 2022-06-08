@@ -16,6 +16,7 @@ import {
 } from "../../utils/firebaseGameUtils";
 import { Route, Routes } from "react-router-dom";
 import levelSelectData from "../../data/levelSelectData"
+// import Registration from "../Registration/Registration";
 
 const Home = () => {
   //   const currentRound = {
