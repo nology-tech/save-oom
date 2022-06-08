@@ -34,7 +34,7 @@ const AvatarCreation = () => {
 
   return (
     <div className="avatar-creation-container" role="ACC">
-      <AvatarHeading avatarHeadingText={headerText} />
+      <AvatarHeading avatarHeadingText={headerText} role="avatar_heading"/>
       <div className="avatar-creation-container__text">
       {/* {showText ? <TextInput /> : null} */}
       {avatarCreationData[count].inputBox  && <TextInput onChangeEvent={handleName}/> }
