@@ -18,7 +18,6 @@ import {
  * @returns 
  */
 export const getUserById = async( userId ) => {
-  console.log("getUserbyId", userId);
   const docRef = doc(db, "users", userId);
   const docSnap = await getDoc( docRef );
   return docSnap;
@@ -77,7 +76,7 @@ export const getIncorrectGameRoundsForUser = async (id, game) => {
   @param {String} userId
   @param {String} gameId
   @param {Function} getGameRounds
-  *@returns returs a promise.
+  *@returns returns a promise.
   */
 export const getArrayOfRounds = async (id, game, getGameRounds) => {
   const querySnap = await getGameRounds(id, game);

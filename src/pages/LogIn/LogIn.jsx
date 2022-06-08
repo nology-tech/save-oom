@@ -9,6 +9,7 @@ import "./LogIn.scss";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 import { getUserById } from "../../utils/firebaseGameUtils";
+import { getArrayForSwing } from "../../utils/gameUtils";
 import { useState } from "react";
 import { useContext } from "react";
 import UserContext from "../../contexts/UserContext";
@@ -37,6 +38,10 @@ const LogIn = () => {
       console.log("currentUser", currentUser)
       console.log("userContext", userContext)
       console.log("fbUser", fbUser.data())
+
+      const staticArray = await getArrayForSwing(currentUser.userId, 1);
+      console.log("array for using in game", staticArray)
+
       userContext.setUser(currentUser)
       console.log(userContext.user)
     } catch (error) {

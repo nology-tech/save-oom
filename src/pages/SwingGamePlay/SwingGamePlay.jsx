@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import swingingOom from "../../assets/images/Group 146swingingOom.png";
 import squirrel from "../../assets/images/squirrel.png";
 import AnimatedImage from "../../components/AnimatedImage/AnimatedImage";
@@ -10,20 +10,47 @@ import "./SwingGamePlay.scss";
 import Timer from "../../components/Timer/Timer";
 import shortid from "shortid";
 import OomsNeedsContainer from "../../containers/OomsNeedsContainer/OomsNeedsContainer";
+// import {getUserById} from "../../utils/firebaseGameUtils";
+import UserContext from "../../contexts/UserContext";
+import {getArrayForSwing} from "../../utils/gameUtils";
 
 let gameScore = 0;
 const SwingGamePlay = () => {
+
+  // let currentUserName;
+  let currentUserId = 0;
+  try {
+    const { user } = useContext(UserContext);
+    // currentUserName = user.name;
+    currentUserId = user.name;
+
+  } catch {
+    // currentUserName = "";
+  }
+
   const [gameState, setGameState] = useState({
     score: 0,
     index: 0,
     isCorrect: false,
     isGameOver: false,
+    isGameReady: false,
     counter: 0,
   });
 
   const [hintAnimation, setHintAnimation] = useState(false);
+  const [phonicsArray, setPhonicsArray] = useState([]);
 
-  const phonicsArray = Object.keys(phonicsData.levelOne);
+  // load up the Phonics array 
+  useEffect(() => {
+    getArrayForSwing(currentUserId, 1)
+      .then( array => {
+          let newGameState = { ...gameState };
+          newGameState.isGameReady = true;
+          setGameState(newGameState);
+          setPhonicsArray(array);
+    });
+
+  }, []  );
 
   const handleCorrect = () => {
     let newGameState = { ...gameState };
@@ -84,10 +111,16 @@ const SwingGamePlay = () => {
   const squirrelAnimationType2 = hintAnimation ? "animate__bounce" : "";
   const oomAnimationType = gameState.isCorrect ? "animate__swinging" : "";
 
+  const gameNotAvailable = ! gameState.isGameReady || gameState.isGameOver;
+  const gameNotAvailableJsx = gameState.isGameOver ? 
+      <GameEnd score={gameScore} /> :
+          gameState.isGameReady == false ?
+            <p>Nothing!</p> : null;
+
   return (
     <div className="swing-game-play">
-      {gameState.isGameOver ? (
-        <GameEnd score={gameScore} />
+      {gameNotAvailable ? (
+        gameNotAvailableJsx
       ) : (
         <>
           <OomsNeedsContainer />
