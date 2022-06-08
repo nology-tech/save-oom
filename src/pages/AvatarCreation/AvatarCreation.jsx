@@ -5,16 +5,19 @@ import "./AvatarCreation.scss";
 import TextInput from "../../components/TextInput/TextInput";
 import { useState } from "react";
 import avatarCreationData from "../../data/avatarCreationData";
+import { useNavigate } from "react-router-dom";
 
 const AvatarCreation = () => {
   //use state for container - which changes upon an index value that changes with button click - and if page is exited resets
 
   const [count, setCount] = useState(0);
   const [name, setName] = useState("");
+  let navigate = useNavigate();
 
   const increment = () => {
     if (count >= 2) {
       setCount(2);
+      navigate("/story-container");
     } 
     else {
       setCount(count + 1);
@@ -26,6 +29,7 @@ const AvatarCreation = () => {
 
     const headerText = (avatarCreationData[count].appendName ? name: " " )+ avatarCreationData[count].title
 
+  
 
 
   return (
