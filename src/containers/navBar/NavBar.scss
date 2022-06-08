@@ -1,6 +1,6 @@
-@use "../../styles/reset" as *;
-@use "../../styles/variables" as *;
-@use "../../styles/typography" as *;
+@use '../../styles/reset' as *;
+@use '../../styles/variables' as *;
+@use '../../styles/typography' as *;
 
 .nav-bar {
   background-color: $color-secondary-dark;
@@ -8,5 +8,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 20rem;
+  max-width: 12rem;
+  border-right: 0.5px solid $color-primary;
+}
+
+@media screen and (min-width: 1100px) {
+  .nav-bar {
+    max-width: 20rem;
+  }
 }
