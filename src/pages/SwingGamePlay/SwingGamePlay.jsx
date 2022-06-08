@@ -115,7 +115,7 @@ const SwingGamePlay = () => {
     let newGameState = { ...gameState };
     newGameState.isGameOver = true;
     setGameState(newGameState);
-    console.log(newGameState, gameState, "handleGameEnd");
+    console.log(newGameState, gameState, 'handleGameEnd');
   };
 
   const getId = () => {
@@ -124,8 +124,8 @@ const SwingGamePlay = () => {
     return id;
   };
 
-  const squirrelAnimationType2 = hintAnimation ? "animate__bounce" : "";
-  const oomAnimationType = gameState.isCorrect ? "animate__swinging" : "";
+  const squirrelAnimationType2 = hintAnimation ? 'animate__bounce' : '';
+  const oomAnimationType = gameState.isCorrect ? 'animate__swinging' : '';
 
   const gameNotAvailable = ! gameState.isGameReady || gameState.isGameOver;
   const gameNotAvailableJsx = gameState.isGameOver ? 
@@ -140,7 +140,7 @@ const SwingGamePlay = () => {
       ) : (
         <>
           <OomsNeedsContainer />
-          <div className="swing-game-play__phonic">
+          <div className='swing-game-play__phonic'>
             <Timer startTime={60} handleGameEnd={handleGameEnd} />
             <PhonicComponent phonicText={phonicsArray[gameState.index]} />
           </div>
@@ -149,17 +149,17 @@ const SwingGamePlay = () => {
             <AnimatedImage
               key={getId()}
               imageToAnimate={squirrel}
-              animationClass={"animate__animated"}
+              animationClass={'animate__animated.animate__fastest'}
               animationType={` ${squirrelAnimationType2}`}
-              imageStylesClass={"swing-game-play__squirrel"}
+              imageStylesClass={'swing-game-play__squirrel'}
             />
           </div>
           <AnimatedImage
             key={getId()}
             imageToAnimate={swingingOom}
-            animationClass={"animate__animated.animate__fastest"}
+            animationClass={'animate__animated.animate__fastest'}
             animationType={oomAnimationType}
-            imageStylesClass={"swing-game-play__oom"}
+            imageStylesClass={'swing-game-play__oom'}
           />
 
           <ValidateAnswerButtons
@@ -167,7 +167,7 @@ const SwingGamePlay = () => {
             handleIncorrect={handleIncorrect}
           />
 
-          <p className="swing-game-play__score">
+          <p className='swing-game-play__score'>
             Number Of Correct Sounds: {gameState.score}
           </p>
         </>
