@@ -87,7 +87,7 @@ const SwingGamePlay = () => {
     // save game results
     saveUserRound( currentUserId, game, level, newGameState, currentPhonic)
       .then(() => {console.log("Saved user round - incorrect!")})
-      .catch(() => {console.error(`Error attempting to save a user ${userId} round`)});
+      .catch(() => {console.error(`Error attempting to save a user ${currentUserId} round`)});
   };
 
   const handleHint = () => {
