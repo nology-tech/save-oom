@@ -21,9 +21,11 @@ const SwingGamePlay = () => {
   // should become props?
   const level = 1;
 
+  let currentUserName = "";
   let currentUserId = 0;
   try {
     const { user } = useContext(UserContext);
+    currentUserName = user.name;
     currentUserId = user.userId;
 
   } catch {
@@ -50,7 +52,9 @@ const SwingGamePlay = () => {
           newGameState.isGameReady = true;
           setGameState(newGameState);
           setPhonicsArray(array);
-    });
+      
+    })
+    .catch((e) => console.error("Error attempting to load phonics array", e));
 
   }, []  );
 
@@ -67,7 +71,8 @@ const SwingGamePlay = () => {
     console.log(newGameState, gameState, "handleCorrect");
     // save game results
     saveUserRound( currentUserId, game, level, newGameState, currentPhonic)
-      .then(() => {console.log("Saved user round - correct!")});
+      .then(() => {console.log("Saved user round - correct!")})
+      .catch(() => {console.error("Error attempting to save a user's round")});
   };
 
   const handleIncorrect = () => {
@@ -81,7 +86,8 @@ const SwingGamePlay = () => {
     console.log(newGameState, gameState, "handleIncorrect");
     // save game results
     saveUserRound( currentUserId, game, level, newGameState, currentPhonic)
-      .then(() => {console.log("Saved user round - incorrect!")});
+      .then(() => {console.log("Saved user round - incorrect!")})
+      .catch(() => {console.error(`Error attempting to save a user ${userId} round`)});
   };
 
   const handleHint = () => {
@@ -123,7 +129,7 @@ const SwingGamePlay = () => {
 
   const gameNotAvailable = ! gameState.isGameReady || gameState.isGameOver;
   const gameNotAvailableJsx = gameState.isGameOver ? 
-      <GameEnd score={gameScore} /> :
+      <GameEnd score={gameScore} childName={currentUserName} /> :
           gameState.isGameReady == false ?
             <p>Nothing!</p> : null;
 
