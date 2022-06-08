@@ -40,13 +40,12 @@ const Home = () => {
       <Layout>
         <NavBar />
         <Routes>
-          <Route path="/swing-gamePlay" element={<SwingGamePlay />} />
-          <Route path="/story-container" element={<StoryContainer />} />
-          <Route path="/level-select-card-container" element={<LevelSelectCardContainer levelSelectData={levelSelectData}/>} />
-          <Route path="/game-instructions" element={<GameInstructions />} />
-          <Route path="/stats-page" element={<StatsPage />} />
+          <Route path="/swinggameplay" element={<SwingGamePlay />} />
+          <Route path="/story" element={<StoryContainer />} />
+          <Route path="/levelselect" element={<LevelSelectCardContainer levelSelectData={levelSelectData}/>} />
+          <Route path="/instructions" element={<GameInstructions />} />
+          <Route path="/stats" element={<StatsPage />} />
           <Route path="/avatarcreation" element={<AvatarCreation />} />
-
         </Routes>
       </Layout>
 
@@ -54,6 +53,8 @@ const Home = () => {
 };
 
 export default Home;
+
+
 
 
 

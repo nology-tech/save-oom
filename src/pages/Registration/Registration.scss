@@ -35,6 +35,13 @@
   &__registration-link {
     color: white;
   }
+
+  &__avatar-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+      
+  }
 }
 
 .text-input-container {
@@ -46,7 +53,7 @@
   }
 }
 
-.button-secondary {
+.button-secondary2 {
   margin-top: 1rem;
   width: 80%;
   margin-left: auto;
