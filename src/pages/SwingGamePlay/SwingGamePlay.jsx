@@ -19,6 +19,7 @@ const SwingGamePlay = () => {
     isCorrect: false,
     isGameOver: false,
     counter: 0,
+    percentage: 0,
   });
 
   const [hintAnimation, setHintAnimation] = useState(false);
@@ -32,6 +33,11 @@ const SwingGamePlay = () => {
     newGameState.score = newGameState.score + 1;
     gameScore = newGameState.score;
     newGameState.counter = newGameState.counter + 1;
+    if (newGameState.percentage == 100) {
+      newGameState.percentage + 0
+    }else {
+      newGameState.percentage += 5
+    }
     newGameState.index = handleIndexChange();
     setGameState(newGameState);
     console.log(newGameState, gameState, 'handleCorrect');
@@ -90,8 +96,8 @@ const SwingGamePlay = () => {
         <GameEnd score={gameScore} />
       ) : (
         <>
-          <OomsNeedsContainer />
-          <div className='swing-game-play__phonic'>
+          <OomsNeedsContainer percentage={gameState.percentage} />
+          <div className="swing-game-play__phonic">
             <Timer startTime={60} handleGameEnd={handleGameEnd} />
             <PhonicComponent phonicText={phonicsArray[gameState.index]} />
           </div>
