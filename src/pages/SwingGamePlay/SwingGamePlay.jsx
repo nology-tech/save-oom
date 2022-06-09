@@ -28,8 +28,8 @@ const SwingGamePlay = () => {
     currentUserName = user.name;
     currentUserId = user.userId;
 
-  } catch {
-    console.error("Error!");
+  } catch (e) {
+    console.error("Error attempting to get userContext!", e);
   }
 
   const [gameState, setGameState] = useState({

@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import "./NavBar.scss";
 import NavBarHeading from "../../components/navBarHeading/NavBarHeading";
 import vector from "../../assets/images/Vectorvector.png";
@@ -32,6 +33,9 @@ const NavBar = () => {
           headingImg={vector}
           headingStyle={"nav-bar"}
         />
+        <Link to="/swing-gamePlay">
+          <h3>Swing game</h3>
+        </Link>
         <h2>Introduction</h2>
         <NavBarHeading
           headingText={"Level 1"}
