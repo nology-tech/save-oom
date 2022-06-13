@@ -17,7 +17,7 @@ exports[`Should render the Game End screen 1`] = `
         class="avatar-heading"
       >
         <h1>
-          Amazing effort Jack
+          Amazing effort undefined
         </h1>
       </div>
       <div

@@ -11,7 +11,7 @@ import addImg from "../../assets/images/Vectoradd.png";
 import UserContext from "../../contexts/UserContext";
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebase";
-import { Link } from "react-router-dom";
+
 const NavBar = () => {
   let currentUserName;
   try {

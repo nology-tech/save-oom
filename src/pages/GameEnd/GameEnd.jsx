@@ -5,6 +5,11 @@ import Button from "../../components/Button/Button";
 import "./GameEnd.scss";
 
 const GameEnd = ({score, childName}) => {
+
+  const refreshPage = () => {
+    window.location.reload(false);
+  }
+    
   return (
         <div className="game-end">
             <div className="game-end__top">
