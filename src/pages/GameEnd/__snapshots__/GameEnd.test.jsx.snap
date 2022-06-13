@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the Game End screen 1`] = `
+<div>
+  <div
+    class="game-end"
+  >
+    <div
+      class="game-end__top"
+    >
+      <p
+        class="game-end__timer"
+      >
+        Time's up
+      </p>
+      <div
+        class="avatar-heading"
+      >
+        <h1>
+          Amazing effort Jack
+        </h1>
+      </div>
+      <div
+        class="game-end__buttons"
+      >
+        <a
+          href="/level-select-card-container"
+        >
+          <button
+            class="button-primary"
+          >
+            Back to Home
+          </button>
+        </a>
+        <button
+          class="button-primary"
+        >
+          Play Again
+        </button>
+      </div>
+      <p
+        class="game-end__score"
+      >
+        No. of correct sounds: 
+      </p>
+    </div>
+  </div>
+</div>
+`;
