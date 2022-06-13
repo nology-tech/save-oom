@@ -16,7 +16,9 @@ import {
 } from "../../utils/firebaseGameUtils";
 import { Route, Routes } from "react-router-dom";
 import levelSelectData from "../../data/levelSelectData"
-// import Registration from "../Registration/Registration";
+import Dashboard from "../DashBoard/Dashboard";
+//import { useNavigate } from 'react-router';
+//const loggedIn = false
 
 const Home = () => {
   //   const currentRound = {
@@ -41,6 +43,7 @@ const Home = () => {
         <NavBar />
         <Routes>
           <Route path="/swing-gamePlay" element={<SwingGamePlay />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/story-container" element={<StoryContainer />} />
           <Route path="/level-select-card-container" element={<LevelSelectCardContainer levelSelectData={levelSelectData}/>} />
           <Route path="/game-instructions" element={<GameInstructions />} />
