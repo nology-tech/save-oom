@@ -32,54 +32,74 @@ exports[`Should render the navbar 1`] = `
       <h2>
         Introduction
       </h2>
-      <div
-        class="nav-bar-header"
+      <a
+        href="/level-select-card-container"
       >
-        <h2
-          class="nav-bar-header__heading"
+        <div
+          class="nav-bar-header"
         >
-          Level 1
-        </h2>
-      </div>
-      <div
-        class="nav-bar-header"
+          <h2
+            class="nav-bar-header__heading"
+          >
+            Level 1
+          </h2>
+        </div>
+      </a>
+      <a
+        href="/swing-gamePlay"
       >
-        <h2
-          class="nav-bar-header__heading"
+        <div
+          class="nav-bar-header"
         >
-          Level 2
-        </h2>
-      </div>
-      <div
-        class="nav-bar-header"
+          <h2
+            class="nav-bar-header__heading"
+          >
+            Game Play
+          </h2>
+        </div>
+      </a>
+      <a
+        href="/dashboard"
       >
-        <h2
-          class="nav-bar-header__heading"
+        <div
+          class="nav-bar-header"
         >
-          Level 3
-        </h2>
-      </div>
-      <div
-        class="nav-bar-header"
+          <h2
+            class="nav-bar-header__heading"
+          >
+            Dashboard
+          </h2>
+        </div>
+      </a>
+      <a
+        href="/stats-page"
       >
-        <h2
-          class="nav-bar-header__heading"
+        <div
+          class="nav-bar-header"
         >
-          Stats
-        </h2>
-      </div>
+          <h2
+            class="nav-bar-header__heading"
+          >
+            Stats
+          </h2>
+        </div>
+      </a>
       <h2>
         Jack
       </h2>
-      <div
-        class="nav-bar-header"
+      <a
+        href="/avatarcreation"
       >
-        <h2
-          class="nav-bar-header__heading"
+        <div
+          class="nav-bar-header"
         >
-          Add Avatar
-        </h2>
-      </div>
+          <h2
+            class="nav-bar-header__heading"
+          >
+            Add Avatar
+          </h2>
+        </div>
+      </a>
     </div>
     <button
       class="button-logout"
@@ -122,54 +142,74 @@ exports[`Should render the navbar 2`] = `
       <h2>
         Introduction
       </h2>
-      <div
-        class="nav-bar-header"
+      <a
+        href="/level-select-card-container"
       >
-        <h2
-          class="nav-bar-header__heading"
+        <div
+          class="nav-bar-header"
         >
-          Level 1
-        </h2>
-      </div>
-      <div
-        class="nav-bar-header"
+          <h2
+            class="nav-bar-header__heading"
+          >
+            Level 1
+          </h2>
+        </div>
+      </a>
+      <a
+        href="/swing-gamePlay"
       >
-        <h2
-          class="nav-bar-header__heading"
+        <div
+          class="nav-bar-header"
         >
-          Level 2
-        </h2>
-      </div>
-      <div
-        class="nav-bar-header"
+          <h2
+            class="nav-bar-header__heading"
+          >
+            Game Play
+          </h2>
+        </div>
+      </a>
+      <a
+        href="/dashboard"
       >
-        <h2
-          class="nav-bar-header__heading"
+        <div
+          class="nav-bar-header"
         >
-          Level 3
-        </h2>
-      </div>
-      <div
-        class="nav-bar-header"
+          <h2
+            class="nav-bar-header__heading"
+          >
+            Dashboard
+          </h2>
+        </div>
+      </a>
+      <a
+        href="/stats-page"
       >
-        <h2
-          class="nav-bar-header__heading"
+        <div
+          class="nav-bar-header"
         >
-          Stats
-        </h2>
-      </div>
+          <h2
+            class="nav-bar-header__heading"
+          >
+            Stats
+          </h2>
+        </div>
+      </a>
       <h2>
         Jack
       </h2>
-      <div
-        class="nav-bar-header"
+      <a
+        href="/avatarcreation"
       >
-        <h2
-          class="nav-bar-header__heading"
+        <div
+          class="nav-bar-header"
         >
-          Add Avatar
-        </h2>
-      </div>
+          <h2
+            class="nav-bar-header__heading"
+          >
+            Add Avatar
+          </h2>
+        </div>
+      </a>
     </div>
     <button
       class="button-logout"

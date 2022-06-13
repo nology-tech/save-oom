@@ -12,7 +12,7 @@ const StoryContainer = () => {
 
   const handleIncrement = () => {
     if (counter > 4) {
-      navigate("/LevelSelectCardContainer");
+      navigate("/level-select-card-container");
     } else {
       setCounter(counter + 1);
     }

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the Avatar Creation Pageu 1`] = `
+<div>
+  <div
+    class="avatar-creation-container"
+    role="ACC"
+  >
+    <div
+      class="avatar-heading"
+    >
+      <h1>
+         Please add an avatar to save oom
+      </h1>
+    </div>
+    <div
+      class="avatar-creation-container__text"
+    />
+    <button
+      class="button-primary"
+    >
+      Add Avatar
+    </button>
+  </div>
+</div>
+`;

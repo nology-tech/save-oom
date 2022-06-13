@@ -11,6 +11,7 @@ import addImg from "../../assets/images/Vectoradd.png";
 import UserContext from "../../contexts/UserContext";
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebase";
+import { Link } from "react-router-dom";
 const NavBar = () => {
   let currentUserName;
   try {
@@ -37,32 +38,43 @@ const NavBar = () => {
           <h3>Swing game</h3>
         </Link>
         <h2>Introduction</h2>
+        <Link to={"/level-select-card-container"}>
         <NavBarHeading
           headingText={"Level 1"}
           headingImg={lockImg}
           headingStyle={"nav-bar"}
         />
+        </Link>
+
+        <Link to={"/swing-gamePlay"}>
         <NavBarHeading
-          headingText={"Level 2"}
+          headingText={"Game Play"}
           headingImg={lockImg}
           headingStyle={"nav-bar"}
         />
+        </Link>
+        <Link to={"/dashboard"}>
         <NavBarHeading
-          headingText={"Level 3"}
+          headingText={"Dashboard"}
           headingImg={lockImg}
           headingStyle={"nav-bar"}
         />
+        </Link>
+        <Link to={"/stats-page"}>
         <NavBarHeading
           headingText={"Stats"}
           headingImg={statImg}
           headingStyle={"nav-bar"}
         />
+        </Link>
         <h2>{currentUserName}</h2>
+        <Link to={"/avatarcreation"}>
         <NavBarHeading
           headingText={"Add Avatar"}
           headingImg={addImg}
           headingStyle={"nav-bar"}
         />
+        </Link>
       </div>
       <Button
         buttonText={"Logout"}

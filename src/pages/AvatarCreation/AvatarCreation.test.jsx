@@ -1,10 +1,10 @@
-import { render, screen } from "@testing-library/react";
+import { customRender } from '../../utils/testUtils';
 import AvatarCreation from "./AvatarCreation.jsx";
 
 
-it("Should display the graph", () => {
-    render(<AvatarCreation />);
-    const ACC = screen.getByRole("ACC");
-    expect(ACC).toBeInTheDocument();
-  });
   
+  it("Should render the Avatar Creation Pageu", () => {
+    const { container } = customRender(<AvatarCreation />);
+  
+    expect(container).toMatchSnapshot();
+  });
