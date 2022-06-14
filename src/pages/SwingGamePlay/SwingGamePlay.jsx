@@ -131,7 +131,7 @@ const SwingGamePlay = () => {
   const gameNotAvailableJsx = gameState.isGameOver ? 
       <GameEnd score={gameScore} childName={currentUserName} /> :
           gameState.isGameReady == false ?
-            <p>Nothing!</p> : null;
+            <p>Loading</p> : null;
 
   return (
     <div className="swing-game-play">

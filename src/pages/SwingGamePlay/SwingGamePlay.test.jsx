@@ -22,6 +22,6 @@ it("Should render the Swing Game Play screen", () => {
 
 it('Should render the score count screen', () => {
   customRender(<SwingGamePlay />, true, {useContext: true, value: userObj});
-  const scoreCount = screen.getByText(/Nothing!/i);
+  const scoreCount = screen.getByText(/Loading/i);
   expect(scoreCount).toBeInTheDocument();
 });

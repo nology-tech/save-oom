@@ -6,7 +6,7 @@ exports[`Should render the Swing Game Play screen 1`] = `
     class="swing-game-play"
   >
     <p>
-      Nothing!
+      Loading
     </p>
   </div>
 </div>

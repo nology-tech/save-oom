@@ -22,13 +22,6 @@ exports[`Should render the navbar 1`] = `
           Phonics stages
         </h2>
       </div>
-      <a
-        href="/swing-gamePlay"
-      >
-        <h3>
-          Swing game
-        </h3>
-      </a>
       <h2>
         Introduction
       </h2>
@@ -132,13 +125,6 @@ exports[`Should render the navbar 2`] = `
           Phonics stages
         </h2>
       </div>
-      <a
-        href="/swing-gamePlay"
-      >
-        <h3>
-          Swing game
-        </h3>
-      </a>
       <h2>
         Introduction
       </h2>
