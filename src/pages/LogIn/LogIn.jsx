@@ -8,6 +8,8 @@ import "./LogIn.scss";
 //authentication imports
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
+import { getUserById } from "../../utils/firebaseGameUtils";
+import { getArrayForSwing } from "../../utils/gameUtils";
 import { useState } from "react";
 import { useContext } from "react";
 import UserContext from "../../contexts/UserContext";
@@ -16,30 +18,37 @@ const LogIn = () => {
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
   const [showValue, setShowValue] = useState("");
-  const userContext  = useContext(UserContext)
+  const userContext = useContext(UserContext)
 
-  console.log(userContext)
+  console.log("UserContext", userContext)
   const login = async (e) => {
     e.preventDefault();
     console.log(showValue);
 
     try {
-      const user = await signInWithEmailAndPassword(
+      const authUser = await signInWithEmailAndPassword(
         auth,
         loginEmail,
         loginPassword
       );
-      console.log(user)
+      const fbUser = await getUserById(authUser.user.uid);
+      console.log("authenticated user", authUser)
       const currentUser = {
-        userId: user.user.uid,
-        name: user.user.email 
+        userId: authUser.user.uid,
+        name: fbUser.data() && fbUser.data().name ? fbUser.data().name : authUser.user.email 
       }
-      console.log(currentUser)
-      console.log(userContext)
+      console.log("currentUser", currentUser)
+      console.log("fbUser", fbUser.data())
+
+      const staticArray = await getArrayForSwing(currentUser.userId, 1);
+      console.log("array for using in game", staticArray)
+
+      // finally. set the userContext
       userContext.setUser(currentUser)
-      console.log(userContext.user)
+      console.log("userContext, after setting context", userContext);
+
     } catch (error) {
-      console.log(error.message);
+      console.error("Error attempting to authenticate user", error.message);
     }
   };
   

@@ -2,12 +2,27 @@ import { db } from "../firebase";
 import {
   addDoc,
   collection,
+  doc,
   getDocs,
+  getDoc,
   query,
   where,
   orderBy,
   Timestamp,
 } from "firebase/firestore";
+
+
+/**
+ * Gets a user object using the userId.
+ * @param {*} userId 
+ * @returns 
+ */
+export const getUserById = async( userId ) => {
+  const docRef = doc(db, "users", userId);
+  const docSnap = await getDoc( docRef );
+  return docSnap;
+}
+
 /** 
  * Get all the rounds of a specific game for a given user, ordered by most recent first 
  @param {*} userId
@@ -61,7 +76,7 @@ export const getIncorrectGameRoundsForUser = async (id, game) => {
   @param {String} userId
   @param {String} gameId
   @param {Function} getGameRounds
-  *@returns returs a promise.
+  *@returns returns a promise.
   */
 export const getArrayOfRounds = async (id, game, getGameRounds) => {
   const querySnap = await getGameRounds(id, game);
@@ -78,7 +93,6 @@ export const getArrayOfRounds = async (id, game, getGameRounds) => {
   @param {String} answer
   *@returns returs a promise.
   */
-
 export const saveUserRound = async (id, game, level, gameStats, answer) => {
   const { isCorrect, score } = gameStats;
   await addDoc(collection(db, "users", id, "rounds_played"), {

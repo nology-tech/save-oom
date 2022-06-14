@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import "./NavBar.scss";
 import NavBarHeading from "../../components/navBarHeading/NavBarHeading";
 import vector from "../../assets/images/Vectorvector.png";
@@ -10,7 +11,7 @@ import addImg from "../../assets/images/Vectoradd.png";
 import UserContext from "../../contexts/UserContext";
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebase";
-import { Link } from "react-router-dom";
+
 const NavBar = () => {
   let currentUserName;
   try {
@@ -33,6 +34,9 @@ const NavBar = () => {
           headingImg={vector}
           headingStyle={"nav-bar"}
         />
+        <Link to="/swing-gamePlay">
+          <h3>Swing game</h3>
+        </Link>
         <h2>Introduction</h2>
         <Link to={"/level-select-card-container"}>
         <NavBarHeading
