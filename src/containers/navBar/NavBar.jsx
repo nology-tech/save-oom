@@ -34,9 +34,6 @@ const NavBar = () => {
           headingImg={vector}
           headingStyle={"nav-bar"}
         />
-        <Link to="/swing-gamePlay">
-          <h3>Swing game</h3>
-        </Link>
         <h2>Introduction</h2>
         <Link to={"/level-select-card-container"}>
         <NavBarHeading
